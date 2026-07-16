@@ -10,35 +10,215 @@ DynamicList UI 객체의 속성, 상태와 동작을 제어합니다.
 
 ## ✅ 사용 가능
 
-| API | 한국어 설명 | 제약/주의 |
-|---|---|---|
-| `InitHeight(viewHeight, mainHeight, subHeight)` | InitHeight 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `InitFunc(mainLayout, mainData, subLayout, subData)` | InitFunc 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `InitBgType(bgDrawType)` | InitBgType 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `InitCreateWidgetPool()` | InitCreateWidgetPool 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetGaps(mainGap, subListGap)` | Gaps 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `EraseData(index)` | EraseData 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `InsertData(index, mainKey, subDatas)` | 데이터 항목을 생성하거나 등록합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `PushData(mainKey, subDatas)` | PushData 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `UpdateData(mainKey, subDatas)` | 데이터 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `ClearData()` | 데이터 항목을 제거하거나 초기화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `MoveIndex(index, anchorHeight, open)` | 인덱스 이동을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `MoveHeight(height)` | Height 이동을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SaveItemList()` | 아이템 목록 데이터를 저장합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `LoadItemList()` | 아이템 목록 데이터를 불러옵니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `UpdateView()` | View 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetMainList()` | Main 목록 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetMainIndex(mainKey)` | Main 인덱스 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetScrollMaxValue()` | Scroll 최대 Value 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetCurrentHeight()` | 현재 Height 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `Toggle(index)` | Toggle 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `ToggleByMainKey(mainKey)` | ToggleByMainKey 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `ToggleSubItem(mainKey, depth, depthKey)` | ToggleSubItem 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetSelectedItemInfo(key, depth)` | Selected 아이템 정보 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetSelectedItemInfo()` | Selected 아이템 정보 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `IsSelectedItem(key, depth)` | Selected 아이템 여부를 확인합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `EnableChildTouch(isEnable)` | Child Touch 기능을 시작하거나 활성화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `InsertSubItemInfo(mainKey, depth, depthKey, key)` | Sub 아이템 정보 항목을 생성하거나 등록합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `EraseSubItemInfo(mainKey, depth, depthKey, key)` | EraseSubItemInfo 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `OpenBySubItemInfo(mainKey, depth, key)` | By Sub 아이템 정보 화면이나 정보를 표시합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `CreateOveredImage(layerStr)` | Overed Image 항목을 생성하거나 등록합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
+함수 이름을 눌러 설명과 확인된 제약을 펼칠 수 있습니다. 제약이 확인되지 않은 함수는 제약 항목을 표시하지 않습니다.
+
+
+<details>
+<summary><code>InitHeight(viewHeight, mainHeight, subHeight)</code></summary>
+
+InitHeight 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>InitFunc(mainLayout, mainData, subLayout, subData)</code></summary>
+
+InitFunc 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>InitBgType(bgDrawType)</code></summary>
+
+InitBgType 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>InitCreateWidgetPool()</code></summary>
+
+InitCreateWidgetPool 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>SetGaps(mainGap, subListGap)</code></summary>
+
+Gaps 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>EraseData(index)</code></summary>
+
+EraseData 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>InsertData(index, mainKey, subDatas)</code></summary>
+
+데이터 항목을 생성하거나 등록합니다.
+
+</details>
+
+<details>
+<summary><code>PushData(mainKey, subDatas)</code></summary>
+
+PushData 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>UpdateData(mainKey, subDatas)</code></summary>
+
+데이터 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>ClearData()</code></summary>
+
+데이터 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>MoveIndex(index, anchorHeight, open)</code></summary>
+
+인덱스 이동을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>MoveHeight(height)</code></summary>
+
+Height 이동을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>SaveItemList()</code></summary>
+
+아이템 목록 데이터를 저장합니다.
+
+</details>
+
+<details>
+<summary><code>LoadItemList()</code></summary>
+
+아이템 목록 데이터를 불러옵니다.
+
+</details>
+
+<details>
+<summary><code>UpdateView()</code></summary>
+
+View 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>GetMainList()</code></summary>
+
+Main 목록 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetMainIndex(mainKey)</code></summary>
+
+Main 인덱스 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetScrollMaxValue()</code></summary>
+
+Scroll 최대 Value 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetCurrentHeight()</code></summary>
+
+현재 Height 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>Toggle(index)</code></summary>
+
+Toggle 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>ToggleByMainKey(mainKey)</code></summary>
+
+ToggleByMainKey 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>ToggleSubItem(mainKey, depth, depthKey)</code></summary>
+
+ToggleSubItem 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>SetSelectedItemInfo(key, depth)</code></summary>
+
+Selected 아이템 정보 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>GetSelectedItemInfo()</code></summary>
+
+Selected 아이템 정보 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>IsSelectedItem(key, depth)</code></summary>
+
+Selected 아이템 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>EnableChildTouch(isEnable)</code></summary>
+
+Child Touch 기능을 시작하거나 활성화합니다.
+
+</details>
+
+<details>
+<summary><code>InsertSubItemInfo(mainKey, depth, depthKey, key)</code></summary>
+
+Sub 아이템 정보 항목을 생성하거나 등록합니다.
+
+</details>
+
+<details>
+<summary><code>EraseSubItemInfo(mainKey, depth, depthKey, key)</code></summary>
+
+EraseSubItemInfo 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>OpenBySubItemInfo(mainKey, depth, key)</code></summary>
+
+By Sub 아이템 정보 화면이나 정보를 표시합니다.
+
+</details>
+
+<details>
+<summary><code>CreateOveredImage(layerStr)</code></summary>
+
+Overed Image 항목을 생성하거나 등록합니다.
+
+</details>

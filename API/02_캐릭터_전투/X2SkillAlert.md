@@ -10,23 +10,58 @@
 
 ## ⛔ 애드온 사용 불가
 
-| API | 한국어 설명 | 사용 불가 근거 |
-|---|---|---|
-| `GetAbilitySkillList(abilityIndex)` | 능력 기술 목록 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `SaveSkillBlackList(blackList, whiteList)` | 기술 Black 목록 데이터를 저장합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `AddSkillToBlackList(skillIndex)` | 기술 To Black 목록 항목을 생성하거나 등록합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `RemoveSkillFromBlackList(skillIndex)` | 기술 From Black 목록 항목을 제거하거나 초기화합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetBuffRemainTime(buffId)` | 버프 Remain 시간 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetTooltip(skillIndex)` | 툴팁 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
+아래 함수는 클라이언트에 이름이 노출되어 있지만 애드온 호출 허용 목록에는 포함되지 않습니다.
+
+
+<details>
+<summary><code>GetAbilitySkillList(abilityIndex)</code></summary>
+
+능력 기술 목록 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>SaveSkillBlackList(blackList, whiteList)</code></summary>
+
+기술 Black 목록 데이터를 저장합니다.
+
+</details>
+
+<details>
+<summary><code>AddSkillToBlackList(skillIndex)</code></summary>
+
+기술 To Black 목록 항목을 생성하거나 등록합니다.
+
+</details>
+
+<details>
+<summary><code>RemoveSkillFromBlackList(skillIndex)</code></summary>
+
+기술 From Black 목록 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>GetBuffRemainTime(buffId)</code></summary>
+
+버프 Remain 시간 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetTooltip(skillIndex)</code></summary>
+
+툴팁 정보를 조회합니다.
+
+</details>
 
 ## ⚠️ 전역 상수/값
 
+
 > 전역값은 읽기용 상수로 취급하는 것을 권장합니다. 값을 변경할 수 있는지는 보장되지 않습니다.
 
-| 이름 | 한국어 설명 | 상태 |
-|---|---|---|
-| `SKILL_ALERT_POS_INVALID` | SKILL_ALERT_POS_INVALID 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `SKILL_ALERT_POS_BASIC` | SKILL_ALERT_POS_BASIC 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `SKILL_ALERT_POS_FIRST` | SKILL_ALERT_POS_FIRST 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `SKILL_ALERT_POS_SECOND` | SKILL_ALERT_POS_SECOND 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `SKILL_ALERT_POS_OFF` | SKILL_ALERT_POS_OFF 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
+- <code>SKILL_ALERT_POS_INVALID</code> — SKILL_ALERT_POS_INVALID 관련 기능을 수행합니다.
+- <code>SKILL_ALERT_POS_BASIC</code> — SKILL_ALERT_POS_BASIC 관련 기능을 수행합니다.
+- <code>SKILL_ALERT_POS_FIRST</code> — SKILL_ALERT_POS_FIRST 관련 기능을 수행합니다.
+- <code>SKILL_ALERT_POS_SECOND</code> — SKILL_ALERT_POS_SECOND 관련 기능을 수행합니다.
+- <code>SKILL_ALERT_POS_OFF</code> — SKILL_ALERT_POS_OFF 관련 기능을 수행합니다.

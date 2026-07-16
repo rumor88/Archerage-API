@@ -10,28 +10,111 @@
 
 ## ⛔ 애드온 사용 불가
 
-| API | 한국어 설명 | 사용 불가 근거 |
-|---|---|---|
-| `RequestTrade()` | 거래 작업을 요청합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `StartTrade(unitIdStr)` | 거래 기능을 시작하거나 활성화합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `CancelTrade(reason)` | 거래 기능을 중지하거나 비활성화합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `LockTrade()` | LockTrade 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `OkTrade()` | OkTrade 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `PutupTradeItem(slot, amount)` | PutupTradeItem 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `TakeDownTradeItemByInventoryIdx(inventoryIdx)` | TakeDownTradeItemByInventoryIdx 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `PutupTradeMoneyByStr(moneyStr)` | PutupTradeMoneyByStr 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `IsTradeLocked()` | 거래 잠긴 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `IsOtherTradeLocked()` | Other 거래 잠긴 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetCurrencyForUserTrade()` | 통화 For 사용자 거래 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `CanLock()` | Lock 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetTradeMoneyLimit()` | 거래 Money Limit 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `HasEnoughExchangeFee(money, exchangeFee)` | Enough Exchange Fee 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
+아래 함수는 클라이언트에 이름이 노출되어 있지만 애드온 호출 허용 목록에는 포함되지 않습니다.
+
+
+<details>
+<summary><code>RequestTrade()</code></summary>
+
+거래 작업을 요청합니다.
+
+</details>
+
+<details>
+<summary><code>StartTrade(unitIdStr)</code></summary>
+
+거래 기능을 시작하거나 활성화합니다.
+
+</details>
+
+<details>
+<summary><code>CancelTrade(reason)</code></summary>
+
+거래 기능을 중지하거나 비활성화합니다.
+
+</details>
+
+<details>
+<summary><code>LockTrade()</code></summary>
+
+LockTrade 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>OkTrade()</code></summary>
+
+OkTrade 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>PutupTradeItem(slot, amount)</code></summary>
+
+PutupTradeItem 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>TakeDownTradeItemByInventoryIdx(inventoryIdx)</code></summary>
+
+TakeDownTradeItemByInventoryIdx 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>PutupTradeMoneyByStr(moneyStr)</code></summary>
+
+PutupTradeMoneyByStr 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>IsTradeLocked()</code></summary>
+
+거래 잠긴 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>IsOtherTradeLocked()</code></summary>
+
+Other 거래 잠긴 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>GetCurrencyForUserTrade()</code></summary>
+
+통화 For 사용자 거래 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>CanLock()</code></summary>
+
+Lock 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>GetTradeMoneyLimit()</code></summary>
+
+거래 Money Limit 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>HasEnoughExchangeFee(money, exchangeFee)</code></summary>
+
+Enough Exchange Fee 여부를 확인합니다.
+
+</details>
 
 ## ⚠️ 전역 상수/값
 
+
 > 전역값은 읽기용 상수로 취급하는 것을 권장합니다. 값을 변경할 수 있는지는 보장되지 않습니다.
 
-| 이름 | 한국어 설명 | 상태 |
-|---|---|---|
-| `TCR_NORMAL` | TCR_NORMAL 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `TCR_OPEND_MONEY_WINDOW` | TCR_OPEND_MONEY_WINDOW 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
+- <code>TCR_NORMAL</code> — TCR_NORMAL 관련 기능을 수행합니다.
+- <code>TCR_OPEND_MONEY_WINDOW</code> — TCR_OPEND_MONEY_WINDOW 관련 기능을 수행합니다.

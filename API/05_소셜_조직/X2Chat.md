@@ -10,197 +10,442 @@
 
 ## ✅ 사용 가능
 
-| API | 한국어 설명 | 제약/주의 |
-|---|---|---|
-| `DispatchChatMessage(filter, message)` | DispatchChatMessage 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
+함수 이름을 눌러 설명과 확인된 제약을 펼칠 수 있습니다. 제약이 확인되지 않은 함수는 제약 항목을 표시하지 않습니다.
+
+
+<details>
+<summary><code>DispatchChatMessage(filter, message)</code></summary>
+
+DispatchChatMessage 관련 기능을 수행합니다.
+
+</details>
 
 ## ⛔ 애드온 사용 불가
 
-| API | 한국어 설명 | 사용 불가 근거 |
-|---|---|---|
-| `CreateUserChatChannel(channel, password)` | 사용자 채팅 Channel 항목을 생성하거나 등록합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `JoinUserChatChannel(channel, password)` | 사용자 채팅 Channel 기능을 시작하거나 활성화합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `LeaveUserChatChannel(channel)` | 사용자 채팅 Channel 기능을 중지하거나 비활성화합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetChatChannelName(channel)` | 채팅 Channel 이름 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `OpenChat()` | 채팅 화면이나 정보를 표시합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetChatCommands()` | 채팅 Commands 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `ExpressEmotion(text)` | ExpressEmotion 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `DispatchCombatChatMessage(targetFilter, combatFilter, message)` | DispatchCombatChatMessage 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `UpdateChatTabInfo(tabId, chatTabInfoTable)` | 채팅 탭 정보 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `UpdateChatTabFilter(tabId, filtersTable, filterColorsTable)` | 채팅 탭 Filter 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `AddNewChatTabByUser(windowId, name)` | New 채팅 탭 By 사용자 항목을 생성하거나 등록합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `DeleteChatTabByUser(tabId)` | 채팅 탭 By 사용자 항목을 제거하거나 초기화합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `RenameChatTabByUser(tabId, name)` | RenameChatTabByUser 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `ClearChatContentByUser(tabId)` | 채팅 콘텐츠 By 사용자 항목을 제거하거나 초기화합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetChatTabInfoTable(tabId)` | 채팅 탭 정보 Table 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetDefaultChatTabInfoTable(tabId)` | Default 채팅 탭 정보 Table 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `AllChatWindowIds()` | AllChatWindowIds 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `AddItemLinkToActiveChatInput(linkText)` | 아이템 Link To Active 채팅 Input 항목을 생성하거나 등록합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `AddQuestLinkToActiveChatInput(linkText)` | 퀘스트 Link To Active 채팅 Input 항목을 생성하거나 등록합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `AddRaidRecruitLinkToActiveChatInput(linkText)` | 공격대 Recruit Link To Active 채팅 Input 항목을 생성하거나 등록합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `AddSquadRecruitLinkToActiveChatInput(linkText)` | 분대 Recruit Link To Active 채팅 Input 항목을 생성하거나 등록합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `AddUrlLinkToActiveChatInput()` | Url Link To Active 채팅 Input 항목을 생성하거나 등록합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `AddCraftLinkToActiveChatInput(craftType)` | 제작 Link To Active 채팅 Input 항목을 생성하거나 등록합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `IsActivatedChatInput()` | Activated 채팅 Input 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `ActivateWhisperChatInput(isWhispered)` | Whisper 채팅 Input 기능을 활성화합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `InitChatWindow()` | InitChatWindow 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `IsLockedChatWindowByChatTabId(tabId)` | 잠긴 채팅 Window By 채팅 탭 ID 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `LockChatWindowByTabId(tabId, lock)` | LockChatWindowByTabId 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetChatOption()` | 채팅 옵션 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `UpdateChatOption(chatOption)` | 채팅 옵션 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `ReportSpammer(targetName, message, chatType)` | ReportSpammer 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetChatChannelInfo(chatType)` | 채팅 Channel 정보 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `UseMegaphone()` | Megaphone 사용을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetMegaphoneChannelInfos()` | Megaphone Channel Infos 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `SetMegaphoneWarningMsgState()` | Megaphone Warning Msg 상태 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetUrlTextAddr()` | Url 텍스트 Addr 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `SetUrlTextAddr(text, addr)` | Url 텍스트 Addr 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `IsEnableChatChannel(chatType)` | Enable 채팅 Channel 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetChatIcon(chatIconKind)` | 채팅 Icon 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetChatIconKind(charId, chatType)` | 채팅 Icon Kind 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
+아래 함수는 클라이언트에 이름이 노출되어 있지만 애드온 호출 허용 목록에는 포함되지 않습니다.
+
+
+<details>
+<summary><code>CreateUserChatChannel(channel, password)</code></summary>
+
+사용자 채팅 Channel 항목을 생성하거나 등록합니다.
+
+</details>
+
+<details>
+<summary><code>JoinUserChatChannel(channel, password)</code></summary>
+
+사용자 채팅 Channel 기능을 시작하거나 활성화합니다.
+
+</details>
+
+<details>
+<summary><code>LeaveUserChatChannel(channel)</code></summary>
+
+사용자 채팅 Channel 기능을 중지하거나 비활성화합니다.
+
+</details>
+
+<details>
+<summary><code>GetChatChannelName(channel)</code></summary>
+
+채팅 Channel 이름 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>OpenChat()</code></summary>
+
+채팅 화면이나 정보를 표시합니다.
+
+</details>
+
+<details>
+<summary><code>GetChatCommands()</code></summary>
+
+채팅 Commands 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>ExpressEmotion(text)</code></summary>
+
+ExpressEmotion 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>DispatchCombatChatMessage(targetFilter, combatFilter, message)</code></summary>
+
+DispatchCombatChatMessage 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>UpdateChatTabInfo(tabId, chatTabInfoTable)</code></summary>
+
+채팅 탭 정보 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>UpdateChatTabFilter(tabId, filtersTable, filterColorsTable)</code></summary>
+
+채팅 탭 Filter 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>AddNewChatTabByUser(windowId, name)</code></summary>
+
+New 채팅 탭 By 사용자 항목을 생성하거나 등록합니다.
+
+</details>
+
+<details>
+<summary><code>DeleteChatTabByUser(tabId)</code></summary>
+
+채팅 탭 By 사용자 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>RenameChatTabByUser(tabId, name)</code></summary>
+
+RenameChatTabByUser 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>ClearChatContentByUser(tabId)</code></summary>
+
+채팅 콘텐츠 By 사용자 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>GetChatTabInfoTable(tabId)</code></summary>
+
+채팅 탭 정보 Table 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetDefaultChatTabInfoTable(tabId)</code></summary>
+
+Default 채팅 탭 정보 Table 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>AllChatWindowIds()</code></summary>
+
+AllChatWindowIds 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>AddItemLinkToActiveChatInput(linkText)</code></summary>
+
+아이템 Link To Active 채팅 Input 항목을 생성하거나 등록합니다.
+
+</details>
+
+<details>
+<summary><code>AddQuestLinkToActiveChatInput(linkText)</code></summary>
+
+퀘스트 Link To Active 채팅 Input 항목을 생성하거나 등록합니다.
+
+</details>
+
+<details>
+<summary><code>AddRaidRecruitLinkToActiveChatInput(linkText)</code></summary>
+
+공격대 Recruit Link To Active 채팅 Input 항목을 생성하거나 등록합니다.
+
+</details>
+
+<details>
+<summary><code>AddSquadRecruitLinkToActiveChatInput(linkText)</code></summary>
+
+분대 Recruit Link To Active 채팅 Input 항목을 생성하거나 등록합니다.
+
+</details>
+
+<details>
+<summary><code>AddUrlLinkToActiveChatInput()</code></summary>
+
+Url Link To Active 채팅 Input 항목을 생성하거나 등록합니다.
+
+</details>
+
+<details>
+<summary><code>AddCraftLinkToActiveChatInput(craftType)</code></summary>
+
+제작 Link To Active 채팅 Input 항목을 생성하거나 등록합니다.
+
+</details>
+
+<details>
+<summary><code>IsActivatedChatInput()</code></summary>
+
+Activated 채팅 Input 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>ActivateWhisperChatInput(isWhispered)</code></summary>
+
+Whisper 채팅 Input 기능을 활성화합니다.
+
+</details>
+
+<details>
+<summary><code>InitChatWindow()</code></summary>
+
+InitChatWindow 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>IsLockedChatWindowByChatTabId(tabId)</code></summary>
+
+잠긴 채팅 Window By 채팅 탭 ID 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>LockChatWindowByTabId(tabId, lock)</code></summary>
+
+LockChatWindowByTabId 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>GetChatOption()</code></summary>
+
+채팅 옵션 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>UpdateChatOption(chatOption)</code></summary>
+
+채팅 옵션 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>ReportSpammer(targetName, message, chatType)</code></summary>
+
+ReportSpammer 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>GetChatChannelInfo(chatType)</code></summary>
+
+채팅 Channel 정보 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>UseMegaphone()</code></summary>
+
+Megaphone 사용을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>GetMegaphoneChannelInfos()</code></summary>
+
+Megaphone Channel Infos 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>SetMegaphoneWarningMsgState()</code></summary>
+
+Megaphone Warning Msg 상태 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>GetUrlTextAddr()</code></summary>
+
+Url 텍스트 Addr 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>SetUrlTextAddr(text, addr)</code></summary>
+
+Url 텍스트 Addr 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>IsEnableChatChannel(chatType)</code></summary>
+
+Enable 채팅 Channel 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>GetChatIcon(chatIconKind)</code></summary>
+
+채팅 Icon 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetChatIconKind(charId, chatType)</code></summary>
+
+채팅 Icon Kind 정보를 조회합니다.
+
+</details>
 
 ## ⚠️ 전역 상수/값
 
+
 > 전역값은 읽기용 상수로 취급하는 것을 권장합니다. 값을 변경할 수 있는지는 보장되지 않습니다.
 
-| 이름 | 한국어 설명 | 상태 |
-|---|---|---|
-| `QMS_GIVE_MAIN` | QMS_GIVE_MAIN 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `QMS_GIVE_SAGA` | QMS_GIVE_SAGA 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `QMS_GIVE_NORMAL` | QMS_GIVE_NORMAL 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `QMS_GIVE_REPEAT` | QMS_GIVE_REPEAT 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `QMS_CHECKPOINT` | QMS_CHECKPOINT 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `QMS_PROGRESS` | QMS_PROGRESS 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `QMS_READY_MAIN` | QMS_READY_MAIN 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `QMS_READY_SAGA` | QMS_READY_SAGA 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `QMS_READY_NORMAL` | QMS_READY_NORMAL 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `QMS_OVER_DONE` | QMS_OVER_DONE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `QMS_LET_IT_DONE` | QMS_LET_IT_DONE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CHAT_INVALID` | CHAT_INVALID 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CHAT_REPLYWHISPER` | CHAT_REPLYWHISPER 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CHAT_WHISPERED` | CHAT_WHISPERED 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CHAT_WHISPER` | CHAT_WHISPER 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CHAT_DAILY_MSG` | CHAT_DAILY_MSG 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CHAT_NOTICE` | CHAT_NOTICE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CHAT_SAY` | CHAT_SAY 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CHAT_ZONE` | CHAT_ZONE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CHAT_TRADE` | CHAT_TRADE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CHAT_FIND_PARTY` | CHAT_FIND_PARTY 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CHAT_PARTY` | CHAT_PARTY 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CHAT_RAID` | CHAT_RAID 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CHAT_FACTION` | CHAT_FACTION 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CHAT_EXPEDITION` | CHAT_EXPEDITION 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CHAT_SYSTEM` | CHAT_SYSTEM 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CHAT_FAMILY` | CHAT_FAMILY 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CHAT_RAID_COMMAND` | CHAT_RAID_COMMAND 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CHAT_TRIAL` | CHAT_TRIAL 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CHAT_GM_LISTEN` | CHAT_GM_LISTEN 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CHAT_PLAY_MUSIC` | CHAT_PLAY_MUSIC 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CHAT_RACE` | CHAT_RACE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CHAT_BIG_MEGAPHONE` | CHAT_BIG_MEGAPHONE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CHAT_SMALL_MEGAPHONE` | CHAT_SMALL_MEGAPHONE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CHAT_SQUAD` | CHAT_SQUAD 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CHAT_ALL_SERVER` | CHAT_ALL_SERVER 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CHAT_LOCALE_SERVER` | CHAT_LOCALE_SERVER 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CHAT_USER` | CHAT_USER 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_NONE` | CMF_NONE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_BEGIN_USE` | 채팅 채널, 메시지, 링크와 채팅 설정을 다룹니다. 사용을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_SAY` | CMF_SAY 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_WHISPER` | CMF_WHISPER 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_PARTY` | CMF_PARTY 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_RAID` | CMF_RAID 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_RAID_COMMAND` | CMF_RAID_COMMAND 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_TRIAL` | CMF_TRIAL 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_COMMUNITY` | CMF_COMMUNITY 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_EXPEDITION` | CMF_EXPEDITION 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_FAMILY` | CMF_FAMILY 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_FACTION` | CMF_FACTION 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_ZONE` | CMF_ZONE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_TRADE` | CMF_TRADE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_FIND_PARTY` | CMF_FIND_PARTY 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_NOTICE` | CMF_NOTICE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_SYSTEM` | CMF_SYSTEM 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_CHANNEL_INFO` | CMF_CHANNEL_INFO 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_COMBAT_SRC_GROUP` | CMF_COMBAT_SRC_GROUP 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_COMBAT_DST_GROUP` | CMF_COMBAT_DST_GROUP 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_COMBAT_SRC_SELF` | CMF_COMBAT_SRC_SELF 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_COMBAT_SRC_OTHER` | CMF_COMBAT_SRC_OTHER 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_COMBAT_DST_SELF` | CMF_COMBAT_DST_SELF 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_COMBAT_DST_OTHER` | CMF_COMBAT_DST_OTHER 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_COMBAT_MELEE_GROUP` | CMF_COMBAT_MELEE_GROUP 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_COMBAT_MELEE_DAMAGE` | CMF_COMBAT_MELEE_DAMAGE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_COMBAT_MELEE_MISSED` | CMF_COMBAT_MELEE_MISSED 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_COMBAT_SPELL_GROUP` | CMF_COMBAT_SPELL_GROUP 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_COMBAT_SPELL_DAMAGE` | CMF_COMBAT_SPELL_DAMAGE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_COMBAT_SPELL_MISSED` | CMF_COMBAT_SPELL_MISSED 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_COMBAT_SPELL_HEALED` | CMF_COMBAT_SPELL_HEALED 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_COMBAT_SPELL_ENERGIZE` | CMF_COMBAT_SPELL_ENERGIZE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_COMBAT_SPELL_CAST` | CMF_COMBAT_SPELL_CAST 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_COMBAT_SPELL_AURA` | CMF_COMBAT_SPELL_AURA 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_COMBAT_ENVIRONMENTAL_DMANAGE` | CMF_COMBAT_ENVIRONMENTAL_DMANAGE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_COMBAT_DEAD` | CMF_COMBAT_DEAD 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_SELF_SKILL_INFO` | CMF_SELF_SKILL_INFO 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_ADDED_ITEM_GROUP` | CMF_ADDED_ITEM_GROUP 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_ADDED_ITEM_SELF` | CMF_ADDED_ITEM_SELF 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_ADDED_ITEM_TEAM` | CMF_ADDED_ITEM_TEAM 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_ACQ_CONSUME_GROUP` | CMF_ACQ_CONSUME_GROUP 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_LOOT_METHOD_CHANGED` | CMF_LOOT_METHOD_CHANGED 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_SELF_MONEY_CHANGED` | CMF_SELF_MONEY_CHANGED 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_SELF_HONOR_POINT_CHANGED` | CMF_SELF_HONOR_POINT_CHANGED 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_SELF_LIVING_POINT_CHANGED` | CMF_SELF_LIVING_POINT_CHANGED 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_SELF_CONTRIBUTION_POINT_CHANGED` | CMF_SELF_CONTRIBUTION_POINT_CHANGED 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_SELF_LEADERSHIP_POINT_CHANGED` | CMF_SELF_LEADERSHIP_POINT_CHANGED 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_PARTY_AND_RAID_INFO` | CMF_PARTY_AND_RAID_INFO 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_DOMINION_AND_SIEGE_INFO` | CMF_DOMINION_AND_SIEGE_INFO 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_TRADE_STORE_MSG` | CMF_TRADE_STORE_MSG 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_BEHAVIOR_RESULT` | CMF_BEHAVIOR_RESULT 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_QUEST_INFO` | CMF_QUEST_INFO 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_EMOTIOIN_EXPRESS` | CMF_EMOTIOIN_EXPRESS 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_ETC_GROUP` | CMF_ETC_GROUP 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_PLAY_MUSIC` | CMF_PLAY_MUSIC 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_RACE` | CMF_RACE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_HERO_SEASON_UPDATED` | CMF_HERO_SEASON_UPDATED 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_BIG_MEGAPHONE` | CMF_BIG_MEGAPHONE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_SMALL_MEGAPHONE` | CMF_SMALL_MEGAPHONE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_SQUAD` | CMF_SQUAD 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_END_USE` | 채팅 채널, 메시지, 링크와 채팅 설정을 다룹니다. 사용을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_OTHER_CONTINENT` | CMF_OTHER_CONTINENT 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_ALL_SERVER` | CMF_ALL_SERVER 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_LOCALE_SERVER` | CMF_LOCALE_SERVER 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_CONNECT_ALERT` | CMF_CONNECT_ALERT 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_CONNECT_FRIEND` | CMF_CONNECT_FRIEND 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_CONNECT_FAMILY` | CMF_CONNECT_FAMILY 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_CONNECT_EXPEDITION` | CMF_CONNECT_EXPEDITION 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_KO` | CMF_KO 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_EN_US` | CMF_EN_US 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_ZH_CN` | CMF_ZH_CN 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_JA` | CMF_JA 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_RU` | CMF_RU 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_ZH_TW` | CMF_ZH_TW 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_DE` | CMF_DE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_FR` | CMF_FR 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_TH` | CMF_TH 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_IND` | CMF_IND 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_EN_SG` | CMF_EN_SG 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_LANG_BEGIN` | CMF_LANG_BEGIN 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMF_LANG_END` | CMF_LANG_END 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `COLLISION_PART_FRONT` | COLLISION_PART_FRONT 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `COLLISION_PART_SIDE` | COLLISION_PART_SIDE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `COLLISION_PART_REAR` | COLLISION_PART_REAR 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `COLLISION_PART_BOTTOM` | COLLISION_PART_BOTTOM 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `COLLISION_PART_TOP` | COLLISION_PART_TOP 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `LOCALE_INVALID` | LOCALE_INVALID 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `LOCALE_KO` | LOCALE_KO 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `LOCALE_ZH_CN` | LOCALE_ZH_CN 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `LOCALE_EN_US` | LOCALE_EN_US 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `LOCALE_JA` | LOCALE_JA 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `LOCALE_ZH_TW` | LOCALE_ZH_TW 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `LOCALE_RU` | LOCALE_RU 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `LOCALE_DE` | LOCALE_DE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `LOCALE_FR` | LOCALE_FR 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `LOCALE_TH` | LOCALE_TH 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `LOCALE_IND` | LOCALE_IND 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `LOCALE_EN_SG` | LOCALE_EN_SG 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CIK_DEFAULT` | CIK_DEFAULT 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMSP_LEFT` | CMSP_LEFT 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `CMSP_RIGHT` | CMSP_RIGHT 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
+- <code>QMS_GIVE_MAIN</code> — QMS_GIVE_MAIN 관련 기능을 수행합니다.
+- <code>QMS_GIVE_SAGA</code> — QMS_GIVE_SAGA 관련 기능을 수행합니다.
+- <code>QMS_GIVE_NORMAL</code> — QMS_GIVE_NORMAL 관련 기능을 수행합니다.
+- <code>QMS_GIVE_REPEAT</code> — QMS_GIVE_REPEAT 관련 기능을 수행합니다.
+- <code>QMS_CHECKPOINT</code> — QMS_CHECKPOINT 관련 기능을 수행합니다.
+- <code>QMS_PROGRESS</code> — QMS_PROGRESS 관련 기능을 수행합니다.
+- <code>QMS_READY_MAIN</code> — QMS_READY_MAIN 관련 기능을 수행합니다.
+- <code>QMS_READY_SAGA</code> — QMS_READY_SAGA 관련 기능을 수행합니다.
+- <code>QMS_READY_NORMAL</code> — QMS_READY_NORMAL 관련 기능을 수행합니다.
+- <code>QMS_OVER_DONE</code> — QMS_OVER_DONE 관련 기능을 수행합니다.
+- <code>QMS_LET_IT_DONE</code> — QMS_LET_IT_DONE 관련 기능을 수행합니다.
+- <code>CHAT_INVALID</code> — CHAT_INVALID 관련 기능을 수행합니다.
+- <code>CHAT_REPLYWHISPER</code> — CHAT_REPLYWHISPER 관련 기능을 수행합니다.
+- <code>CHAT_WHISPERED</code> — CHAT_WHISPERED 관련 기능을 수행합니다.
+- <code>CHAT_WHISPER</code> — CHAT_WHISPER 관련 기능을 수행합니다.
+- <code>CHAT_DAILY_MSG</code> — CHAT_DAILY_MSG 관련 기능을 수행합니다.
+- <code>CHAT_NOTICE</code> — CHAT_NOTICE 관련 기능을 수행합니다.
+- <code>CHAT_SAY</code> — CHAT_SAY 관련 기능을 수행합니다.
+- <code>CHAT_ZONE</code> — CHAT_ZONE 관련 기능을 수행합니다.
+- <code>CHAT_TRADE</code> — CHAT_TRADE 관련 기능을 수행합니다.
+- <code>CHAT_FIND_PARTY</code> — CHAT_FIND_PARTY 관련 기능을 수행합니다.
+- <code>CHAT_PARTY</code> — CHAT_PARTY 관련 기능을 수행합니다.
+- <code>CHAT_RAID</code> — CHAT_RAID 관련 기능을 수행합니다.
+- <code>CHAT_FACTION</code> — CHAT_FACTION 관련 기능을 수행합니다.
+- <code>CHAT_EXPEDITION</code> — CHAT_EXPEDITION 관련 기능을 수행합니다.
+- <code>CHAT_SYSTEM</code> — CHAT_SYSTEM 관련 기능을 수행합니다.
+- <code>CHAT_FAMILY</code> — CHAT_FAMILY 관련 기능을 수행합니다.
+- <code>CHAT_RAID_COMMAND</code> — CHAT_RAID_COMMAND 관련 기능을 수행합니다.
+- <code>CHAT_TRIAL</code> — CHAT_TRIAL 관련 기능을 수행합니다.
+- <code>CHAT_GM_LISTEN</code> — CHAT_GM_LISTEN 관련 기능을 수행합니다.
+- <code>CHAT_PLAY_MUSIC</code> — CHAT_PLAY_MUSIC 관련 기능을 수행합니다.
+- <code>CHAT_RACE</code> — CHAT_RACE 관련 기능을 수행합니다.
+- <code>CHAT_BIG_MEGAPHONE</code> — CHAT_BIG_MEGAPHONE 관련 기능을 수행합니다.
+- <code>CHAT_SMALL_MEGAPHONE</code> — CHAT_SMALL_MEGAPHONE 관련 기능을 수행합니다.
+- <code>CHAT_SQUAD</code> — CHAT_SQUAD 관련 기능을 수행합니다.
+- <code>CHAT_ALL_SERVER</code> — CHAT_ALL_SERVER 관련 기능을 수행합니다.
+- <code>CHAT_LOCALE_SERVER</code> — CHAT_LOCALE_SERVER 관련 기능을 수행합니다.
+- <code>CHAT_USER</code> — CHAT_USER 관련 기능을 수행합니다.
+- <code>CMF_NONE</code> — CMF_NONE 관련 기능을 수행합니다.
+- <code>CMF_BEGIN_USE</code> — 채팅 채널, 메시지, 링크와 채팅 설정을 다룹니다. 사용을 수행합니다.
+- <code>CMF_SAY</code> — CMF_SAY 관련 기능을 수행합니다.
+- <code>CMF_WHISPER</code> — CMF_WHISPER 관련 기능을 수행합니다.
+- <code>CMF_PARTY</code> — CMF_PARTY 관련 기능을 수행합니다.
+- <code>CMF_RAID</code> — CMF_RAID 관련 기능을 수행합니다.
+- <code>CMF_RAID_COMMAND</code> — CMF_RAID_COMMAND 관련 기능을 수행합니다.
+- <code>CMF_TRIAL</code> — CMF_TRIAL 관련 기능을 수행합니다.
+- <code>CMF_COMMUNITY</code> — CMF_COMMUNITY 관련 기능을 수행합니다.
+- <code>CMF_EXPEDITION</code> — CMF_EXPEDITION 관련 기능을 수행합니다.
+- <code>CMF_FAMILY</code> — CMF_FAMILY 관련 기능을 수행합니다.
+- <code>CMF_FACTION</code> — CMF_FACTION 관련 기능을 수행합니다.
+- <code>CMF_ZONE</code> — CMF_ZONE 관련 기능을 수행합니다.
+- <code>CMF_TRADE</code> — CMF_TRADE 관련 기능을 수행합니다.
+- <code>CMF_FIND_PARTY</code> — CMF_FIND_PARTY 관련 기능을 수행합니다.
+- <code>CMF_NOTICE</code> — CMF_NOTICE 관련 기능을 수행합니다.
+- <code>CMF_SYSTEM</code> — CMF_SYSTEM 관련 기능을 수행합니다.
+- <code>CMF_CHANNEL_INFO</code> — CMF_CHANNEL_INFO 관련 기능을 수행합니다.
+- <code>CMF_COMBAT_SRC_GROUP</code> — CMF_COMBAT_SRC_GROUP 관련 기능을 수행합니다.
+- <code>CMF_COMBAT_DST_GROUP</code> — CMF_COMBAT_DST_GROUP 관련 기능을 수행합니다.
+- <code>CMF_COMBAT_SRC_SELF</code> — CMF_COMBAT_SRC_SELF 관련 기능을 수행합니다.
+- <code>CMF_COMBAT_SRC_OTHER</code> — CMF_COMBAT_SRC_OTHER 관련 기능을 수행합니다.
+- <code>CMF_COMBAT_DST_SELF</code> — CMF_COMBAT_DST_SELF 관련 기능을 수행합니다.
+- <code>CMF_COMBAT_DST_OTHER</code> — CMF_COMBAT_DST_OTHER 관련 기능을 수행합니다.
+- <code>CMF_COMBAT_MELEE_GROUP</code> — CMF_COMBAT_MELEE_GROUP 관련 기능을 수행합니다.
+- <code>CMF_COMBAT_MELEE_DAMAGE</code> — CMF_COMBAT_MELEE_DAMAGE 관련 기능을 수행합니다.
+- <code>CMF_COMBAT_MELEE_MISSED</code> — CMF_COMBAT_MELEE_MISSED 관련 기능을 수행합니다.
+- <code>CMF_COMBAT_SPELL_GROUP</code> — CMF_COMBAT_SPELL_GROUP 관련 기능을 수행합니다.
+- <code>CMF_COMBAT_SPELL_DAMAGE</code> — CMF_COMBAT_SPELL_DAMAGE 관련 기능을 수행합니다.
+- <code>CMF_COMBAT_SPELL_MISSED</code> — CMF_COMBAT_SPELL_MISSED 관련 기능을 수행합니다.
+- <code>CMF_COMBAT_SPELL_HEALED</code> — CMF_COMBAT_SPELL_HEALED 관련 기능을 수행합니다.
+- <code>CMF_COMBAT_SPELL_ENERGIZE</code> — CMF_COMBAT_SPELL_ENERGIZE 관련 기능을 수행합니다.
+- <code>CMF_COMBAT_SPELL_CAST</code> — CMF_COMBAT_SPELL_CAST 관련 기능을 수행합니다.
+- <code>CMF_COMBAT_SPELL_AURA</code> — CMF_COMBAT_SPELL_AURA 관련 기능을 수행합니다.
+- <code>CMF_COMBAT_ENVIRONMENTAL_DMANAGE</code> — CMF_COMBAT_ENVIRONMENTAL_DMANAGE 관련 기능을 수행합니다.
+- <code>CMF_COMBAT_DEAD</code> — CMF_COMBAT_DEAD 관련 기능을 수행합니다.
+- <code>CMF_SELF_SKILL_INFO</code> — CMF_SELF_SKILL_INFO 관련 기능을 수행합니다.
+- <code>CMF_ADDED_ITEM_GROUP</code> — CMF_ADDED_ITEM_GROUP 관련 기능을 수행합니다.
+- <code>CMF_ADDED_ITEM_SELF</code> — CMF_ADDED_ITEM_SELF 관련 기능을 수행합니다.
+- <code>CMF_ADDED_ITEM_TEAM</code> — CMF_ADDED_ITEM_TEAM 관련 기능을 수행합니다.
+- <code>CMF_ACQ_CONSUME_GROUP</code> — CMF_ACQ_CONSUME_GROUP 관련 기능을 수행합니다.
+- <code>CMF_LOOT_METHOD_CHANGED</code> — CMF_LOOT_METHOD_CHANGED 관련 기능을 수행합니다.
+- <code>CMF_SELF_MONEY_CHANGED</code> — CMF_SELF_MONEY_CHANGED 관련 기능을 수행합니다.
+- <code>CMF_SELF_HONOR_POINT_CHANGED</code> — CMF_SELF_HONOR_POINT_CHANGED 관련 기능을 수행합니다.
+- <code>CMF_SELF_LIVING_POINT_CHANGED</code> — CMF_SELF_LIVING_POINT_CHANGED 관련 기능을 수행합니다.
+- <code>CMF_SELF_CONTRIBUTION_POINT_CHANGED</code> — CMF_SELF_CONTRIBUTION_POINT_CHANGED 관련 기능을 수행합니다.
+- <code>CMF_SELF_LEADERSHIP_POINT_CHANGED</code> — CMF_SELF_LEADERSHIP_POINT_CHANGED 관련 기능을 수행합니다.
+- <code>CMF_PARTY_AND_RAID_INFO</code> — CMF_PARTY_AND_RAID_INFO 관련 기능을 수행합니다.
+- <code>CMF_DOMINION_AND_SIEGE_INFO</code> — CMF_DOMINION_AND_SIEGE_INFO 관련 기능을 수행합니다.
+- <code>CMF_TRADE_STORE_MSG</code> — CMF_TRADE_STORE_MSG 관련 기능을 수행합니다.
+- <code>CMF_BEHAVIOR_RESULT</code> — CMF_BEHAVIOR_RESULT 관련 기능을 수행합니다.
+- <code>CMF_QUEST_INFO</code> — CMF_QUEST_INFO 관련 기능을 수행합니다.
+- <code>CMF_EMOTIOIN_EXPRESS</code> — CMF_EMOTIOIN_EXPRESS 관련 기능을 수행합니다.
+- <code>CMF_ETC_GROUP</code> — CMF_ETC_GROUP 관련 기능을 수행합니다.
+- <code>CMF_PLAY_MUSIC</code> — CMF_PLAY_MUSIC 관련 기능을 수행합니다.
+- <code>CMF_RACE</code> — CMF_RACE 관련 기능을 수행합니다.
+- <code>CMF_HERO_SEASON_UPDATED</code> — CMF_HERO_SEASON_UPDATED 관련 기능을 수행합니다.
+- <code>CMF_BIG_MEGAPHONE</code> — CMF_BIG_MEGAPHONE 관련 기능을 수행합니다.
+- <code>CMF_SMALL_MEGAPHONE</code> — CMF_SMALL_MEGAPHONE 관련 기능을 수행합니다.
+- <code>CMF_SQUAD</code> — CMF_SQUAD 관련 기능을 수행합니다.
+- <code>CMF_END_USE</code> — 채팅 채널, 메시지, 링크와 채팅 설정을 다룹니다. 사용을 수행합니다.
+- <code>CMF_OTHER_CONTINENT</code> — CMF_OTHER_CONTINENT 관련 기능을 수행합니다.
+- <code>CMF_ALL_SERVER</code> — CMF_ALL_SERVER 관련 기능을 수행합니다.
+- <code>CMF_LOCALE_SERVER</code> — CMF_LOCALE_SERVER 관련 기능을 수행합니다.
+- <code>CMF_CONNECT_ALERT</code> — CMF_CONNECT_ALERT 관련 기능을 수행합니다.
+- <code>CMF_CONNECT_FRIEND</code> — CMF_CONNECT_FRIEND 관련 기능을 수행합니다.
+- <code>CMF_CONNECT_FAMILY</code> — CMF_CONNECT_FAMILY 관련 기능을 수행합니다.
+- <code>CMF_CONNECT_EXPEDITION</code> — CMF_CONNECT_EXPEDITION 관련 기능을 수행합니다.
+- <code>CMF_KO</code> — CMF_KO 관련 기능을 수행합니다.
+- <code>CMF_EN_US</code> — CMF_EN_US 관련 기능을 수행합니다.
+- <code>CMF_ZH_CN</code> — CMF_ZH_CN 관련 기능을 수행합니다.
+- <code>CMF_JA</code> — CMF_JA 관련 기능을 수행합니다.
+- <code>CMF_RU</code> — CMF_RU 관련 기능을 수행합니다.
+- <code>CMF_ZH_TW</code> — CMF_ZH_TW 관련 기능을 수행합니다.
+- <code>CMF_DE</code> — CMF_DE 관련 기능을 수행합니다.
+- <code>CMF_FR</code> — CMF_FR 관련 기능을 수행합니다.
+- <code>CMF_TH</code> — CMF_TH 관련 기능을 수행합니다.
+- <code>CMF_IND</code> — CMF_IND 관련 기능을 수행합니다.
+- <code>CMF_EN_SG</code> — CMF_EN_SG 관련 기능을 수행합니다.
+- <code>CMF_LANG_BEGIN</code> — CMF_LANG_BEGIN 관련 기능을 수행합니다.
+- <code>CMF_LANG_END</code> — CMF_LANG_END 관련 기능을 수행합니다.
+- <code>COLLISION_PART_FRONT</code> — COLLISION_PART_FRONT 관련 기능을 수행합니다.
+- <code>COLLISION_PART_SIDE</code> — COLLISION_PART_SIDE 관련 기능을 수행합니다.
+- <code>COLLISION_PART_REAR</code> — COLLISION_PART_REAR 관련 기능을 수행합니다.
+- <code>COLLISION_PART_BOTTOM</code> — COLLISION_PART_BOTTOM 관련 기능을 수행합니다.
+- <code>COLLISION_PART_TOP</code> — COLLISION_PART_TOP 관련 기능을 수행합니다.
+- <code>LOCALE_INVALID</code> — LOCALE_INVALID 관련 기능을 수행합니다.
+- <code>LOCALE_KO</code> — LOCALE_KO 관련 기능을 수행합니다.
+- <code>LOCALE_ZH_CN</code> — LOCALE_ZH_CN 관련 기능을 수행합니다.
+- <code>LOCALE_EN_US</code> — LOCALE_EN_US 관련 기능을 수행합니다.
+- <code>LOCALE_JA</code> — LOCALE_JA 관련 기능을 수행합니다.
+- <code>LOCALE_ZH_TW</code> — LOCALE_ZH_TW 관련 기능을 수행합니다.
+- <code>LOCALE_RU</code> — LOCALE_RU 관련 기능을 수행합니다.
+- <code>LOCALE_DE</code> — LOCALE_DE 관련 기능을 수행합니다.
+- <code>LOCALE_FR</code> — LOCALE_FR 관련 기능을 수행합니다.
+- <code>LOCALE_TH</code> — LOCALE_TH 관련 기능을 수행합니다.
+- <code>LOCALE_IND</code> — LOCALE_IND 관련 기능을 수행합니다.
+- <code>LOCALE_EN_SG</code> — LOCALE_EN_SG 관련 기능을 수행합니다.
+- <code>CIK_DEFAULT</code> — CIK_DEFAULT 관련 기능을 수행합니다.
+- <code>CMSP_LEFT</code> — CMSP_LEFT 관련 기능을 수행합니다.
+- <code>CMSP_RIGHT</code> — CMSP_RIGHT 관련 기능을 수행합니다.

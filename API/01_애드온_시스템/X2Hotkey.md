@@ -10,44 +10,248 @@
 
 ## ✅ 사용 가능
 
-| API | 한국어 설명 | 제약/주의 |
-|---|---|---|
-| `SaveHotKey()` | Hot Key 데이터를 저장합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `BindingToOption()` | BindingToOption 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `OptionToBinding()` | OptionToBinding 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetOptionBinding(action, index, option, arg)` | 옵션 Binding 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetOptionBindingButton(buttonName, index)` | 옵션 Binding 버튼 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetOptionBindingButtonWithIndex(buttonName, key)` | 옵션 Binding 버튼 With 인덱스 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetOptionBindingWithIndex(action, key, index, arg)` | 옵션 Binding With 인덱스 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `EnableHotkey(enable)` | 단축키 기능을 시작하거나 활성화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `IsValidActionName(action)` | Valid 행동 이름 여부를 확인합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `IsOverridableAction(action)` | Overridable 행동 여부를 확인합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetBindingUiEvent(actionName, index)` | Binding UI 이벤트 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetBindingUiEvent(actionName, key)` | Binding UI 이벤트 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetBindingUiEventWithIndex(actionName, key, index)` | Binding UI 이벤트 With 인덱스 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetOptionBindingUiEvent(actionName, index)` | 옵션 Binding UI 이벤트 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetOptionBindingUiEvent(actionName, key)` | 옵션 Binding UI 이벤트 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetOptionBindingUiEventWithIndex(actionName, key)` | 옵션 Binding UI 이벤트 With 인덱스 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
+함수 이름을 눌러 설명과 확인된 제약을 펼칠 수 있습니다. 제약이 확인되지 않은 함수는 제약 항목을 표시하지 않습니다.
+
+
+<details>
+<summary><code>SaveHotKey()</code></summary>
+
+Hot Key 데이터를 저장합니다.
+
+</details>
+
+<details>
+<summary><code>BindingToOption()</code></summary>
+
+BindingToOption 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>OptionToBinding()</code></summary>
+
+OptionToBinding 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>GetOptionBinding(action, index, option, arg)</code></summary>
+
+옵션 Binding 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetOptionBindingButton(buttonName, index)</code></summary>
+
+옵션 Binding 버튼 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>SetOptionBindingButtonWithIndex(buttonName, key)</code></summary>
+
+옵션 Binding 버튼 With 인덱스 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetOptionBindingWithIndex(action, key, index, arg)</code></summary>
+
+옵션 Binding With 인덱스 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>EnableHotkey(enable)</code></summary>
+
+단축키 기능을 시작하거나 활성화합니다.
+
+</details>
+
+<details>
+<summary><code>IsValidActionName(action)</code></summary>
+
+Valid 행동 이름 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>IsOverridableAction(action)</code></summary>
+
+Overridable 행동 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>GetBindingUiEvent(actionName, index)</code></summary>
+
+Binding UI 이벤트 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>SetBindingUiEvent(actionName, key)</code></summary>
+
+Binding UI 이벤트 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetBindingUiEventWithIndex(actionName, key, index)</code></summary>
+
+Binding UI 이벤트 With 인덱스 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>GetOptionBindingUiEvent(actionName, index)</code></summary>
+
+옵션 Binding UI 이벤트 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>SetOptionBindingUiEvent(actionName, key)</code></summary>
+
+옵션 Binding UI 이벤트 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetOptionBindingUiEventWithIndex(actionName, key)</code></summary>
+
+옵션 Binding UI 이벤트 With 인덱스 값을 설정하거나 변경합니다.
+
+</details>
 
 ## ⛔ 애드온 사용 불가
 
-| API | 한국어 설명 | 사용 불가 근거 |
-|---|---|---|
-| `InitOptionHotKey()` | InitOptionHotKey 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `RemoveOptionBinding(action, index, arg)` | 옵션 Binding 항목을 제거하거나 초기화합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetBinding(action, index)` | Binding 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetBindingSpell(spellName, index)` | Binding Spell 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetBindingButton(buttonName, index)` | Binding 버튼 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `SetBinding(action, key)` | Binding 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `SetOptionBinding(action, key)` | 옵션 Binding 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `SetBindingSpell(spellName, key)` | Binding Spell 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `SetBindingButton(buttonName, key)` | Binding 버튼 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `SetOptionBindingButton(buttonName, key)` | 옵션 Binding 버튼 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `SetBindingItem(itemName, key)` | Binding 아이템 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `SetTemporaryBindingButton(buttonName, key)` | Temporary Binding 버튼 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetTemporaryBindingButton(buttonName, index)` | Temporary Binding 버튼 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `SetBindingWithIndex(action, key, index)` | Binding With 인덱스 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `SetBindingSpellWithIndex(spellName, key, index)` | Binding Spell With 인덱스 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `SetBindingButtonWithIndex(buttonName, key, index)` | Binding 버튼 With 인덱스 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `SetBindingItemWithIndex(itemName, key, index)` | Binding 아이템 With 인덱스 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `ExcuteActionHandler(action)` | ExcuteActionHandler 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
+아래 함수는 클라이언트에 이름이 노출되어 있지만 애드온 호출 허용 목록에는 포함되지 않습니다.
+
+
+<details>
+<summary><code>InitOptionHotKey()</code></summary>
+
+InitOptionHotKey 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>RemoveOptionBinding(action, index, arg)</code></summary>
+
+옵션 Binding 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>GetBinding(action, index)</code></summary>
+
+Binding 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetBindingSpell(spellName, index)</code></summary>
+
+Binding Spell 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetBindingButton(buttonName, index)</code></summary>
+
+Binding 버튼 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>SetBinding(action, key)</code></summary>
+
+Binding 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetOptionBinding(action, key)</code></summary>
+
+옵션 Binding 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetBindingSpell(spellName, key)</code></summary>
+
+Binding Spell 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetBindingButton(buttonName, key)</code></summary>
+
+Binding 버튼 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetOptionBindingButton(buttonName, key)</code></summary>
+
+옵션 Binding 버튼 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetBindingItem(itemName, key)</code></summary>
+
+Binding 아이템 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetTemporaryBindingButton(buttonName, key)</code></summary>
+
+Temporary Binding 버튼 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>GetTemporaryBindingButton(buttonName, index)</code></summary>
+
+Temporary Binding 버튼 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>SetBindingWithIndex(action, key, index)</code></summary>
+
+Binding With 인덱스 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetBindingSpellWithIndex(spellName, key, index)</code></summary>
+
+Binding Spell With 인덱스 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetBindingButtonWithIndex(buttonName, key, index)</code></summary>
+
+Binding 버튼 With 인덱스 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetBindingItemWithIndex(itemName, key, index)</code></summary>
+
+Binding 아이템 With 인덱스 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>ExcuteActionHandler(action)</code></summary>
+
+ExcuteActionHandler 관련 기능을 수행합니다.
+
+</details>

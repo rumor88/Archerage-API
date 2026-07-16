@@ -10,9 +10,33 @@
 
 ## ⛔ 애드온 사용 불가
 
-| API | 한국어 설명 | 사용 불가 근거 |
-|---|---|---|
-| `IsBaseEquipment(itemSlot)` | Base 장비 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `IsRenewableEquipment(itemSlot)` | Renewable 장비 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `IsRenewableItem(sourceItemSlot, targetItemSlot)` | Renewable 아이템 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `Renew(sourceItemSlot, targetItemSlot, skillType)` | Renew 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
+아래 함수는 클라이언트에 이름이 노출되어 있지만 애드온 호출 허용 목록에는 포함되지 않습니다.
+
+
+<details>
+<summary><code>IsBaseEquipment(itemSlot)</code></summary>
+
+Base 장비 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>IsRenewableEquipment(itemSlot)</code></summary>
+
+Renewable 장비 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>IsRenewableItem(sourceItemSlot, targetItemSlot)</code></summary>
+
+Renewable 아이템 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>Renew(sourceItemSlot, targetItemSlot, skillType)</code></summary>
+
+Renew 관련 기능을 수행합니다.
+
+</details>

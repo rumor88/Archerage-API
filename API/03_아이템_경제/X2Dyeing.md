@@ -10,9 +10,33 @@
 
 ## ⛔ 애드온 사용 불가
 
-| API | 한국어 설명 | 사용 불가 근거 |
-|---|---|---|
-| `GetInfo()` | 정보 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `DyeSample(r, g, b)` | DyeSample 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `Execute()` | Execute 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `Leave()` | 염색 정보와 색상 적용 기능을 다룹니다. 기능을 중지하거나 비활성화합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
+아래 함수는 클라이언트에 이름이 노출되어 있지만 애드온 호출 허용 목록에는 포함되지 않습니다.
+
+
+<details>
+<summary><code>GetInfo()</code></summary>
+
+정보 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>DyeSample(r, g, b)</code></summary>
+
+DyeSample 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>Execute()</code></summary>
+
+Execute 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>Leave()</code></summary>
+
+염색 정보와 색상 적용 기능을 다룹니다. 기능을 중지하거나 비활성화합니다.
+
+</details>

@@ -10,7 +10,19 @@
 
 ## ⛔ 애드온 사용 불가
 
-| API | 한국어 설명 | 사용 불가 근거 |
-|---|---|---|
-| `SetDoneTutorial(id)` | Done Tutorial 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetUiAviTable()` | UI Avi Table 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
+아래 함수는 클라이언트에 이름이 노출되어 있지만 애드온 호출 허용 목록에는 포함되지 않습니다.
+
+
+<details>
+<summary><code>SetDoneTutorial(id)</code></summary>
+
+Done Tutorial 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>GetUiAviTable()</code></summary>
+
+UI Avi Table 정보를 조회합니다.
+
+</details>

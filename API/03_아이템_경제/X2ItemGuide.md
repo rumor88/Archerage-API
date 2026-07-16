@@ -10,27 +10,56 @@
 
 ## ⛔ 애드온 사용 불가
 
-| API | 한국어 설명 | 사용 불가 근거 |
-|---|---|---|
-| `GetImpls()` | Impls 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetCategories()` | Categories 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetCategoryInfos(aCategory, bCategory, lootIndex, grade)` | 분류 Infos 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetSpecifiedItems(aCategory, bCategory, equipItemGuideType, grade)` | Specified Items 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetIndunPortalInfo(indunZoneKey)` | Indun Portal 정보 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
+아래 함수는 클라이언트에 이름이 노출되어 있지만 애드온 호출 허용 목록에는 포함되지 않습니다.
+
+
+<details>
+<summary><code>GetImpls()</code></summary>
+
+Impls 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetCategories()</code></summary>
+
+Categories 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetCategoryInfos(aCategory, bCategory, lootIndex, grade)</code></summary>
+
+분류 Infos 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetSpecifiedItems(aCategory, bCategory, equipItemGuideType, grade)</code></summary>
+
+Specified Items 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetIndunPortalInfo(indunZoneKey)</code></summary>
+
+Indun Portal 정보 정보를 조회합니다.
+
+</details>
 
 ## ⚠️ 전역 상수/값
 
+
 > 전역값은 읽기용 상수로 취급하는 것을 권장합니다. 값을 변경할 수 있는지는 보장되지 않습니다.
 
-| 이름 | 한국어 설명 | 상태 |
-|---|---|---|
-| `IGLMC_CRAFT` | IGLMC_CRAFT 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `IGLMC_OTHER_CRAFT` | IGLMC_OTHER_CRAFT 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `IGLMC_INDUN` | IGLMC_INDUN 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `IGLMC_BOSS` | IGLMC_BOSS 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `IGLMC_ETC` | IGLMC_ETC 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `IGLMC_SHOP` | IGLMC_SHOP 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `IGLMC_EVENT` | IGLMC_EVENT 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `IGLMC_INGAME_SHOP` | IGLMC_INGAME_SHOP 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `IGLMC_REBUILDING` | IGLMC_REBUILDING 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `IGLMC_SOCKET_CHANGE` | 아이템 도감과 획득처 정보를 다룹니다. 값을 설정하거나 변경합니다. | ⚠️ 읽기 권장 |
+- <code>IGLMC_CRAFT</code> — IGLMC_CRAFT 관련 기능을 수행합니다.
+- <code>IGLMC_OTHER_CRAFT</code> — IGLMC_OTHER_CRAFT 관련 기능을 수행합니다.
+- <code>IGLMC_INDUN</code> — IGLMC_INDUN 관련 기능을 수행합니다.
+- <code>IGLMC_BOSS</code> — IGLMC_BOSS 관련 기능을 수행합니다.
+- <code>IGLMC_ETC</code> — IGLMC_ETC 관련 기능을 수행합니다.
+- <code>IGLMC_SHOP</code> — IGLMC_SHOP 관련 기능을 수행합니다.
+- <code>IGLMC_EVENT</code> — IGLMC_EVENT 관련 기능을 수행합니다.
+- <code>IGLMC_INGAME_SHOP</code> — IGLMC_INGAME_SHOP 관련 기능을 수행합니다.
+- <code>IGLMC_REBUILDING</code> — IGLMC_REBUILDING 관련 기능을 수행합니다.
+- <code>IGLMC_SOCKET_CHANGE</code> — 아이템 도감과 획득처 정보를 다룹니다. 값을 설정하거나 변경합니다.

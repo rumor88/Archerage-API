@@ -10,44 +10,163 @@
 
 ## ⛔ 애드온 사용 불가
 
-| API | 한국어 설명 | 사용 불가 근거 |
-|---|---|---|
-| `GetRankTabCodes()` | 순위 탭 Codes 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `BuildRankTabInfo(tabCode)` | BuildRankTabInfo 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetRankKind(rankType)` | 순위 Kind 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `IsRankerQueriable(rankType)` | Ranker Queriable 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `IsRankRatingOnly(rankType)` | 순위 Rating Only 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetGamePointDetail(rankType)` | 게임 Point Detail 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `HasRankReward(rankType, divisionId)` | 순위 Reward 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetPersonalData(rankType, divisionId, preSeason)` | Personal 데이터 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetSnapshot(rankType, divisionId)` | Snapshot 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetRewardSnapshot(rankType, divisionId)` | Reward Snapshot 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetRankRewards(rankType, divisionId)` | 순위 Rewards 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetMetaInfo(rankType, divisionId, preSeason)` | Meta 정보 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `RequestSnapshot(rankType, divisionId)` | Snapshot 작업을 요청합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `RequestRewardSnapshot(rankType, divisionId)` | Reward Snapshot 작업을 요청합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `RequestPersonalData(rankType)` | Personal 데이터 작업을 요청합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `RequestRankerAppearance(worldId, charId)` | Ranker Appearance 작업을 요청합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetRankDivisions(rankType, divisionId)` | 순위 Divisions 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetRankRewardDivisions(rankType)` | 순위 Reward Divisions 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetRankSeasonOffDate(rankType)` | 순위 Season Off Date 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetRankSeasonInformation(rankType, preSeason)` | 순위 Season Information 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
+아래 함수는 클라이언트에 이름이 노출되어 있지만 애드온 호출 허용 목록에는 포함되지 않습니다.
+
+
+<details>
+<summary><code>GetRankTabCodes()</code></summary>
+
+순위 탭 Codes 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>BuildRankTabInfo(tabCode)</code></summary>
+
+BuildRankTabInfo 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>GetRankKind(rankType)</code></summary>
+
+순위 Kind 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>IsRankerQueriable(rankType)</code></summary>
+
+Ranker Queriable 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>IsRankRatingOnly(rankType)</code></summary>
+
+순위 Rating Only 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>GetGamePointDetail(rankType)</code></summary>
+
+게임 Point Detail 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>HasRankReward(rankType, divisionId)</code></summary>
+
+순위 Reward 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>GetPersonalData(rankType, divisionId, preSeason)</code></summary>
+
+Personal 데이터 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetSnapshot(rankType, divisionId)</code></summary>
+
+Snapshot 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetRewardSnapshot(rankType, divisionId)</code></summary>
+
+Reward Snapshot 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetRankRewards(rankType, divisionId)</code></summary>
+
+순위 Rewards 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetMetaInfo(rankType, divisionId, preSeason)</code></summary>
+
+Meta 정보 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>RequestSnapshot(rankType, divisionId)</code></summary>
+
+Snapshot 작업을 요청합니다.
+
+</details>
+
+<details>
+<summary><code>RequestRewardSnapshot(rankType, divisionId)</code></summary>
+
+Reward Snapshot 작업을 요청합니다.
+
+</details>
+
+<details>
+<summary><code>RequestPersonalData(rankType)</code></summary>
+
+Personal 데이터 작업을 요청합니다.
+
+</details>
+
+<details>
+<summary><code>RequestRankerAppearance(worldId, charId)</code></summary>
+
+Ranker Appearance 작업을 요청합니다.
+
+</details>
+
+<details>
+<summary><code>GetRankDivisions(rankType, divisionId)</code></summary>
+
+순위 Divisions 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetRankRewardDivisions(rankType)</code></summary>
+
+순위 Reward Divisions 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetRankSeasonOffDate(rankType)</code></summary>
+
+순위 Season Off Date 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetRankSeasonInformation(rankType, preSeason)</code></summary>
+
+순위 Season Information 정보를 조회합니다.
+
+</details>
 
 ## ⚠️ 전역 상수/값
 
+
 > 전역값은 읽기용 상수로 취급하는 것을 권장합니다. 값을 변경할 수 있는지는 보장되지 않습니다.
 
-| 이름 | 한국어 설명 | 상태 |
-|---|---|---|
-| `RK_FISHING_SUM` | RK_FISHING_SUM 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `RK_FISHING_TOP` | RK_FISHING_TOP 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `RK_GOODS_VALUE` | RK_GOODS_VALUE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `RK_CHARACTER_GEAR_SCORE` | RK_CHARACTER_GEAR_SCORE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `RK_ITEM_SCORE` | RK_ITEM_SCORE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `RK_INSTANCE_RATING` | RK_INSTANCE_RATING 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `RK_EXPEDITION_GEAR_SCORE` | RK_EXPEDITION_GEAR_SCORE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `RK_EXPEDITION_BATTLE_RECORD` | RK_EXPEDITION_BATTLE_RECORD 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `RK_HEIR_LEVEL` | RK_HEIR_LEVEL 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `RK_ZONE_SCORE_SUM_BY_QUEST_COMPLETE` | RK_ZONE_SCORE_SUM_BY_QUEST_COMPLETE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `RK_EXPEDITION_INSTANCE_RATING` | RK_EXPEDITION_INSTANCE_RATING 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `RK_GAME_POINTS` | RK_GAME_POINTS 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
+- <code>RK_FISHING_SUM</code> — RK_FISHING_SUM 관련 기능을 수행합니다.
+- <code>RK_FISHING_TOP</code> — RK_FISHING_TOP 관련 기능을 수행합니다.
+- <code>RK_GOODS_VALUE</code> — RK_GOODS_VALUE 관련 기능을 수행합니다.
+- <code>RK_CHARACTER_GEAR_SCORE</code> — RK_CHARACTER_GEAR_SCORE 관련 기능을 수행합니다.
+- <code>RK_ITEM_SCORE</code> — RK_ITEM_SCORE 관련 기능을 수행합니다.
+- <code>RK_INSTANCE_RATING</code> — RK_INSTANCE_RATING 관련 기능을 수행합니다.
+- <code>RK_EXPEDITION_GEAR_SCORE</code> — RK_EXPEDITION_GEAR_SCORE 관련 기능을 수행합니다.
+- <code>RK_EXPEDITION_BATTLE_RECORD</code> — RK_EXPEDITION_BATTLE_RECORD 관련 기능을 수행합니다.
+- <code>RK_HEIR_LEVEL</code> — RK_HEIR_LEVEL 관련 기능을 수행합니다.
+- <code>RK_ZONE_SCORE_SUM_BY_QUEST_COMPLETE</code> — RK_ZONE_SCORE_SUM_BY_QUEST_COMPLETE 관련 기능을 수행합니다.
+- <code>RK_EXPEDITION_INSTANCE_RATING</code> — RK_EXPEDITION_INSTANCE_RATING 관련 기능을 수행합니다.
+- <code>RK_GAME_POINTS</code> — RK_GAME_POINTS 관련 기능을 수행합니다.

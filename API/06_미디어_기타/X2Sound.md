@@ -10,16 +10,52 @@ UI 효과음과 배경 음악 재생을 다룹니다.
 
 ## ✅ 사용 가능
 
-| API | 한국어 설명 | 제약/주의 |
-|---|---|---|
-| `PlayUISound(soundPackItemName)` | UI 소리 기능을 시작하거나 활성화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `IsPlaying(soundId)` | Playing 여부를 확인합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `StopSound(soundId)` | 소리 기능을 중지하거나 비활성화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `PlayMusic(soundPackItemName)` | 음악 기능을 시작하거나 활성화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `StopMusic()` | 음악 기능을 중지하거나 비활성화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
+함수 이름을 눌러 설명과 확인된 제약을 펼칠 수 있습니다. 제약이 확인되지 않은 함수는 제약 항목을 표시하지 않습니다.
+
+
+<details>
+<summary><code>PlayUISound(soundPackItemName)</code></summary>
+
+UI 소리 기능을 시작하거나 활성화합니다.
+
+</details>
+
+<details>
+<summary><code>IsPlaying(soundId)</code></summary>
+
+Playing 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>StopSound(soundId)</code></summary>
+
+소리 기능을 중지하거나 비활성화합니다.
+
+</details>
+
+<details>
+<summary><code>PlayMusic(soundPackItemName)</code></summary>
+
+음악 기능을 시작하거나 활성화합니다.
+
+</details>
+
+<details>
+<summary><code>StopMusic()</code></summary>
+
+음악 기능을 중지하거나 비활성화합니다.
+
+</details>
 
 ## ⛔ 애드온 사용 불가
 
-| API | 한국어 설명 | 사용 불가 근거 |
-|---|---|---|
-| `SetSiegePeriod(enable)` | 공성 Period 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
+아래 함수는 클라이언트에 이름이 노출되어 있지만 애드온 호출 허용 목록에는 포함되지 않습니다.
+
+
+<details>
+<summary><code>SetSiegePeriod(enable)</code></summary>
+
+공성 Period 값을 설정하거나 변경합니다.
+
+</details>

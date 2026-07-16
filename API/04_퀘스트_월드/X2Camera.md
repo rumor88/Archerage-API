@@ -10,8 +10,26 @@
 
 ## ⛔ 애드온 사용 불가
 
-| API | 한국어 설명 | 사용 불가 근거 |
-|---|---|---|
-| `ShakeCamera(shakeInfo)` | ShakeCamera 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `SetUnitCameraAngles(angles)` | 유닛 카메라 Angles 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `IsScreenShotCameraMode()` | Screen Shot 카메라 Mode 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
+아래 함수는 클라이언트에 이름이 노출되어 있지만 애드온 호출 허용 목록에는 포함되지 않습니다.
+
+
+<details>
+<summary><code>ShakeCamera(shakeInfo)</code></summary>
+
+ShakeCamera 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>SetUnitCameraAngles(angles)</code></summary>
+
+유닛 카메라 Angles 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>IsScreenShotCameraMode()</code></summary>
+
+Screen Shot 카메라 Mode 여부를 확인합니다.
+
+</details>

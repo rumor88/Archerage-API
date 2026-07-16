@@ -10,38 +10,236 @@ Edit UI 객체의 속성, 상태와 동작을 제어합니다.
 
 ## ✅ 사용 가능
 
-| API | 한국어 설명 | 제약/주의 |
-|---|---|---|
-| `GetText()` | 텍스트 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetMaxTextLength(length)` | 최대 텍스트 Length 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `ClearTextOnEnter(clear)` | 텍스트 On Enter 항목을 제거하거나 초기화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetPassword(password)` | Password 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetInset(left, top, right, bottom)` | Inset 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `AddHistoryLine(text)` | History Line 항목을 생성하거나 등록합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetHistoryLines(count)` | History Lines 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetDigit(digit)` | Digit 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetDigitEmpty(empty)` | Digit 빈 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetDigitMax(max)` | Digit 최대 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetEnglish(english)` | English 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetText(text)` | 텍스트 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `ClearFocus()` | 포커스 항목을 제거하거나 초기화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetFocus()` | 포커스 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `MaxTextLength()` | MaxTextLength 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `IsPassword()` | Password 여부를 확인합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `IsDigit()` | Digit 여부를 확인합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetCursorOffset(offset)` | Cursor Offset 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetCursorHeight(height)` | Cursor Height 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetCursorColor(r, g, b, a)` | Cursor 색상 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetCursorColorByColorKey(colorKey)` | Cursor 색상 By 색상 Key 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetReadOnly(readOnly)` | Read Only 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetReClickable(click)` | Re Clickable 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetPrefixText(prefixText)` | Prefix 텍스트 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetPrefixInset(left, top, right, bottom)` | Prefix Inset 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `UseSelectAllWhenFocused(use)` | Select All When Focused 사용을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetInitVal(val)` | Init Val 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetPossibleFirstZero(possibleFirstZero)` | Possible 첫 번째 Zero 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetGuideText(text)` | Guide 텍스트 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetGuideTextInset(insetData)` | Guide 텍스트 Inset 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `CheckNamePolicy(nameType)` | 이름 Policy 여부를 확인합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `ClearString()` | String 항목을 제거하거나 초기화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `IsNowComposition()` | Now Composition 여부를 확인합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
+함수 이름을 눌러 설명과 확인된 제약을 펼칠 수 있습니다. 제약이 확인되지 않은 함수는 제약 항목을 표시하지 않습니다.
+
+
+<details>
+<summary><code>GetText()</code></summary>
+
+텍스트 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>SetMaxTextLength(length)</code></summary>
+
+최대 텍스트 Length 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>ClearTextOnEnter(clear)</code></summary>
+
+텍스트 On Enter 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>SetPassword(password)</code></summary>
+
+Password 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetInset(left, top, right, bottom)</code></summary>
+
+Inset 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>AddHistoryLine(text)</code></summary>
+
+History Line 항목을 생성하거나 등록합니다.
+
+</details>
+
+<details>
+<summary><code>SetHistoryLines(count)</code></summary>
+
+History Lines 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetDigit(digit)</code></summary>
+
+Digit 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetDigitEmpty(empty)</code></summary>
+
+Digit 빈 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetDigitMax(max)</code></summary>
+
+Digit 최대 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetEnglish(english)</code></summary>
+
+English 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetText(text)</code></summary>
+
+텍스트 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>ClearFocus()</code></summary>
+
+포커스 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>SetFocus()</code></summary>
+
+포커스 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>MaxTextLength()</code></summary>
+
+MaxTextLength 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>IsPassword()</code></summary>
+
+Password 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>IsDigit()</code></summary>
+
+Digit 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>SetCursorOffset(offset)</code></summary>
+
+Cursor Offset 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetCursorHeight(height)</code></summary>
+
+Cursor Height 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetCursorColor(r, g, b, a)</code></summary>
+
+Cursor 색상 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetCursorColorByColorKey(colorKey)</code></summary>
+
+Cursor 색상 By 색상 Key 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetReadOnly(readOnly)</code></summary>
+
+Read Only 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetReClickable(click)</code></summary>
+
+Re Clickable 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetPrefixText(prefixText)</code></summary>
+
+Prefix 텍스트 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetPrefixInset(left, top, right, bottom)</code></summary>
+
+Prefix Inset 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>UseSelectAllWhenFocused(use)</code></summary>
+
+Select All When Focused 사용을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>SetInitVal(val)</code></summary>
+
+Init Val 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetPossibleFirstZero(possibleFirstZero)</code></summary>
+
+Possible 첫 번째 Zero 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetGuideText(text)</code></summary>
+
+Guide 텍스트 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetGuideTextInset(insetData)</code></summary>
+
+Guide 텍스트 Inset 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>CheckNamePolicy(nameType)</code></summary>
+
+이름 Policy 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>ClearString()</code></summary>
+
+String 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>IsNowComposition()</code></summary>
+
+Now Composition 여부를 확인합니다.
+
+</details>

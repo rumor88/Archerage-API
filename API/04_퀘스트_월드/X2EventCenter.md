@@ -10,24 +10,71 @@
 
 ## ⛔ 애드온 사용 불가
 
-| API | 한국어 설명 | 사용 불가 근거 |
-|---|---|---|
-| `GetAttendanceRewardInfos()` | Attendance Reward Infos 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `CheckAttendable()` | Attendable 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `AddAttendance()` | Attendance 항목을 생성하거나 등록합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetAttendedDayCount()` | Attended Day 개수 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `RequestGameEventInfo()` | 게임 이벤트 정보 작업을 요청합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetGameEventInfoCount()` | 게임 이벤트 정보 개수 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetGameEventInfo(value)` | 게임 이벤트 정보 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetGameEventInfoTitleList(eventFilter)` | 게임 이벤트 정보 Title 목록 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
+아래 함수는 클라이언트에 이름이 노출되어 있지만 애드온 호출 허용 목록에는 포함되지 않습니다.
+
+
+<details>
+<summary><code>GetAttendanceRewardInfos()</code></summary>
+
+Attendance Reward Infos 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>CheckAttendable()</code></summary>
+
+Attendable 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>AddAttendance()</code></summary>
+
+Attendance 항목을 생성하거나 등록합니다.
+
+</details>
+
+<details>
+<summary><code>GetAttendedDayCount()</code></summary>
+
+Attended Day 개수 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>RequestGameEventInfo()</code></summary>
+
+게임 이벤트 정보 작업을 요청합니다.
+
+</details>
+
+<details>
+<summary><code>GetGameEventInfoCount()</code></summary>
+
+게임 이벤트 정보 개수 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetGameEventInfo(value)</code></summary>
+
+게임 이벤트 정보 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetGameEventInfoTitleList(eventFilter)</code></summary>
+
+게임 이벤트 정보 Title 목록 정보를 조회합니다.
+
+</details>
 
 ## ⚠️ 전역 상수/값
 
+
 > 전역값은 읽기용 상수로 취급하는 것을 권장합니다. 값을 변경할 수 있는지는 보장되지 않습니다.
 
-| 이름 | 한국어 설명 | 상태 |
-|---|---|---|
-| `GEIP_ALL` | GEIP_ALL 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `GEIP_SCHEDULED` | GEIP_SCHEDULED 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `GEIP_IN_PROGRESS` | GEIP_IN_PROGRESS 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `GEIP_ENDED` | GEIP_ENDED 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
+- <code>GEIP_ALL</code> — GEIP_ALL 관련 기능을 수행합니다.
+- <code>GEIP_SCHEDULED</code> — GEIP_SCHEDULED 관련 기능을 수행합니다.
+- <code>GEIP_IN_PROGRESS</code> — GEIP_IN_PROGRESS 관련 기능을 수행합니다.
+- <code>GEIP_ENDED</code> — GEIP_ENDED 관련 기능을 수행합니다.

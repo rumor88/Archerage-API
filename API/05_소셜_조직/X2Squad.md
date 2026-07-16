@@ -10,50 +10,235 @@
 
 ## ⛔ 애드온 사용 불가
 
-| API | 한국어 설명 | 사용 불가 근거 |
-|---|---|---|
-| `GetMySquadInfo()` | My 분대 정보 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetMyRoleInfo()` | My 역할 정보 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetSquadList(instanceType, page)` | 분대 목록 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `CreateSquad(selectedField, openType, explanation, partyInvitation, limitLevel, limitGearScore)` | 분대 항목을 생성하거나 등록합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `DelegateSquadLeader(unitId)` | DelegateSquadLeader 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `DelegateSquadLeaderByCId(cId)` | DelegateSquadLeaderByCId 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `DisbandSquad()` | DisbandSquad 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `DisbandSquadInRecruitList()` | DisbandSquadInRecruitList 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `JoinSquad(squadId, fieldType)` | 분대 기능을 시작하거나 활성화합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `JoinSquadByKey(squadId, fieldType, joinKey)` | 분대 By Key 기능을 시작하거나 활성화합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `LeaveSquad()` | 분대 기능을 중지하거나 비활성화합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `ReadySquad()` | ReadySquad 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `InviteSquad(invitee)` | InviteSquad 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `ExpelSquad(unitId)` | ExpelSquad 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `ExpelSquadByCId(cId)` | ExpelSquadByCId 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `HasMySquad()` | My 분대 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `IsLeader()` | Leader 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `IsReady()` | Ready 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `IsAllReady()` | All Ready 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `IsSameSquad(unitId)` | Same 분대 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `SetMyRole(role)` | My 역할 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `ApplySquadMatching()` | 분대 Matching 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `EnterSquadMatching()` | 분대 Matching 기능을 시작하거나 활성화합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `ChangeOpenType(openType)` | Open 유형 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetLinkText()` | Link 텍스트 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `IsInstanceQueuedOrJoined()` | 인스턴스 Queued Or Joined 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `IsAvailableDirectMatching(instanceType)` | Available Direct Matching 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `EnableLeaveSquad(enable)` | Leave 분대 기능을 시작하거나 활성화합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `CanLeaveSquad()` | Leave 분대 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `IsExpeditionContents(instanceType)` | Expedition Contents 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetSquadMemberListStr(squadId)` | 분대 구성원 목록 Str 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
+아래 함수는 클라이언트에 이름이 노출되어 있지만 애드온 호출 허용 목록에는 포함되지 않습니다.
+
+
+<details>
+<summary><code>GetMySquadInfo()</code></summary>
+
+My 분대 정보 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetMyRoleInfo()</code></summary>
+
+My 역할 정보 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetSquadList(instanceType, page)</code></summary>
+
+분대 목록 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>CreateSquad(selectedField, openType, explanation, partyInvitation, limitLevel, limitGearScore)</code></summary>
+
+분대 항목을 생성하거나 등록합니다.
+
+</details>
+
+<details>
+<summary><code>DelegateSquadLeader(unitId)</code></summary>
+
+DelegateSquadLeader 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>DelegateSquadLeaderByCId(cId)</code></summary>
+
+DelegateSquadLeaderByCId 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>DisbandSquad()</code></summary>
+
+DisbandSquad 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>DisbandSquadInRecruitList()</code></summary>
+
+DisbandSquadInRecruitList 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>JoinSquad(squadId, fieldType)</code></summary>
+
+분대 기능을 시작하거나 활성화합니다.
+
+</details>
+
+<details>
+<summary><code>JoinSquadByKey(squadId, fieldType, joinKey)</code></summary>
+
+분대 By Key 기능을 시작하거나 활성화합니다.
+
+</details>
+
+<details>
+<summary><code>LeaveSquad()</code></summary>
+
+분대 기능을 중지하거나 비활성화합니다.
+
+</details>
+
+<details>
+<summary><code>ReadySquad()</code></summary>
+
+ReadySquad 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>InviteSquad(invitee)</code></summary>
+
+InviteSquad 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>ExpelSquad(unitId)</code></summary>
+
+ExpelSquad 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>ExpelSquadByCId(cId)</code></summary>
+
+ExpelSquadByCId 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>HasMySquad()</code></summary>
+
+My 분대 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>IsLeader()</code></summary>
+
+Leader 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>IsReady()</code></summary>
+
+Ready 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>IsAllReady()</code></summary>
+
+All Ready 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>IsSameSquad(unitId)</code></summary>
+
+Same 분대 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>SetMyRole(role)</code></summary>
+
+My 역할 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>ApplySquadMatching()</code></summary>
+
+분대 Matching 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>EnterSquadMatching()</code></summary>
+
+분대 Matching 기능을 시작하거나 활성화합니다.
+
+</details>
+
+<details>
+<summary><code>ChangeOpenType(openType)</code></summary>
+
+Open 유형 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>GetLinkText()</code></summary>
+
+Link 텍스트 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>IsInstanceQueuedOrJoined()</code></summary>
+
+인스턴스 Queued Or Joined 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>IsAvailableDirectMatching(instanceType)</code></summary>
+
+Available Direct Matching 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>EnableLeaveSquad(enable)</code></summary>
+
+Leave 분대 기능을 시작하거나 활성화합니다.
+
+</details>
+
+<details>
+<summary><code>CanLeaveSquad()</code></summary>
+
+Leave 분대 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>IsExpeditionContents(instanceType)</code></summary>
+
+Expedition Contents 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>GetSquadMemberListStr(squadId)</code></summary>
+
+분대 구성원 목록 Str 정보를 조회합니다.
+
+</details>
 
 ## ⚠️ 전역 상수/값
 
+
 > 전역값은 읽기용 상수로 취급하는 것을 권장합니다. 값을 변경할 수 있는지는 보장되지 않습니다.
 
-| 이름 | 한국어 설명 | 상태 |
-|---|---|---|
-| `SCI_BATTLE_FIELD` | SCI_BATTLE_FIELD 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `SCI_INDUN` | SCI_INDUN 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `MAX_SQUAD_SELECT_COUNT_PER_PAGE` | MAX_SQUAD_SELECT_COUNT_PER_PAGE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `SOT_PUBLIC` | SOT_PUBLIC 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `SOT_PRIVATE` | SOT_PRIVATE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `SOT_DIRECT_MATCHING` | SOT_DIRECT_MATCHING 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `SOT_MUST_PUBLIC` | SOT_MUST_PUBLIC 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
+- <code>SCI_BATTLE_FIELD</code> — SCI_BATTLE_FIELD 관련 기능을 수행합니다.
+- <code>SCI_INDUN</code> — SCI_INDUN 관련 기능을 수행합니다.
+- <code>MAX_SQUAD_SELECT_COUNT_PER_PAGE</code> — MAX_SQUAD_SELECT_COUNT_PER_PAGE 관련 기능을 수행합니다.
+- <code>SOT_PUBLIC</code> — SOT_PUBLIC 관련 기능을 수행합니다.
+- <code>SOT_PRIVATE</code> — SOT_PRIVATE 관련 기능을 수행합니다.
+- <code>SOT_DIRECT_MATCHING</code> — SOT_DIRECT_MATCHING 관련 기능을 수행합니다.
+- <code>SOT_MUST_PUBLIC</code> — SOT_MUST_PUBLIC 관련 기능을 수행합니다.

@@ -10,10 +10,40 @@
 
 ## ⛔ 애드온 사용 불가
 
-| API | 한국어 설명 | 사용 불가 근거 |
-|---|---|---|
-| `PrepareToSaveMusicSheet(itemIdStr, title, musicSheet)` | PrepareToSaveMusicSheet 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `TryToSaveMusicSheet()` | TryToSaveMusicSheet 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `PlayMusicSheet(musicSheet)` | 음악 Sheet 기능을 시작하거나 활성화합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `StopMusicSheet()` | 음악 Sheet 기능을 중지하거나 비활성화합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetCompositionLimitInfos()` | Composition Limit Infos 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
+아래 함수는 클라이언트에 이름이 노출되어 있지만 애드온 호출 허용 목록에는 포함되지 않습니다.
+
+
+<details>
+<summary><code>PrepareToSaveMusicSheet(itemIdStr, title, musicSheet)</code></summary>
+
+PrepareToSaveMusicSheet 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>TryToSaveMusicSheet()</code></summary>
+
+TryToSaveMusicSheet 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>PlayMusicSheet(musicSheet)</code></summary>
+
+음악 Sheet 기능을 시작하거나 활성화합니다.
+
+</details>
+
+<details>
+<summary><code>StopMusicSheet()</code></summary>
+
+음악 Sheet 기능을 중지하거나 비활성화합니다.
+
+</details>
+
+<details>
+<summary><code>GetCompositionLimitInfos()</code></summary>
+
+Composition Limit Infos 정보를 조회합니다.
+
+</details>

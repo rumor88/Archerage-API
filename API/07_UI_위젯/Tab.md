@@ -10,51 +10,327 @@ Tab UI 객체의 속성, 상태와 동작을 제어합니다.
 
 ## ✅ 사용 가능
 
-| API | 한국어 설명 | 제약/주의 |
-|---|---|---|
-| `AddNewTab(tabName, selectedButtonWidget, unselectedButtonWidget, windowWidget)` | New 탭 항목을 생성하거나 등록합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `AddSimpleTab(tabName)` | Simple 탭 항목을 생성하거나 등록합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `ShowTab(idx)` | 탭 화면이나 정보를 표시합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `HideTab(idx)` | 탭 화면이나 정보를 숨기거나 닫습니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `RemoveTab(idx)` | 탭 항목을 제거하거나 초기화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `RemoveAllTabs()` | All Tabs 항목을 제거하거나 초기화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetActivateTabCount(activateTabCount)` | Activate 탭 개수 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetActivateTabCount()` | Activate 탭 개수 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SelectTab(idx)` | 탭 대상을 선택합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetVertical(vertical)` | Vertical 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetCorner(corner)` | Corner 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetOffset(offset)` | Offset 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetGap(gap)` | Gap 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetSelectedTab()` | Selected 탭 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `IsHideTab(index)` | Hide 탭 여부를 확인합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetTabCount()` | 탭 개수 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `AlignTabButtons()` | AlignTabButtons 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `AddTab(tabName, widget)` | 탭 항목을 생성하거나 등록합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `RemoveTab(idx)` | 탭 항목을 제거하거나 초기화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `RemoveAllTabs()` | All Tabs 항목을 제거하거나 초기화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SelectTab(idx)` | 탭 대상을 선택합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetOffset(offset)` | Offset 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetGap(gap)` | Gap 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetSlideTimeInDragging(time)` | Slide 시간 In Dragging 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetContentOffset(topLeftXOffset, topLeftYOffset, bottomRightXOffset, bottomRightYOffset)` | 콘텐츠 Offset 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `AllowTabSwitch(allow)` | AllowTabSwitch 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `UseAddTabButton(use)` | Add 탭 버튼 사용을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetInjectable(injectable)` | Injectable 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetSelectedTab()` | Selected 탭 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetAddButton()` | Add 버튼 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetLeftLineDrawable()` | Left Line Drawable 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetRightLineDrawable()` | Right Line Drawable 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetLeftLineOffset(offset)` | Left Line Offset 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetRightLineOffset(offset)` | Right Line Offset 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetCaretDrawable()` | Caret Drawable 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetLockNotifyDrawable()` | Lock Notify Drawable 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetMinTabWidth(width)` | Min 탭 Width 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetTabWidth(width)` | 탭 Width 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetCaretOffset(x, y)` | Caret Offset 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `UseSlidingButton(use)` | Sliding 버튼 사용을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetTabAreaHeight(height)` | 탭 Area Height 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `UseAutoResizingTabButtonMode(offset)` | Auto Resizing 탭 버튼 Mode 사용을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetTabButtonAlpha(selectedAlpha, unselectedAlpha)` | 탭 버튼 Alpha 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetMaxNotifyTime(time)` | 최대 Notify 시간 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetNotifyBlinkingFreq(freq)` | Notify Blinking Freq 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetTabAreaInset(left, top, right, bottom)` | 탭 Area Inset 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
+함수 이름을 눌러 설명과 확인된 제약을 펼칠 수 있습니다. 제약이 확인되지 않은 함수는 제약 항목을 표시하지 않습니다.
+
+
+<details>
+<summary><code>AddNewTab(tabName, selectedButtonWidget, unselectedButtonWidget, windowWidget)</code></summary>
+
+New 탭 항목을 생성하거나 등록합니다.
+
+</details>
+
+<details>
+<summary><code>AddSimpleTab(tabName)</code></summary>
+
+Simple 탭 항목을 생성하거나 등록합니다.
+
+</details>
+
+<details>
+<summary><code>ShowTab(idx)</code></summary>
+
+탭 화면이나 정보를 표시합니다.
+
+</details>
+
+<details>
+<summary><code>HideTab(idx)</code></summary>
+
+탭 화면이나 정보를 숨기거나 닫습니다.
+
+</details>
+
+<details>
+<summary><code>RemoveTab(idx)</code></summary>
+
+탭 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>RemoveAllTabs()</code></summary>
+
+All Tabs 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>SetActivateTabCount(activateTabCount)</code></summary>
+
+Activate 탭 개수 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>GetActivateTabCount()</code></summary>
+
+Activate 탭 개수 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>SelectTab(idx)</code></summary>
+
+탭 대상을 선택합니다.
+
+</details>
+
+<details>
+<summary><code>SetVertical(vertical)</code></summary>
+
+Vertical 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetCorner(corner)</code></summary>
+
+Corner 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetOffset(offset)</code></summary>
+
+Offset 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetGap(gap)</code></summary>
+
+Gap 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>GetSelectedTab()</code></summary>
+
+Selected 탭 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>IsHideTab(index)</code></summary>
+
+Hide 탭 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>GetTabCount()</code></summary>
+
+탭 개수 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>AlignTabButtons()</code></summary>
+
+AlignTabButtons 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>AddTab(tabName, widget)</code></summary>
+
+탭 항목을 생성하거나 등록합니다.
+
+</details>
+
+<details>
+<summary><code>RemoveTab(idx)</code></summary>
+
+탭 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>RemoveAllTabs()</code></summary>
+
+All Tabs 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>SelectTab(idx)</code></summary>
+
+탭 대상을 선택합니다.
+
+</details>
+
+<details>
+<summary><code>SetOffset(offset)</code></summary>
+
+Offset 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetGap(gap)</code></summary>
+
+Gap 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetSlideTimeInDragging(time)</code></summary>
+
+Slide 시간 In Dragging 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetContentOffset(topLeftXOffset, topLeftYOffset, bottomRightXOffset, bottomRightYOffset)</code></summary>
+
+콘텐츠 Offset 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>AllowTabSwitch(allow)</code></summary>
+
+AllowTabSwitch 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>UseAddTabButton(use)</code></summary>
+
+Add 탭 버튼 사용을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>SetInjectable(injectable)</code></summary>
+
+Injectable 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>GetSelectedTab()</code></summary>
+
+Selected 탭 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetAddButton()</code></summary>
+
+Add 버튼 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetLeftLineDrawable()</code></summary>
+
+Left Line Drawable 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetRightLineDrawable()</code></summary>
+
+Right Line Drawable 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>SetLeftLineOffset(offset)</code></summary>
+
+Left Line Offset 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetRightLineOffset(offset)</code></summary>
+
+Right Line Offset 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>GetCaretDrawable()</code></summary>
+
+Caret Drawable 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetLockNotifyDrawable()</code></summary>
+
+Lock Notify Drawable 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>SetMinTabWidth(width)</code></summary>
+
+Min 탭 Width 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetTabWidth(width)</code></summary>
+
+탭 Width 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetCaretOffset(x, y)</code></summary>
+
+Caret Offset 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>UseSlidingButton(use)</code></summary>
+
+Sliding 버튼 사용을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>SetTabAreaHeight(height)</code></summary>
+
+탭 Area Height 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>UseAutoResizingTabButtonMode(offset)</code></summary>
+
+Auto Resizing 탭 버튼 Mode 사용을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>SetTabButtonAlpha(selectedAlpha, unselectedAlpha)</code></summary>
+
+탭 버튼 Alpha 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetMaxNotifyTime(time)</code></summary>
+
+최대 Notify 시간 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetNotifyBlinkingFreq(freq)</code></summary>
+
+Notify Blinking Freq 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetTabAreaInset(left, top, right, bottom)</code></summary>
+
+탭 Area Inset 값을 설정하거나 변경합니다.
+
+</details>

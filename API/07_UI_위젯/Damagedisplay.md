@@ -10,28 +10,75 @@ Damagedisplay UI 객체의 속성, 상태와 동작을 제어합니다.
 
 ## ✅ 사용 가능
 
-| API | 한국어 설명 | 제약/주의 |
-|---|---|---|
-| `SetInset(left, top, right, bottom)` | Inset 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetInset()` | Inset 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetInitPos(x, y)` | Init Pos 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetUnitId(sourceId, targetId)` | 유닛 ID 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetPositionCalculationType(positionCalculationType)` | 위치 Calculation 유형 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `Animation(anim)` | Animation 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetAnimFrameInfo(frameInfo)` | Anim Frame 정보 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetActualDrawn()` | Actual Drawn 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
+함수 이름을 눌러 설명과 확인된 제약을 펼칠 수 있습니다. 제약이 확인되지 않은 함수는 제약 항목을 표시하지 않습니다.
+
+
+<details>
+<summary><code>SetInset(left, top, right, bottom)</code></summary>
+
+Inset 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>GetInset()</code></summary>
+
+Inset 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>SetInitPos(x, y)</code></summary>
+
+Init Pos 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetUnitId(sourceId, targetId)</code></summary>
+
+유닛 ID 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetPositionCalculationType(positionCalculationType)</code></summary>
+
+위치 Calculation 유형 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>Animation(anim)</code></summary>
+
+Animation 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>SetAnimFrameInfo(frameInfo)</code></summary>
+
+Anim Frame 정보 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>GetActualDrawn()</code></summary>
+
+Actual Drawn 정보를 조회합니다.
+
+</details>
 
 ## ⚠️ 전역 상수/값
 
+
 > 전역값은 읽기용 상수로 취급하는 것을 권장합니다. 값을 변경할 수 있는지는 보장되지 않습니다.
 
-| 이름 | 한국어 설명 | 상태 |
-|---|---|---|
-| `LAT_NONE` | LAT_NONE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `LAT_MOVE` | 이동을 수행합니다. | ⚠️ 읽기 권장 |
-| `LAT_COUNT` | 개수를 조회합니다. | ⚠️ 읽기 권장 |
-| `LAT_AFTERIMAGE` | LAT_AFTERIMAGE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `LAT_SHAKE` | LAT_SHAKE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `LAT_LINEAR_DISPLAY` | LAT_LINEAR_DISPLAY 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `PCT_DEFAULT` | PCT_DEFAULT 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `PCT_SHIP_COLLISION` | PCT_SHIP_COLLISION 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
+- <code>LAT_NONE</code> — LAT_NONE 관련 기능을 수행합니다.
+- <code>LAT_MOVE</code> — 이동을 수행합니다.
+- <code>LAT_COUNT</code> — 개수를 조회합니다.
+- <code>LAT_AFTERIMAGE</code> — LAT_AFTERIMAGE 관련 기능을 수행합니다.
+- <code>LAT_SHAKE</code> — LAT_SHAKE 관련 기능을 수행합니다.
+- <code>LAT_LINEAR_DISPLAY</code> — LAT_LINEAR_DISPLAY 관련 기능을 수행합니다.
+- <code>PCT_DEFAULT</code> — PCT_DEFAULT 관련 기능을 수행합니다.
+- <code>PCT_SHIP_COLLISION</code> — PCT_SHIP_COLLISION 관련 기능을 수행합니다.

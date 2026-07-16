@@ -10,8 +10,26 @@
 
 ## ⛔ 애드온 사용 불가
 
-| API | 한국어 설명 | 사용 불가 근거 |
-|---|---|---|
-| `OnChatClosed(channelId)` | OnChatClosed 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `OnChatEntered(channelId, message)` | OnChatEntered 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetChatDataList()` | 채팅 데이터 목록 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
+아래 함수는 클라이언트에 이름이 노출되어 있지만 애드온 호출 허용 목록에는 포함되지 않습니다.
+
+
+<details>
+<summary><code>OnChatClosed(channelId)</code></summary>
+
+OnChatClosed 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>OnChatEntered(channelId, message)</code></summary>
+
+OnChatEntered 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>GetChatDataList()</code></summary>
+
+채팅 데이터 목록 정보를 조회합니다.
+
+</details>

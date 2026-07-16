@@ -10,39 +10,243 @@
 
 ## ⛔ 애드온 사용 불가
 
-| API | 한국어 설명 | 사용 불가 근거 |
-|---|---|---|
-| `GetClientFactionID()` | Client 세력 ID 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetClientFactionName()` | Client 세력 이름 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetRankFactions()` | 순위 Factions 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetScheduleInfo()` | Schedule 정보 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `RequestRankData(factionID)` | 순위 데이터 작업을 요청합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetMyScore()` | My Score 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetHeroCandidateCount()` | 영웅 Candidate 개수 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetRankingData(factionID)` | Ranking 데이터 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetRemainTimeToAnnounceHero()` | Remain 시간 To Announce 영웅 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetElectionPeriod()` | Election Period 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `IsElectionPeriod()` | Election Period 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetCandidateList()` | Candidate 목록 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetActivedHeroPeriod(eventID)` | Actived 영웅 Period 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetAbstainPeriod()` | Abstain Period 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `IsCandidate()` | Candidate 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `IsVoter()` | Voter 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `IsAlreadyVoted()` | Already Voted 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `RequestElection(rankings)` | Election 작업을 요청합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `RequestAbstain()` | Abstain 작업을 요청합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `RequestFactionScores(factionId)` | 세력 Scores 작업을 요청합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetHeroFactions()` | 영웅 Factions 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetHeroList(factionID)` | 영웅 목록 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `VoteReputation(point)` | VoteReputation 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `CanAddReputation()` | Add Reputation 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetReputationCondition()` | Reputation Condition 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetVoterCondition()` | Voter Condition 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetHeroBonus()` | 영웅 Bonus 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetMyHeroBonusInfo()` | My 영웅 Bonus 정보 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetFactionScores(factionId)` | 세력 Scores 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetFactionHeroCount()` | 세력 영웅 개수 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GiveDominionPoint(zoneGroup)` | GiveDominionPoint 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `DominionPointCount()` | DominionPointCount 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `IsHero()` | 영웅 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `IsTopLevelHero()` | Top 레벨 영웅 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
+아래 함수는 클라이언트에 이름이 노출되어 있지만 애드온 호출 허용 목록에는 포함되지 않습니다.
+
+
+<details>
+<summary><code>GetClientFactionID()</code></summary>
+
+Client 세력 ID 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetClientFactionName()</code></summary>
+
+Client 세력 이름 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetRankFactions()</code></summary>
+
+순위 Factions 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetScheduleInfo()</code></summary>
+
+Schedule 정보 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>RequestRankData(factionID)</code></summary>
+
+순위 데이터 작업을 요청합니다.
+
+</details>
+
+<details>
+<summary><code>GetMyScore()</code></summary>
+
+My Score 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetHeroCandidateCount()</code></summary>
+
+영웅 Candidate 개수 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetRankingData(factionID)</code></summary>
+
+Ranking 데이터 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetRemainTimeToAnnounceHero()</code></summary>
+
+Remain 시간 To Announce 영웅 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetElectionPeriod()</code></summary>
+
+Election Period 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>IsElectionPeriod()</code></summary>
+
+Election Period 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>GetCandidateList()</code></summary>
+
+Candidate 목록 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetActivedHeroPeriod(eventID)</code></summary>
+
+Actived 영웅 Period 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetAbstainPeriod()</code></summary>
+
+Abstain Period 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>IsCandidate()</code></summary>
+
+Candidate 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>IsVoter()</code></summary>
+
+Voter 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>IsAlreadyVoted()</code></summary>
+
+Already Voted 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>RequestElection(rankings)</code></summary>
+
+Election 작업을 요청합니다.
+
+</details>
+
+<details>
+<summary><code>RequestAbstain()</code></summary>
+
+Abstain 작업을 요청합니다.
+
+</details>
+
+<details>
+<summary><code>RequestFactionScores(factionId)</code></summary>
+
+세력 Scores 작업을 요청합니다.
+
+</details>
+
+<details>
+<summary><code>GetHeroFactions()</code></summary>
+
+영웅 Factions 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetHeroList(factionID)</code></summary>
+
+영웅 목록 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>VoteReputation(point)</code></summary>
+
+VoteReputation 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>CanAddReputation()</code></summary>
+
+Add Reputation 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>GetReputationCondition()</code></summary>
+
+Reputation Condition 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetVoterCondition()</code></summary>
+
+Voter Condition 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetHeroBonus()</code></summary>
+
+영웅 Bonus 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetMyHeroBonusInfo()</code></summary>
+
+My 영웅 Bonus 정보 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetFactionScores(factionId)</code></summary>
+
+세력 Scores 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetFactionHeroCount()</code></summary>
+
+세력 영웅 개수 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GiveDominionPoint(zoneGroup)</code></summary>
+
+GiveDominionPoint 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>DominionPointCount()</code></summary>
+
+DominionPointCount 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>IsHero()</code></summary>
+
+영웅 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>IsTopLevelHero()</code></summary>
+
+Top 레벨 영웅 여부를 확인합니다.
+
+</details>

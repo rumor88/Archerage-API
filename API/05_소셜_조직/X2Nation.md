@@ -10,37 +10,150 @@
 
 ## ⛔ 애드온 사용 불가
 
-| API | 한국어 설명 | 사용 불가 근거 |
-|---|---|---|
-| `GetNationBaseInfo(factionId)` | Nation Base 정보 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `SetDominionColors(colorInfo)` | Dominion Colors 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `SetDominionCustomColor(zoneGroupType, colorTable)` | Dominion Custom 색상 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `SetNationRelationColors(colorInfo)` | Nation Relation Colors 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `AdjustDomionRelation(drawable, path, factionId)` | AdjustDomionRelation 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetDominionList(factionId)` | Dominion 목록 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetDominionListAll()` | Dominion 목록 All 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetNationalDominionInfo(zoneGroupType)` | National Dominion 정보 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetNationList()` | Nation 목록 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetRelationList(factionId)` | Relation 목록 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetRelationHistoryList(checkExpire)` | Relation History 목록 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `CanGetRelationCount()` | Get Relation 개수 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetRelationCount(charId)` | Relation 개수 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `CanDiplomacy()` | Diplomacy 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `RequestDiplomacy(charId, factionId)` | Diplomacy 작업을 요청합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `ResponseDiplomacy(ok)` | ResponseDiplomacy 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `DiplomacyDialogTimeout()` | DiplomacyDialogTimeout 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetPowerGrade(factionId)` | Power Grade 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetNationImmigrateInfo(factionId)` | Nation Immigrate 정보 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
+아래 함수는 클라이언트에 이름이 노출되어 있지만 애드온 호출 허용 목록에는 포함되지 않습니다.
+
+
+<details>
+<summary><code>GetNationBaseInfo(factionId)</code></summary>
+
+Nation Base 정보 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>SetDominionColors(colorInfo)</code></summary>
+
+Dominion Colors 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetDominionCustomColor(zoneGroupType, colorTable)</code></summary>
+
+Dominion Custom 색상 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetNationRelationColors(colorInfo)</code></summary>
+
+Nation Relation Colors 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>AdjustDomionRelation(drawable, path, factionId)</code></summary>
+
+AdjustDomionRelation 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>GetDominionList(factionId)</code></summary>
+
+Dominion 목록 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetDominionListAll()</code></summary>
+
+Dominion 목록 All 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetNationalDominionInfo(zoneGroupType)</code></summary>
+
+National Dominion 정보 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetNationList()</code></summary>
+
+Nation 목록 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetRelationList(factionId)</code></summary>
+
+Relation 목록 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetRelationHistoryList(checkExpire)</code></summary>
+
+Relation History 목록 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>CanGetRelationCount()</code></summary>
+
+Get Relation 개수 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>GetRelationCount(charId)</code></summary>
+
+Relation 개수 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>CanDiplomacy()</code></summary>
+
+Diplomacy 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>RequestDiplomacy(charId, factionId)</code></summary>
+
+Diplomacy 작업을 요청합니다.
+
+</details>
+
+<details>
+<summary><code>ResponseDiplomacy(ok)</code></summary>
+
+ResponseDiplomacy 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>DiplomacyDialogTimeout()</code></summary>
+
+DiplomacyDialogTimeout 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>GetPowerGrade(factionId)</code></summary>
+
+Power Grade 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetNationImmigrateInfo(factionId)</code></summary>
+
+Nation Immigrate 정보 정보를 조회합니다.
+
+</details>
 
 ## ⚠️ 전역 상수/값
 
+
 > 전역값은 읽기용 상수로 취급하는 것을 권장합니다. 값을 변경할 수 있는지는 보장되지 않습니다.
 
-| 이름 | 한국어 설명 | 상태 |
-|---|---|---|
-| `NR_INVALID` | NR_INVALID 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `NR_WAR` | NR_WAR 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `NR_HOSTILE` | NR_HOSTILE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `NR_FRIENDLY` | NR_FRIENDLY 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `NR_NATIVE` | NR_NATIVE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `NR_LIGEANCE` | NR_LIGEANCE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
+- <code>NR_INVALID</code> — NR_INVALID 관련 기능을 수행합니다.
+- <code>NR_WAR</code> — NR_WAR 관련 기능을 수행합니다.
+- <code>NR_HOSTILE</code> — NR_HOSTILE 관련 기능을 수행합니다.
+- <code>NR_FRIENDLY</code> — NR_FRIENDLY 관련 기능을 수행합니다.
+- <code>NR_NATIVE</code> — NR_NATIVE 관련 기능을 수행합니다.
+- <code>NR_LIGEANCE</code> — NR_LIGEANCE 관련 기능을 수행합니다.

@@ -10,34 +10,153 @@ TextStyle UI 객체의 속성, 상태와 동작을 제어합니다.
 
 ## ✅ 사용 가능
 
-| API | 한국어 설명 | 제약/주의 |
-|---|---|---|
-| `SetSnap(snap)` | Snap 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetShadow(shadow)` | Shadow 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetAlign(align)` | Align 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetOutline(outline)` | Outline 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetEllipsis(ellipsis)` | Ellipsis 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetColor(r, g, b, a)` | 색상 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetColorByKey(key)` | 색상 By Key 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetFont(fontPath, fontSize)` | Font 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetFontSize(size)` | Font Size 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetTextWidth(text)` | 텍스트 Width 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetLineHeight()` | Line Height 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `ALIGN_TOP_LEFT()` | ALIGN_TOP_LEFT 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `ALIGN_TOP()` | ALIGN_TOP 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `ALIGN_TOP_RIGHT()` | ALIGN_TOP_RIGHT 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `ALIGN_LEFT()` | ALIGN_LEFT 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `ALIGN_CENTER()` | ALIGN_CENTER 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `ALIGN_RIGHT()` | ALIGN_RIGHT 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `ALIGN_BOTTOM_LEFT()` | ALIGN_BOTTOM_LEFT 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `ALIGN_BOTTOM()` | ALIGN_BOTTOM 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `ALIGN_BOTTOM_RIGHT()` | ALIGN_BOTTOM_RIGHT 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
+함수 이름을 눌러 설명과 확인된 제약을 펼칠 수 있습니다. 제약이 확인되지 않은 함수는 제약 항목을 표시하지 않습니다.
+
+
+<details>
+<summary><code>SetSnap(snap)</code></summary>
+
+Snap 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetShadow(shadow)</code></summary>
+
+Shadow 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetAlign(align)</code></summary>
+
+Align 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetOutline(outline)</code></summary>
+
+Outline 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetEllipsis(ellipsis)</code></summary>
+
+Ellipsis 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetColor(r, g, b, a)</code></summary>
+
+색상 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetColorByKey(key)</code></summary>
+
+색상 By Key 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetFont(fontPath, fontSize)</code></summary>
+
+Font 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetFontSize(size)</code></summary>
+
+Font Size 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>GetTextWidth(text)</code></summary>
+
+텍스트 Width 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetLineHeight()</code></summary>
+
+Line Height 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>ALIGN_TOP_LEFT()</code></summary>
+
+ALIGN_TOP_LEFT 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>ALIGN_TOP()</code></summary>
+
+ALIGN_TOP 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>ALIGN_TOP_RIGHT()</code></summary>
+
+ALIGN_TOP_RIGHT 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>ALIGN_LEFT()</code></summary>
+
+ALIGN_LEFT 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>ALIGN_CENTER()</code></summary>
+
+ALIGN_CENTER 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>ALIGN_RIGHT()</code></summary>
+
+ALIGN_RIGHT 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>ALIGN_BOTTOM_LEFT()</code></summary>
+
+ALIGN_BOTTOM_LEFT 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>ALIGN_BOTTOM()</code></summary>
+
+ALIGN_BOTTOM 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>ALIGN_BOTTOM_RIGHT()</code></summary>
+
+ALIGN_BOTTOM_RIGHT 관련 기능을 수행합니다.
+
+</details>
 
 ## ⚠️ 전역 상수/값
 
+
 > 전역값은 읽기용 상수로 취급하는 것을 권장합니다. 값을 변경할 수 있는지는 보장되지 않습니다.
 
-| 이름 | 한국어 설명 | 상태 |
-|---|---|---|
-| `FTK_GENERAL` | FTK_GENERAL 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `FTK_IMAGETEXT` | FTK_IMAGETEXT 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
+- <code>FTK_GENERAL</code> — FTK_GENERAL 관련 기능을 수행합니다.
+- <code>FTK_IMAGETEXT</code> — FTK_IMAGETEXT 관련 기능을 수행합니다.

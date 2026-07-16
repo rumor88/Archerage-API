@@ -10,37 +10,150 @@
 
 ## ⛔ 애드온 사용 불가
 
-| API | 한국어 설명 | 사용 불가 근거 |
-|---|---|---|
-| `GetMyArchePassInfo()` | My Arche Pass 정보 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetMyArchePassRewards()` | My Arche Pass Rewards 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetMyArchePassReward(tier, premium)` | My Arche Pass Reward 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetCategories()` | Categories 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetStatus(archePassType)` | Status 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetArchePassInfo(archePassType)` | Arche Pass 정보 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetArchePassRewards(archePassType)` | Arche Pass Rewards 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `RemovePass()` | Pass 항목을 제거하거나 초기화합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `StartPass(archePassType)` | Pass 기능을 시작하거나 활성화합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `BuyPass(archePassType)` | BuyPass 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `UpgradePremium()` | 프리미엄 단계를 올립니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `IsCompleted(archePassType)` | Completed 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetMissionCompleteCount()` | Mission Complete 개수 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetMissionChangeCount()` | Mission Change 개수 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `ResetTodayAssignment(todayType, index)` | Today Assignment 상태를 초기화합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `IsPremiumItemTag(itemType)` | 프리미엄 아이템 Tag 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `IsFull()` | Full 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `NormalComplete()` | NormalComplete 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetArchePassResetWeeklyDay()` | Arche Pass Reset Weekly Day 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
+아래 함수는 클라이언트에 이름이 노출되어 있지만 애드온 호출 허용 목록에는 포함되지 않습니다.
+
+
+<details>
+<summary><code>GetMyArchePassInfo()</code></summary>
+
+My Arche Pass 정보 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetMyArchePassRewards()</code></summary>
+
+My Arche Pass Rewards 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetMyArchePassReward(tier, premium)</code></summary>
+
+My Arche Pass Reward 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetCategories()</code></summary>
+
+Categories 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetStatus(archePassType)</code></summary>
+
+Status 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetArchePassInfo(archePassType)</code></summary>
+
+Arche Pass 정보 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetArchePassRewards(archePassType)</code></summary>
+
+Arche Pass Rewards 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>RemovePass()</code></summary>
+
+Pass 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>StartPass(archePassType)</code></summary>
+
+Pass 기능을 시작하거나 활성화합니다.
+
+</details>
+
+<details>
+<summary><code>BuyPass(archePassType)</code></summary>
+
+BuyPass 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>UpgradePremium()</code></summary>
+
+프리미엄 단계를 올립니다.
+
+</details>
+
+<details>
+<summary><code>IsCompleted(archePassType)</code></summary>
+
+Completed 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>GetMissionCompleteCount()</code></summary>
+
+Mission Complete 개수 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetMissionChangeCount()</code></summary>
+
+Mission Change 개수 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>ResetTodayAssignment(todayType, index)</code></summary>
+
+Today Assignment 상태를 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>IsPremiumItemTag(itemType)</code></summary>
+
+프리미엄 아이템 Tag 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>IsFull()</code></summary>
+
+Full 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>NormalComplete()</code></summary>
+
+NormalComplete 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>GetArchePassResetWeeklyDay()</code></summary>
+
+Arche Pass Reset Weekly Day 정보를 조회합니다.
+
+</details>
 
 ## ⚠️ 전역 상수/값
 
+
 > 전역값은 읽기용 상수로 취급하는 것을 권장합니다. 값을 변경할 수 있는지는 보장되지 않습니다.
 
-| 이름 | 한국어 설명 | 상태 |
-|---|---|---|
-| `APS_INVALID` | APS_INVALID 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `APS_OWNED` | APS_OWNED 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `APS_PROGRESS` | APS_PROGRESS 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `APS_EXPIRED` | APS_EXPIRED 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `APS_DROPPED` | APS_DROPPED 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `APS_COMPLETED` | APS_COMPLETED 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
+- <code>APS_INVALID</code> — APS_INVALID 관련 기능을 수행합니다.
+- <code>APS_OWNED</code> — APS_OWNED 관련 기능을 수행합니다.
+- <code>APS_PROGRESS</code> — APS_PROGRESS 관련 기능을 수행합니다.
+- <code>APS_EXPIRED</code> — APS_EXPIRED 관련 기능을 수행합니다.
+- <code>APS_DROPPED</code> — APS_DROPPED 관련 기능을 수행합니다.
+- <code>APS_COMPLETED</code> — APS_COMPLETED 관련 기능을 수행합니다.
