@@ -10,14 +10,68 @@ Cooldown UI 객체의 속성, 상태와 동작을 제어합니다.
 
 ## ✅ 사용 가능
 
-| API | 한국어 설명 | 제약/주의 |
-|---|---|---|
-| `SetCoolDown(remainTime, totalTime)` | Cool Down 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetCoolDownMask(textureName, textureKey, colorKey)` | Cool Down Mask 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetBagItemSlot(itemSlot)` | 가방 아이템 슬롯 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetBankItemSlot(itemSlot)` | 창고 아이템 슬롯 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetCofferItemSlot(itemSlot)` | Coffer 아이템 슬롯 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetGuildBankItemSlot(itemSlot)` | 원정대 창고 아이템 슬롯 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetItem(itemType)` | 아이템 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetSkill(skillType)` | 기술 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetItemSlot(itemSlot, slotType)` | 아이템 슬롯 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
+함수 이름을 눌러 설명과 확인된 제약을 펼칠 수 있습니다. 제약이 확인되지 않은 함수는 제약 항목을 표시하지 않습니다.
+
+
+<details>
+<summary><code>SetCoolDown(remainTime, totalTime)</code></summary>
+
+Cool Down 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetCoolDownMask(textureName, textureKey, colorKey)</code></summary>
+
+Cool Down Mask 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetBagItemSlot(itemSlot)</code></summary>
+
+가방 아이템 슬롯 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetBankItemSlot(itemSlot)</code></summary>
+
+창고 아이템 슬롯 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetCofferItemSlot(itemSlot)</code></summary>
+
+Coffer 아이템 슬롯 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetGuildBankItemSlot(itemSlot)</code></summary>
+
+원정대 창고 아이템 슬롯 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetItem(itemType)</code></summary>
+
+아이템 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetSkill(skillType)</code></summary>
+
+기술 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetItemSlot(itemSlot, slotType)</code></summary>
+
+아이템 슬롯 값을 설정하거나 변경합니다.
+
+</details>

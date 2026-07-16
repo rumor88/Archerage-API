@@ -10,24 +10,77 @@
 
 ## ⛔ 애드온 사용 불가
 
-| API | 한국어 설명 | 사용 불가 근거 |
-|---|---|---|
-| `GetNumLootItems()` | 개수 Loot Items 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetLootingBagItemInfo(slot)` | Looting 가방 아이템 정보 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetLootingBagItemTooltipText(slot)` | Looting 가방 아이템 툴팁 텍스트 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `LootItem(slot)` | LootItem 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `CloseLoot()` | Loot 화면이나 정보를 숨기거나 닫습니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetLootItemSoundType(slot)` | Loot 아이템 소리 유형 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `DoDiceAction(key, roll)` | DoDiceAction 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `RequestNextDiceItem()` | Next Dice 아이템 작업을 요청합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `SetMaxConcurrentNotifyDiceItem(count)` | 최대 Concurrent Notify Dice 아이템 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
+아래 함수는 클라이언트에 이름이 노출되어 있지만 애드온 호출 허용 목록에는 포함되지 않습니다.
+
+
+<details>
+<summary><code>GetNumLootItems()</code></summary>
+
+개수 Loot Items 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetLootingBagItemInfo(slot)</code></summary>
+
+Looting 가방 아이템 정보 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetLootingBagItemTooltipText(slot)</code></summary>
+
+Looting 가방 아이템 툴팁 텍스트 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>LootItem(slot)</code></summary>
+
+LootItem 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>CloseLoot()</code></summary>
+
+Loot 화면이나 정보를 숨기거나 닫습니다.
+
+</details>
+
+<details>
+<summary><code>GetLootItemSoundType(slot)</code></summary>
+
+Loot 아이템 소리 유형 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>DoDiceAction(key, roll)</code></summary>
+
+DoDiceAction 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>RequestNextDiceItem()</code></summary>
+
+Next Dice 아이템 작업을 요청합니다.
+
+</details>
+
+<details>
+<summary><code>SetMaxConcurrentNotifyDiceItem(count)</code></summary>
+
+최대 Concurrent Notify Dice 아이템 값을 설정하거나 변경합니다.
+
+</details>
 
 ## ⚠️ 전역 상수/값
 
+
 > 전역값은 읽기용 상수로 취급하는 것을 권장합니다. 값을 변경할 수 있는지는 보장되지 않습니다.
 
-| 이름 | 한국어 설명 | 상태 |
-|---|---|---|
-| `DRK_DEFAULT` | DRK_DEFAULT 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `DRK_AUTO_ACCEPT` | DRK_AUTO_ACCEPT 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `DRK_AUTO_GIVEUP` | DRK_AUTO_GIVEUP 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
+- <code>DRK_DEFAULT</code> — DRK_DEFAULT 관련 기능을 수행합니다.
+- <code>DRK_AUTO_ACCEPT</code> — DRK_AUTO_ACCEPT 관련 기능을 수행합니다.
+- <code>DRK_AUTO_GIVEUP</code> — DRK_AUTO_GIVEUP 관련 기능을 수행합니다.

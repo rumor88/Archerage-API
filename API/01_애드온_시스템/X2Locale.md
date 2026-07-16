@@ -10,13 +10,61 @@
 
 ## ✅ 사용 가능
 
-| API | 한국어 설명 | 제약/주의 |
-|---|---|---|
-| `HasLocalizeUiText()` | Localize UI 텍스트 여부를 확인합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `LocalizeUiText()` | LocalizeUiText 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `LocalizeFormatUiText()` | LocalizeFormatUiText 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `TextFormating(text)` | TextFormating 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetLocale()` | 로케일 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetLocaleIndex()` | 로케일 인덱스 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetKeyboardLayout()` | Keyboard Layout 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `LocalizeNonUiText()` | LocalizeNonUiText 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
+함수 이름을 눌러 설명과 확인된 제약을 펼칠 수 있습니다. 제약이 확인되지 않은 함수는 제약 항목을 표시하지 않습니다.
+
+
+<details>
+<summary><code>HasLocalizeUiText()</code></summary>
+
+Localize UI 텍스트 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>LocalizeUiText()</code></summary>
+
+LocalizeUiText 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>LocalizeFormatUiText()</code></summary>
+
+LocalizeFormatUiText 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>TextFormating(text)</code></summary>
+
+TextFormating 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>GetLocale()</code></summary>
+
+로케일 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetLocaleIndex()</code></summary>
+
+로케일 인덱스 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetKeyboardLayout()</code></summary>
+
+Keyboard Layout 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>LocalizeNonUiText()</code></summary>
+
+LocalizeNonUiText 관련 기능을 수행합니다.
+
+</details>

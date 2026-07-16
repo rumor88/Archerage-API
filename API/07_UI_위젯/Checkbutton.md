@@ -10,9 +10,33 @@ Checkbutton UI 객체의 속성, 상태와 동작을 제어합니다.
 
 ## ✅ 사용 가능
 
-| API | 한국어 설명 | 제약/주의 |
-|---|---|---|
-| `GetChecked()` | Checked 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetChecked(state)` | Checked 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetCheckedBackground(checkedTable)` | Checked 배경 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetDisabledCheckedBackground(disabledCheckedTable)` | 비활성 Checked 배경 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
+함수 이름을 눌러 설명과 확인된 제약을 펼칠 수 있습니다. 제약이 확인되지 않은 함수는 제약 항목을 표시하지 않습니다.
+
+
+<details>
+<summary><code>GetChecked()</code></summary>
+
+Checked 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>SetChecked(state)</code></summary>
+
+Checked 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetCheckedBackground(checkedTable)</code></summary>
+
+Checked 배경 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetDisabledCheckedBackground(disabledCheckedTable)</code></summary>
+
+비활성 Checked 배경 값을 설정하거나 변경합니다.
+
+</details>

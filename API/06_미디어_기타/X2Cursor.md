@@ -10,10 +10,40 @@
 
 ## ⛔ 애드온 사용 불가
 
-| API | 한국어 설명 | 사용 불가 근거 |
-|---|---|---|
-| `GetCursorInfo()` | Cursor 정보 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `ClearCursor()` | Cursor 항목을 제거하거나 초기화합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetCursorPickedItemIconInfo()` | Cursor 집어 든 아이템 Icon 정보 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetCursorPickedBagItemIndex()` | Cursor 집어 든 가방 아이템 인덱스 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetCursorPickedBagItemAmount()` | Cursor 집어 든 가방 아이템 Amount 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
+아래 함수는 클라이언트에 이름이 노출되어 있지만 애드온 호출 허용 목록에는 포함되지 않습니다.
+
+
+<details>
+<summary><code>GetCursorInfo()</code></summary>
+
+Cursor 정보 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>ClearCursor()</code></summary>
+
+Cursor 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>GetCursorPickedItemIconInfo()</code></summary>
+
+Cursor 집어 든 아이템 Icon 정보 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetCursorPickedBagItemIndex()</code></summary>
+
+Cursor 집어 든 가방 아이템 인덱스 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetCursorPickedBagItemAmount()</code></summary>
+
+Cursor 집어 든 가방 아이템 Amount 정보를 조회합니다.
+
+</details>

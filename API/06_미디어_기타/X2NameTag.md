@@ -10,21 +10,26 @@
 
 ## ⛔ 애드온 사용 불가
 
-| API | 한국어 설명 | 사용 불가 근거 |
-|---|---|---|
-| `SetNameTag()` | 이름 Tag 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
+아래 함수는 클라이언트에 이름이 노출되어 있지만 애드온 호출 허용 목록에는 포함되지 않습니다.
+
+
+<details>
+<summary><code>SetNameTag()</code></summary>
+
+이름 Tag 값을 설정하거나 변경합니다.
+
+</details>
 
 ## ⚠️ 전역 상수/값
 
+
 > 전역값은 읽기용 상수로 취급하는 것을 권장합니다. 값을 변경할 수 있는지는 보장되지 않습니다.
 
-| 이름 | 한국어 설명 | 상태 |
-|---|---|---|
-| `NAME_TAG_MODE_DEFAULT` | NAME_TAG_MODE_DEFAULT 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `NAME_TAG_MODE_BATTLE` | NAME_TAG_MODE_BATTLE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `NAME_TAG_MODE_LIFE` | NAME_TAG_MODE_LIFE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `NAME_TAG_MODE_BOX` | NAME_TAG_MODE_BOX 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `NAME_TAG_MODE_MAX` | NAME_TAG_MODE_MAX 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `NAME_TAG_FACTION_EXPEDITION` | NAME_TAG_FACTION_EXPEDITION 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `NAME_TAG_FACTION_FACTION` | NAME_TAG_FACTION_FACTION 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `NAME_TAG_FACTION_FAMILY` | NAME_TAG_FACTION_FAMILY 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
+- <code>NAME_TAG_MODE_DEFAULT</code> — NAME_TAG_MODE_DEFAULT 관련 기능을 수행합니다.
+- <code>NAME_TAG_MODE_BATTLE</code> — NAME_TAG_MODE_BATTLE 관련 기능을 수행합니다.
+- <code>NAME_TAG_MODE_LIFE</code> — NAME_TAG_MODE_LIFE 관련 기능을 수행합니다.
+- <code>NAME_TAG_MODE_BOX</code> — NAME_TAG_MODE_BOX 관련 기능을 수행합니다.
+- <code>NAME_TAG_MODE_MAX</code> — NAME_TAG_MODE_MAX 관련 기능을 수행합니다.
+- <code>NAME_TAG_FACTION_EXPEDITION</code> — NAME_TAG_FACTION_EXPEDITION 관련 기능을 수행합니다.
+- <code>NAME_TAG_FACTION_FACTION</code> — NAME_TAG_FACTION_FACTION 관련 기능을 수행합니다.
+- <code>NAME_TAG_FACTION_FAMILY</code> — NAME_TAG_FACTION_FAMILY 관련 기능을 수행합니다.

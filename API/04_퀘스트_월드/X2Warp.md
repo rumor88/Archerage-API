@@ -10,30 +10,113 @@
 
 ## ⛔ 애드온 사용 불가
 
-| API | 한국어 설명 | 사용 불가 근거 |
-|---|---|---|
-| `IsTeleporterNpc()` | Teleporter Npc 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `SavePortal(memo)` | Portal 데이터를 저장합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `RenamePortal(portalId, name)` | RenamePortal 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetPortalList(searchName, searchCategory)` | Portal 목록 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetReturnList(searchName, searchCategory)` | Return 목록 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `OpenPortal(portalTypeStr, portalId, portalName)` | Portal 화면이나 정보를 표시합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `DeletePortal(portalType, portalId)` | Portal 항목을 제거하거나 초기화합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetBoundPortalId()` | Bound Portal ID 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `EndPortalInteraction()` | EndPortalInteraction 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetIndunPortalList(searchName)` | Indun Portal 목록 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `OpenIndunPortal(zoneKey, itemTypeNumber)` | Indun Portal 화면이나 정보를 표시합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetFavoritePortalList(searchName, searchCategory)` | Favorite Portal 목록 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `SetFavoritePortal(portalTypeStr, portalId, isFavorite)` | Favorite Portal 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetFavoritePortalCountInfos()` | Favorite Portal 개수 Infos 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
+아래 함수는 클라이언트에 이름이 노출되어 있지만 애드온 호출 허용 목록에는 포함되지 않습니다.
+
+
+<details>
+<summary><code>IsTeleporterNpc()</code></summary>
+
+Teleporter Npc 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>SavePortal(memo)</code></summary>
+
+Portal 데이터를 저장합니다.
+
+</details>
+
+<details>
+<summary><code>RenamePortal(portalId, name)</code></summary>
+
+RenamePortal 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>GetPortalList(searchName, searchCategory)</code></summary>
+
+Portal 목록 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetReturnList(searchName, searchCategory)</code></summary>
+
+Return 목록 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>OpenPortal(portalTypeStr, portalId, portalName)</code></summary>
+
+Portal 화면이나 정보를 표시합니다.
+
+</details>
+
+<details>
+<summary><code>DeletePortal(portalType, portalId)</code></summary>
+
+Portal 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>GetBoundPortalId()</code></summary>
+
+Bound Portal ID 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>EndPortalInteraction()</code></summary>
+
+EndPortalInteraction 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>GetIndunPortalList(searchName)</code></summary>
+
+Indun Portal 목록 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>OpenIndunPortal(zoneKey, itemTypeNumber)</code></summary>
+
+Indun Portal 화면이나 정보를 표시합니다.
+
+</details>
+
+<details>
+<summary><code>GetFavoritePortalList(searchName, searchCategory)</code></summary>
+
+Favorite Portal 목록 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>SetFavoritePortal(portalTypeStr, portalId, isFavorite)</code></summary>
+
+Favorite Portal 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>GetFavoritePortalCountInfos()</code></summary>
+
+Favorite Portal 개수 Infos 정보를 조회합니다.
+
+</details>
 
 ## ⚠️ 전역 상수/값
 
+
 > 전역값은 읽기용 상수로 취급하는 것을 권장합니다. 값을 변경할 수 있는지는 보장되지 않습니다.
 
-| 이름 | 한국어 설명 | 상태 |
-|---|---|---|
-| `PSC_NAME` | PSC_NAME 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `PSC_ZONE` | PSC_ZONE 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `PSC_WORLD` | PSC_WORLD 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
-| `PSC_ALL` | PSC_ALL 관련 기능을 수행합니다. | ⚠️ 읽기 권장 |
+- <code>PSC_NAME</code> — PSC_NAME 관련 기능을 수행합니다.
+- <code>PSC_ZONE</code> — PSC_ZONE 관련 기능을 수행합니다.
+- <code>PSC_WORLD</code> — PSC_WORLD 관련 기능을 수행합니다.
+- <code>PSC_ALL</code> — PSC_ALL 관련 기능을 수행합니다.

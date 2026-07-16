@@ -10,11 +10,47 @@
 
 ## ⛔ 애드온 사용 불가
 
-| API | 한국어 설명 | 사용 불가 근거 |
-|---|---|---|
-| `ReloadScreen()` | Screen 대상을 다시 불러옵니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetDevMode()` | Dev Mode 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetSavedLocation(index)` | Saved Location 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetPlayerUnit()` | 플레이어 유닛 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetPlayerId()` | 플레이어 ID 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `IsMaster()` | Master 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
+아래 함수는 클라이언트에 이름이 노출되어 있지만 애드온 호출 허용 목록에는 포함되지 않습니다.
+
+
+<details>
+<summary><code>ReloadScreen()</code></summary>
+
+Screen 대상을 다시 불러옵니다.
+
+</details>
+
+<details>
+<summary><code>GetDevMode()</code></summary>
+
+Dev Mode 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetSavedLocation(index)</code></summary>
+
+Saved Location 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetPlayerUnit()</code></summary>
+
+플레이어 유닛 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetPlayerId()</code></summary>
+
+플레이어 ID 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>IsMaster()</code></summary>
+
+Master 여부를 확인합니다.
+
+</details>

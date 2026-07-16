@@ -10,11 +10,47 @@
 
 ## ⛔ 애드온 사용 불가
 
-| API | 한국어 설명 | 사용 불가 근거 |
-|---|---|---|
-| `GetMousePos()` | Mouse Pos 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `IsShiftKeyDown()` | Shift Key Down 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `IsControlKeyDown()` | Control Key Down 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `IsAltKeyDown()` | Alt Key Down 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `SetInputLanguage(language)` | Input Language 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetInputLanguage()` | Input Language 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
+아래 함수는 클라이언트에 이름이 노출되어 있지만 애드온 호출 허용 목록에는 포함되지 않습니다.
+
+
+<details>
+<summary><code>GetMousePos()</code></summary>
+
+Mouse Pos 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>IsShiftKeyDown()</code></summary>
+
+Shift Key Down 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>IsControlKeyDown()</code></summary>
+
+Control Key Down 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>IsAltKeyDown()</code></summary>
+
+Alt Key Down 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>SetInputLanguage(language)</code></summary>
+
+Input Language 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>GetInputLanguage()</code></summary>
+
+Input Language 정보를 조회합니다.
+
+</details>

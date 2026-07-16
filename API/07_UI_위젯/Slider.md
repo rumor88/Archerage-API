@@ -10,22 +10,124 @@ Slider UI 객체의 속성, 상태와 동작을 제어합니다.
 
 ## ✅ 사용 가능
 
-| API | 한국어 설명 | 제약/주의 |
-|---|---|---|
-| `Up(step)` | Up 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `Down(step)` | Down 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetMinMaxValues()` | Min 최대 Values 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetOrientation()` | Orientation 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetThumbDrawable()` | Thumb Drawable 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetValue()` | Value 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetValueStep()` | Value Step 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetPageStep(pageStep)` | 페이지 Step 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetMinMaxValues(min, max)` | Min 최대 Values 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetOrientation(scrollType)` | Orientation 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetThumbButtonWidget(buttonWidget)` | Thumb 버튼 위젯 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetThumbButtonWidget()` | Thumb 버튼 위젯 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetValue(value, triggerEvent)` | Value 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetValueStep(value)` | Value Step 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetInset(inset)` | Inset 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetMinThumbLength(length)` | Min Thumb Length 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetFixedThumb(bool)` | Fixed Thumb 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
+함수 이름을 눌러 설명과 확인된 제약을 펼칠 수 있습니다. 제약이 확인되지 않은 함수는 제약 항목을 표시하지 않습니다.
+
+
+<details>
+<summary><code>Up(step)</code></summary>
+
+Up 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>Down(step)</code></summary>
+
+Down 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>GetMinMaxValues()</code></summary>
+
+Min 최대 Values 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetOrientation()</code></summary>
+
+Orientation 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetThumbDrawable()</code></summary>
+
+Thumb Drawable 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetValue()</code></summary>
+
+Value 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetValueStep()</code></summary>
+
+Value Step 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>SetPageStep(pageStep)</code></summary>
+
+페이지 Step 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetMinMaxValues(min, max)</code></summary>
+
+Min 최대 Values 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetOrientation(scrollType)</code></summary>
+
+Orientation 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetThumbButtonWidget(buttonWidget)</code></summary>
+
+Thumb 버튼 위젯 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>GetThumbButtonWidget()</code></summary>
+
+Thumb 버튼 위젯 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>SetValue(value, triggerEvent)</code></summary>
+
+Value 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetValueStep(value)</code></summary>
+
+Value Step 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetInset(inset)</code></summary>
+
+Inset 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetMinThumbLength(length)</code></summary>
+
+Min Thumb Length 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetFixedThumb(bool)</code></summary>
+
+Fixed Thumb 값을 설정하거나 변경합니다.
+
+</details>

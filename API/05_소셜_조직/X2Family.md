@@ -10,33 +10,201 @@
 
 ## ⛔ 애드온 사용 불가
 
-| API | 한국어 설명 | 사용 불가 근거 |
-|---|---|---|
-| `ShowMembers()` | Members 화면이나 정보를 표시합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `Invite(name, title)` | Invite 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `Leave()` | 가족 구성원, 역할과 가족 활동 정보를 다룹니다. 기능을 중지하거나 비활성화합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `ChangeTitle(charIdStr, title)` | Title 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetMemberCount()` | 구성원 개수 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetMembers(allMember)` | Members 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `IsOwner()` | Owner 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `ChangeOwner(charIdStr)` | Owner 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `IsMyFamily(name)` | My 가족 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `IsFamily()` | 가족 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `IsLimitFamily()` | Limit 가족 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetInfo()` | 정보 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `UpdateTodayAssignment()` | Today Assignment 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetEffect()` | 효과 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetMemberList(allMember)` | 구성원 목록 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetRoleList()` | 역할 목록 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetChangeNameItem()` | Change 이름 아이템 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `SetName(name)` | 이름 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `SetNotice(notice)` | Notice 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `ChangeMemberRole(charIdStr, role)` | 구성원 역할 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `OpenJoin(name)` | Join 화면이나 정보를 표시합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `OpenLeave()` | Leave 화면이나 정보를 표시합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `OpenKick(charIdStr)` | Kick 화면이나 정보를 표시합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `OpenIncreaseMember()` | Increase 구성원 화면이나 정보를 표시합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `ChangeName(familyName)` | 이름 값을 설정하거나 변경합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetRenameFamilyPeriod()` | Rename 가족 Period 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetFamilyGuideInfo()` | 가족 Guide 정보 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `IsMaxFamily()` | 최대 가족 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
+아래 함수는 클라이언트에 이름이 노출되어 있지만 애드온 호출 허용 목록에는 포함되지 않습니다.
+
+
+<details>
+<summary><code>ShowMembers()</code></summary>
+
+Members 화면이나 정보를 표시합니다.
+
+</details>
+
+<details>
+<summary><code>Invite(name, title)</code></summary>
+
+Invite 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>Leave()</code></summary>
+
+가족 구성원, 역할과 가족 활동 정보를 다룹니다. 기능을 중지하거나 비활성화합니다.
+
+</details>
+
+<details>
+<summary><code>ChangeTitle(charIdStr, title)</code></summary>
+
+Title 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>GetMemberCount()</code></summary>
+
+구성원 개수 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetMembers(allMember)</code></summary>
+
+Members 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>IsOwner()</code></summary>
+
+Owner 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>ChangeOwner(charIdStr)</code></summary>
+
+Owner 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>IsMyFamily(name)</code></summary>
+
+My 가족 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>IsFamily()</code></summary>
+
+가족 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>IsLimitFamily()</code></summary>
+
+Limit 가족 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>GetInfo()</code></summary>
+
+정보 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>UpdateTodayAssignment()</code></summary>
+
+Today Assignment 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>GetEffect()</code></summary>
+
+효과 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetMemberList(allMember)</code></summary>
+
+구성원 목록 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetRoleList()</code></summary>
+
+역할 목록 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetChangeNameItem()</code></summary>
+
+Change 이름 아이템 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>SetName(name)</code></summary>
+
+이름 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetNotice(notice)</code></summary>
+
+Notice 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>ChangeMemberRole(charIdStr, role)</code></summary>
+
+구성원 역할 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>OpenJoin(name)</code></summary>
+
+Join 화면이나 정보를 표시합니다.
+
+</details>
+
+<details>
+<summary><code>OpenLeave()</code></summary>
+
+Leave 화면이나 정보를 표시합니다.
+
+</details>
+
+<details>
+<summary><code>OpenKick(charIdStr)</code></summary>
+
+Kick 화면이나 정보를 표시합니다.
+
+</details>
+
+<details>
+<summary><code>OpenIncreaseMember()</code></summary>
+
+Increase 구성원 화면이나 정보를 표시합니다.
+
+</details>
+
+<details>
+<summary><code>ChangeName(familyName)</code></summary>
+
+이름 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>GetRenameFamilyPeriod()</code></summary>
+
+Rename 가족 Period 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetFamilyGuideInfo()</code></summary>
+
+가족 Guide 정보 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>IsMaxFamily()</code></summary>
+
+최대 가족 여부를 확인합니다.
+
+</details>

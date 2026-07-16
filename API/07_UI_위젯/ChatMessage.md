@@ -10,13 +10,61 @@ ChatMessage UI 객체의 속성, 상태와 동작을 제어합니다.
 
 ## ✅ 사용 가능
 
-| API | 한국어 설명 | 제약/주의 |
-|---|---|---|
-| `GetUpButton()` | Up 버튼 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetDownButton()` | Down 버튼 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetDownToBottomButton()` | Down To Bottom 버튼 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetSlider()` | Slider 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `MouseWheelDown(value)` | MouseWheelDown 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `MouseWheelUp(value)` | MouseWheelUp 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `BackupString(name)` | BackupString 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `CleanupBackupString()` | CleanupBackupString 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
+함수 이름을 눌러 설명과 확인된 제약을 펼칠 수 있습니다. 제약이 확인되지 않은 함수는 제약 항목을 표시하지 않습니다.
+
+
+<details>
+<summary><code>GetUpButton()</code></summary>
+
+Up 버튼 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetDownButton()</code></summary>
+
+Down 버튼 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetDownToBottomButton()</code></summary>
+
+Down To Bottom 버튼 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetSlider()</code></summary>
+
+Slider 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>MouseWheelDown(value)</code></summary>
+
+MouseWheelDown 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>MouseWheelUp(value)</code></summary>
+
+MouseWheelUp 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>BackupString(name)</code></summary>
+
+BackupString 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>CleanupBackupString()</code></summary>
+
+CleanupBackupString 관련 기능을 수행합니다.
+
+</details>

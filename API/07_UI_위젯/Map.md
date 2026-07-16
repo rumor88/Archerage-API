@@ -10,69 +10,404 @@ Map UI 객체의 속성, 상태와 동작을 제어합니다.
 
 ## ✅ 사용 가능
 
-| API | 한국어 설명 | 제약/주의 |
-|---|---|---|
-| `SetPlayerDrawable(player)` | 플레이어 Drawable 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetTooltipController()` | 툴팁 Controller 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetPingWidget(widget, drawable, pingType)` | Ping 위젯 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetTooltipColor(objColor, nickColor)` | 툴팁 색상 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `UpdateZoneInfo()` | 지역 정보 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `UpdateNpcInfo()` | Npc 정보 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `UpdateMonitorNpcInfo()` | Monitor Npc 정보 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `UpdateCurZoneGroupNpcInfo()` | Cur 지역 Group Npc 정보 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `ClearNpcInfo()` | Npc 정보 항목을 제거하거나 초기화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `UpdateDoodadInfo(bRoadMap)` | Doodad 정보 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `ClearDoodadInfo()` | Doodad 정보 항목을 제거하거나 초기화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `UpdateGivenQuestStaticInfo()` | Given 퀘스트 Static 정보 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `ClearGivenQuestStaticInfo()` | Given 퀘스트 Static 정보 항목을 제거하거나 초기화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `UpdateHousingInfo()` | Housing 정보 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `ClearHousingInfo()` | Housing 정보 항목을 제거하거나 초기화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `UpdateShipTelescopeInfo()` | Ship Telescope 정보 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `RemoveShipTelescopeInfo(index)` | Ship Telescope 정보 항목을 제거하거나 초기화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `ClearShipTelescopeInfo()` | Ship Telescope 정보 항목을 제거하거나 초기화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `UpdateTelescopeArea()` | Telescope Area 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `UpdateTransferTelescopeInfo()` | Transfer Telescope 정보 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `RemoveTransferTelescopeInfo(index)` | Transfer Telescope 정보 항목을 제거하거나 초기화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `ClearTransferTelescopeInfo()` | Transfer Telescope 정보 항목을 제거하거나 초기화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `UpdateTransferTelescopeArea()` | Transfer Telescope Area 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `UpdateBossTelescopeInfo()` | Boss Telescope 정보 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `RemoveBossTelescopeInfo(index)` | Boss Telescope 정보 항목을 제거하거나 초기화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `ClearBossTelescopeInfo()` | Boss Telescope 정보 항목을 제거하거나 초기화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `UpdateBossTelescopeArea()` | Boss Telescope Area 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `UpdateCarryingBackpackSlaveInfo()` | Carrying Backpack Slave 정보 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `RemoveCarryingBackpackSlaveInfo(index)` | Carrying Backpack Slave 정보 항목을 제거하거나 초기화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `ClearCarryingBackpackSlaveInfo()` | Carrying Backpack Slave 정보 항목을 제거하거나 초기화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `UpdateFishSchoolInfo()` | Fish School 정보 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `RemoveFishSchoolInfo(index)` | Fish School 정보 항목을 제거하거나 초기화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `ClearFishSchoolInfo()` | Fish School 정보 항목을 제거하거나 초기화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `UpdateFishSchoolArea()` | Fish School Area 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `UpdateCorpseInfo()` | Corpse 정보 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `ClearCorpseInfo()` | Corpse 정보 항목을 제거하거나 초기화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `UpdateMySlaveInfo()` | My Slave 정보 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `ClearMySlaveInfo()` | My Slave 정보 항목을 제거하거나 초기화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `UpdatePingInfo()` | Ping 정보 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `AddGivenQuestInfo(type, id)` | Given 퀘스트 정보 항목을 생성하거나 등록합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `RemoveGivenQuestInfo(type, id)` | Given 퀘스트 정보 항목을 제거하거나 초기화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `UpdateCompletedQuestInfo()` | Completed 퀘스트 정보 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `ClearCompletedQuestInfo()` | Completed 퀘스트 정보 항목을 제거하거나 초기화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `AddNotifyQuestInfo(qType)` | Notify 퀘스트 정보 항목을 생성하거나 등록합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `RemoveNotifyQuestInfo(qType)` | Notify 퀘스트 정보 항목을 제거하거나 초기화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `ClearNotifyQuestInfo()` | Notify 퀘스트 정보 항목을 제거하거나 초기화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `StartNotifyQuestEffect(index, qType, isStart)` | Notify 퀘스트 효과 기능을 시작하거나 활성화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `UpdateDominionInfo()` | Dominion 정보 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `UpdateAllDrawableAnchor()` | All Drawable Anchor 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `ReloadAllInfo()` | All 정보 대상을 다시 불러옵니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `ClearAllInfo()` | All 정보 항목을 제거하거나 초기화합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetPlayerSextants()` | 플레이어 Sextants 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetSkillEffectWidget(widget, drawable, index)` | 기술 효과 위젯 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `ShowSkillMapEffect(x, y, z, radius, index)` | 기술 지도 효과 화면이나 정보를 표시합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `UpdateFactionRezDistrictInfo()` | 세력 Rez District 정보 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `MapWidgetShown()` | MapWidgetShown 관련 기능을 수행합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
+함수 이름을 눌러 설명과 확인된 제약을 펼칠 수 있습니다. 제약이 확인되지 않은 함수는 제약 항목을 표시하지 않습니다.
+
+
+<details>
+<summary><code>SetPlayerDrawable(player)</code></summary>
+
+플레이어 Drawable 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>GetTooltipController()</code></summary>
+
+툴팁 Controller 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>SetPingWidget(widget, drawable, pingType)</code></summary>
+
+Ping 위젯 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetTooltipColor(objColor, nickColor)</code></summary>
+
+툴팁 색상 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>UpdateZoneInfo()</code></summary>
+
+지역 정보 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>UpdateNpcInfo()</code></summary>
+
+Npc 정보 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>UpdateMonitorNpcInfo()</code></summary>
+
+Monitor Npc 정보 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>UpdateCurZoneGroupNpcInfo()</code></summary>
+
+Cur 지역 Group Npc 정보 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>ClearNpcInfo()</code></summary>
+
+Npc 정보 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>UpdateDoodadInfo(bRoadMap)</code></summary>
+
+Doodad 정보 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>ClearDoodadInfo()</code></summary>
+
+Doodad 정보 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>UpdateGivenQuestStaticInfo()</code></summary>
+
+Given 퀘스트 Static 정보 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>ClearGivenQuestStaticInfo()</code></summary>
+
+Given 퀘스트 Static 정보 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>UpdateHousingInfo()</code></summary>
+
+Housing 정보 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>ClearHousingInfo()</code></summary>
+
+Housing 정보 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>UpdateShipTelescopeInfo()</code></summary>
+
+Ship Telescope 정보 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>RemoveShipTelescopeInfo(index)</code></summary>
+
+Ship Telescope 정보 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>ClearShipTelescopeInfo()</code></summary>
+
+Ship Telescope 정보 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>UpdateTelescopeArea()</code></summary>
+
+Telescope Area 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>UpdateTransferTelescopeInfo()</code></summary>
+
+Transfer Telescope 정보 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>RemoveTransferTelescopeInfo(index)</code></summary>
+
+Transfer Telescope 정보 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>ClearTransferTelescopeInfo()</code></summary>
+
+Transfer Telescope 정보 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>UpdateTransferTelescopeArea()</code></summary>
+
+Transfer Telescope Area 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>UpdateBossTelescopeInfo()</code></summary>
+
+Boss Telescope 정보 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>RemoveBossTelescopeInfo(index)</code></summary>
+
+Boss Telescope 정보 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>ClearBossTelescopeInfo()</code></summary>
+
+Boss Telescope 정보 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>UpdateBossTelescopeArea()</code></summary>
+
+Boss Telescope Area 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>UpdateCarryingBackpackSlaveInfo()</code></summary>
+
+Carrying Backpack Slave 정보 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>RemoveCarryingBackpackSlaveInfo(index)</code></summary>
+
+Carrying Backpack Slave 정보 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>ClearCarryingBackpackSlaveInfo()</code></summary>
+
+Carrying Backpack Slave 정보 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>UpdateFishSchoolInfo()</code></summary>
+
+Fish School 정보 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>RemoveFishSchoolInfo(index)</code></summary>
+
+Fish School 정보 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>ClearFishSchoolInfo()</code></summary>
+
+Fish School 정보 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>UpdateFishSchoolArea()</code></summary>
+
+Fish School Area 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>UpdateCorpseInfo()</code></summary>
+
+Corpse 정보 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>ClearCorpseInfo()</code></summary>
+
+Corpse 정보 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>UpdateMySlaveInfo()</code></summary>
+
+My Slave 정보 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>ClearMySlaveInfo()</code></summary>
+
+My Slave 정보 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>UpdatePingInfo()</code></summary>
+
+Ping 정보 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>AddGivenQuestInfo(type, id)</code></summary>
+
+Given 퀘스트 정보 항목을 생성하거나 등록합니다.
+
+</details>
+
+<details>
+<summary><code>RemoveGivenQuestInfo(type, id)</code></summary>
+
+Given 퀘스트 정보 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>UpdateCompletedQuestInfo()</code></summary>
+
+Completed 퀘스트 정보 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>ClearCompletedQuestInfo()</code></summary>
+
+Completed 퀘스트 정보 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>AddNotifyQuestInfo(qType)</code></summary>
+
+Notify 퀘스트 정보 항목을 생성하거나 등록합니다.
+
+</details>
+
+<details>
+<summary><code>RemoveNotifyQuestInfo(qType)</code></summary>
+
+Notify 퀘스트 정보 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>ClearNotifyQuestInfo()</code></summary>
+
+Notify 퀘스트 정보 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>StartNotifyQuestEffect(index, qType, isStart)</code></summary>
+
+Notify 퀘스트 효과 기능을 시작하거나 활성화합니다.
+
+</details>
+
+<details>
+<summary><code>UpdateDominionInfo()</code></summary>
+
+Dominion 정보 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>UpdateAllDrawableAnchor()</code></summary>
+
+All Drawable Anchor 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>ReloadAllInfo()</code></summary>
+
+All 정보 대상을 다시 불러옵니다.
+
+</details>
+
+<details>
+<summary><code>ClearAllInfo()</code></summary>
+
+All 정보 항목을 제거하거나 초기화합니다.
+
+</details>
+
+<details>
+<summary><code>GetPlayerSextants()</code></summary>
+
+플레이어 Sextants 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>SetSkillEffectWidget(widget, drawable, index)</code></summary>
+
+기술 효과 위젯 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>ShowSkillMapEffect(x, y, z, radius, index)</code></summary>
+
+기술 지도 효과 화면이나 정보를 표시합니다.
+
+</details>
+
+<details>
+<summary><code>UpdateFactionRezDistrictInfo()</code></summary>
+
+세력 Rez District 정보 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>MapWidgetShown()</code></summary>
+
+MapWidgetShown 관련 기능을 수행합니다.
+
+</details>
 
 ## ⚠️ 전역 상수/값
 
+
 > 전역값은 읽기용 상수로 취급하는 것을 권장합니다. 값을 변경할 수 있는지는 보장되지 않습니다.
 
-| 이름 | 한국어 설명 | 상태 |
-|---|---|---|
-| `MAX_SKILL_MAP_EFFECT_COUNT` | 개수를 조회합니다. | ⚠️ 읽기 권장 |
+- <code>MAX_SKILL_MAP_EFFECT_COUNT</code> — 개수를 조회합니다.

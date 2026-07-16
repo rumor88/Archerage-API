@@ -10,19 +10,103 @@ Paintcolorpicker UI 객체의 속성, 상태와 동작을 제어합니다.
 
 ## ✅ 사용 가능
 
-| API | 한국어 설명 | 제약/주의 |
-|---|---|---|
-| `SetRGBColor(red, green, blue)` | RGB 색상 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetHue(hue)` | Hue 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetSat(sat)` | Sat 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetLum(lum)` | Lum 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetRGBColor()` | RGB 색상 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetHue()` | Hue 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetSat()` | Sat 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetLum()` | Lum 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetSpectrumWidget()` | Spectrum 위젯 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetLuminanceWidget()` | Luminance 위젯 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetSpectrumBg(bg)` | Spectrum Bg 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetLuminanceBg(bg)` | Luminance Bg 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `SetHLSColor(hue, lum, sat)` | HLS 색상 값을 설정하거나 변경합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
-| `GetHLSColor()` | HLS 색상 정보를 조회합니다. | 별도 제약이 기록되지 않았습니다. 인자·반환값은 클라이언트 버전에서 확인하세요. |
+함수 이름을 눌러 설명과 확인된 제약을 펼칠 수 있습니다. 제약이 확인되지 않은 함수는 제약 항목을 표시하지 않습니다.
+
+
+<details>
+<summary><code>SetRGBColor(red, green, blue)</code></summary>
+
+RGB 색상 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetHue(hue)</code></summary>
+
+Hue 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetSat(sat)</code></summary>
+
+Sat 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetLum(lum)</code></summary>
+
+Lum 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>GetRGBColor()</code></summary>
+
+RGB 색상 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetHue()</code></summary>
+
+Hue 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetSat()</code></summary>
+
+Sat 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetLum()</code></summary>
+
+Lum 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetSpectrumWidget()</code></summary>
+
+Spectrum 위젯 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetLuminanceWidget()</code></summary>
+
+Luminance 위젯 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>SetSpectrumBg(bg)</code></summary>
+
+Spectrum Bg 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetLuminanceBg(bg)</code></summary>
+
+Luminance Bg 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>SetHLSColor(hue, lum, sat)</code></summary>
+
+HLS 색상 값을 설정하거나 변경합니다.
+
+</details>
+
+<details>
+<summary><code>GetHLSColor()</code></summary>
+
+HLS 색상 정보를 조회합니다.
+
+</details>

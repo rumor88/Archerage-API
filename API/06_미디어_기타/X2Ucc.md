@@ -10,13 +10,61 @@ UCC 이미지와 사용자 제작 콘텐츠를 다룹니다.
 
 ## ⛔ 애드온 사용 불가
 
-| API | 한국어 설명 | 사용 불가 근거 |
-|---|---|---|
-| `GetPatterns()` | Patterns 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetUccUserDirectoryPath()` | Ucc 사용자 Directory Path 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetFgUserCount()` | Fg 사용자 개수 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetFgUserPath(idx)` | Fg 사용자 Path 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `UploadColors(r1, g1, b1, r2, g2, b2, r3, g3, b3)` | UploadColors 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `UploadEmblem(doodadId, bgTypeNumber, fgTypeNumber, fgUserIndex)` | UploadEmblem 관련 기능을 수행합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetMakeUccConsumeInfo(doodadId, useUserImage)` | Make Ucc Consume 정보 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetUccCategoryInfo()` | Ucc 분류 정보 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
+아래 함수는 클라이언트에 이름이 노출되어 있지만 애드온 호출 허용 목록에는 포함되지 않습니다.
+
+
+<details>
+<summary><code>GetPatterns()</code></summary>
+
+Patterns 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetUccUserDirectoryPath()</code></summary>
+
+Ucc 사용자 Directory Path 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetFgUserCount()</code></summary>
+
+Fg 사용자 개수 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetFgUserPath(idx)</code></summary>
+
+Fg 사용자 Path 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>UploadColors(r1, g1, b1, r2, g2, b2, r3, g3, b3)</code></summary>
+
+UploadColors 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>UploadEmblem(doodadId, bgTypeNumber, fgTypeNumber, fgUserIndex)</code></summary>
+
+UploadEmblem 관련 기능을 수행합니다.
+
+</details>
+
+<details>
+<summary><code>GetMakeUccConsumeInfo(doodadId, useUserImage)</code></summary>
+
+Make Ucc Consume 정보 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetUccCategoryInfo()</code></summary>
+
+Ucc 분류 정보 정보를 조회합니다.
+
+</details>

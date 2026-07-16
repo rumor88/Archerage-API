@@ -10,10 +10,40 @@
 
 ## ⛔ 애드온 사용 불가
 
-| API | 한국어 설명 | 사용 불가 근거 |
-|---|---|---|
-| `StartBuffSkill(index)` | 버프 기술 기능을 시작하거나 활성화합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `CanUseBuffSkill(index)` | Use 버프 기술 여부를 확인합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetNumBuffSkills()` | 개수 버프 Skills 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetBuffSkill(index)` | 버프 기술 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
-| `GetBuffSkillCooldown(index)` | 버프 기술 재사용 시간 정보를 조회합니다. | 덤프의 `Available/not allowed functions`에 있어 애드온 호출이 차단된 항목입니다. |
+아래 함수는 클라이언트에 이름이 노출되어 있지만 애드온 호출 허용 목록에는 포함되지 않습니다.
+
+
+<details>
+<summary><code>StartBuffSkill(index)</code></summary>
+
+버프 기술 기능을 시작하거나 활성화합니다.
+
+</details>
+
+<details>
+<summary><code>CanUseBuffSkill(index)</code></summary>
+
+Use 버프 기술 여부를 확인합니다.
+
+</details>
+
+<details>
+<summary><code>GetNumBuffSkills()</code></summary>
+
+개수 버프 Skills 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetBuffSkill(index)</code></summary>
+
+버프 기술 정보를 조회합니다.
+
+</details>
+
+<details>
+<summary><code>GetBuffSkillCooldown(index)</code></summary>
+
+버프 기술 재사용 시간 정보를 조회합니다.
+
+</details>
