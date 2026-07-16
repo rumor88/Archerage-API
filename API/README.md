@@ -1,0 +1,168 @@
+# ArcheRage API 한국어 참조
+
+ArcheRage 애드온 API를 기능별로 분류하고, 각 함수의 한국어 설명과 사용 가능 여부를 정리한 문서입니다.
+
+## 상태 표기
+
+- ✅ 사용 가능
+- ⛔ 애드온 사용 불가
+- ⚠️ 제약 있음, 레거시 또는 확인 필요
+
+## 일반 API
+
+| 네임스페이스 | 사용 가능 | 사용 불가 | 전역값 | 한국어 기능 설명 |
+|---|---:|---:|---:|---|
+| [ADDON](01_애드온_시스템/ADDON.md) | 19 | 98 | 143 | 애드온 등록, 저장 데이터, 이벤트, 로드와 UI 콘텐츠 연결을 관리합니다. |
+| [Console](01_애드온_시스템/Console.md) | 2 | 2 | 0 | 허용된 콘솔 명령 실행과 콘솔 상태 조회를 담당합니다. |
+| [UI](01_애드온_시스템/UI.md) | 41 | 11 | 24 | UI 객체 생성, 서버 시간, 기본 화면 요소와 UI 공통 기능을 제공합니다. |
+| [X2Ability](02_캐릭터_전투/X2Ability.md) | 5 | 88 | 39 | 능력, 숙련도, 버프 툴팁과 능력 세트 정보를 조회합니다. |
+| [X2Achievement](06_미디어_기타/X2Achievement.md) | 18 | 5 | 17 | 업적 목록, 진행도, 보상과 카테고리 정보를 조회합니다. |
+| [X2Action](02_캐릭터_전투/X2Action.md) | 0 | 18 | 0 | 행동 슬롯과 액션 실행 정보를 다룹니다. |
+| [X2ArchePass](04_퀘스트_월드/X2ArchePass.md) | 0 | 19 | 6 | 아키패스 진행도, 임무와 보상 정보를 다룹니다. |
+| [X2Auction](03_아이템_경제/X2Auction.md) | 7 | 49 | 6 | 경매장 검색, 검색 결과와 경매 물품 정보를 다룹니다. |
+| [X2Bag](03_아이템_경제/X2Bag.md) | 2 | 77 | 0 | 가방 슬롯, 아이템 정보와 장착 동작을 다룹니다. |
+| [X2Bank](03_아이템_경제/X2Bank.md) | 0 | 51 | 0 | 창고 슬롯, 아이템 이동과 보관 정보를 다룹니다. |
+| [X2BattleField](04_퀘스트_월드/X2BattleField.md) | 0 | 43 | 5 | 전장 신청, 입장 상태와 점수 정보를 다룹니다. |
+| [X2BlessUthstin](03_아이템_경제/X2BlessUthstin.md) | 0 | 25 | 0 | 우스틴의 축복 능력치와 변경 정보를 다룹니다. |
+| [X2Book](04_퀘스트_월드/X2Book.md) | 0 | 2 | 0 | 책과 문서 콘텐츠를 다룹니다. |
+| [X2BuffSkill](02_캐릭터_전투/X2BuffSkill.md) | 0 | 5 | 0 | 버프 기술과 효과 정보를 다룹니다. |
+| [X2Butler](06_미디어_기타/X2Butler.md) | 6 | 52 | 0 | 집사 상태, 임무, 장비와 상호작용 정보를 다룹니다. |
+| [X2Camera](04_퀘스트_월드/X2Camera.md) | 0 | 3 | 0 | 카메라 위치, 시점과 확대 관련 기능을 다룹니다. |
+| [X2Chat](05_소셜_조직/X2Chat.md) | 1 | 40 | 139 | 채팅 채널, 메시지, 링크와 채팅 설정을 다룹니다. |
+| [X2Coffer](03_아이템_경제/X2Coffer.md) | 0 | 47 | 0 | 보관함 슬롯과 아이템 이동 기능을 다룹니다. |
+| [X2CombatResource](02_캐릭터_전투/X2CombatResource.md) | 3 | 0 | 4 | 전투 자원과 그룹별 자원 상태를 조회합니다. |
+| [X2Craft](03_아이템_경제/X2Craft.md) | 3 | 50 | 10 | 제작법, 재료, 결과물과 제작 정보를 조회합니다. |
+| [X2Cursor](06_미디어_기타/X2Cursor.md) | 0 | 5 | 0 | 마우스 커서 상태와 커서 모양을 다룹니다. |
+| [X2Debug](01_애드온_시스템/X2Debug.md) | 0 | 6 | 0 | 개발 및 디버그 전용 기능을 다룹니다. |
+| [X2Decal](04_퀘스트_월드/X2Decal.md) | 0 | 10 | 1 | 월드 데칼과 표시 효과를 다룹니다. |
+| [X2DialogManager](04_퀘스트_월드/X2DialogManager.md) | 0 | 12 | 113 | NPC 대화, 선택지와 대화 상태를 다룹니다. |
+| [X2Dominion](04_퀘스트_월드/X2Dominion.md) | 0 | 45 | 9 | 영지전과 세력 지배 정보를 다룹니다. |
+| [X2Dyeing](03_아이템_경제/X2Dyeing.md) | 0 | 4 | 0 | 염색 정보와 색상 적용 기능을 다룹니다. |
+| [X2EquipSlotReinforce](03_아이템_경제/X2EquipSlotReinforce.md) | 0 | 33 | 4 | 장비 슬롯 강화 상태와 재료 정보를 다룹니다. |
+| [X2Equipment](02_캐릭터_전투/X2Equipment.md) | 4 | 29 | 33 | 착용 장비, 장비 슬롯과 툴팁 정보를 조회합니다. |
+| [X2EventCenter](04_퀘스트_월드/X2EventCenter.md) | 0 | 8 | 4 | 이벤트 센터 목록과 보상 정보를 다룹니다. |
+| [X2Faction](05_소셜_조직/X2Faction.md) | 0 | 107 | 27 | 세력, 원정대와 관계 정보를 다룹니다. |
+| [X2Family](05_소셜_조직/X2Family.md) | 0 | 28 | 0 | 가족 구성원, 역할과 가족 활동 정보를 다룹니다. |
+| [X2Friend](05_소셜_조직/X2Friend.md) | 0 | 21 | 3 | 친구 목록, 접속 상태와 차단 정보를 다룹니다. |
+| [X2GuildBank](03_아이템_경제/X2GuildBank.md) | 0 | 45 | 0 | 원정대 창고 슬롯과 아이템 이동을 다룹니다. |
+| [X2HeirSkill](02_캐릭터_전투/X2HeirSkill.md) | 0 | 14 | 2 | 계승자 기술과 단계 정보를 다룹니다. |
+| [X2Hero](04_퀘스트_월드/X2Hero.md) | 0 | 34 | 0 | 영웅 후보, 투표와 영웅 상태 정보를 다룹니다. |
+| [X2Hotkey](01_애드온_시스템/X2Hotkey.md) | 16 | 18 | 0 | 단축키 조회, 지정과 해제를 다룹니다. |
+| [X2House](04_퀘스트_월드/X2House.md) | 0 | 81 | 14 | 주택, 설치물, 세금과 건축 정보를 다룹니다. |
+| [X2Indun](04_퀘스트_월드/X2Indun.md) | 0 | 10 | 0 | 인스턴스 던전 진행 상태를 다룹니다. |
+| [X2IngameShop](03_아이템_경제/X2IngameShop.md) | 0 | 30 | 46 | 루루 상점 상품, 카테고리와 구매 정보를 다룹니다. |
+| [X2Input](01_애드온_시스템/X2Input.md) | 0 | 6 | 0 | 키보드와 마우스 입력 상태를 다룹니다. |
+| [X2Instance](04_퀘스트_월드/X2Instance.md) | 0 | 2 | 2 | 인스턴스 상태와 진영 점수 정보를 다룹니다. |
+| [X2Interaction](04_퀘스트_월드/X2Interaction.md) | 0 | 2 | 0 | 대상 상호작용과 상호작용 상태를 다룹니다. |
+| [X2Item](03_아이템_경제/X2Item.md) | 14 | 61 | 20 | 아이템 정보, 링크 해석, 툴팁과 속성을 다룹니다. |
+| [X2ItemEnchant](03_아이템_경제/X2ItemEnchant.md) | 0 | 57 | 20 | 아이템 강화, 재연마와 강화 재료 정보를 다룹니다. |
+| [X2ItemGacha](03_아이템_경제/X2ItemGacha.md) | 0 | 14 | 0 | 상자형 확률 상품과 결과 정보를 다룹니다. |
+| [X2ItemGuide](03_아이템_경제/X2ItemGuide.md) | 0 | 5 | 10 | 아이템 도감과 획득처 정보를 다룹니다. |
+| [X2Locale](01_애드온_시스템/X2Locale.md) | 8 | 0 | 0 | 언어, 지역화 문자열과 로케일 정보를 다룹니다. |
+| [X2LoginCharacter](04_퀘스트_월드/X2LoginCharacter.md) | 0 | 88 | 4 | 캐릭터 선택 화면의 캐릭터 정보를 다룹니다. |
+| [X2Loot](03_아이템_경제/X2Loot.md) | 0 | 9 | 3 | 전리품 획득 규칙과 주사위 정보를 다룹니다. |
+| [X2Mail](03_아이템_경제/X2Mail.md) | 0 | 62 | 37 | 우편 목록, 첨부물과 발송 정보를 다룹니다. |
+| [X2Map](04_퀘스트_월드/X2Map.md) | 2 | 24 | 155 | 월드맵, 지역, 좌표, 핀과 지도 상태를 다룹니다. |
+| [X2Mate](06_미디어_기타/X2Mate.md) | 0 | 28 | 10 | 소환수와 탑승물의 상태, 장비와 기술을 다룹니다. |
+| [X2MiniScoreboard](06_미디어_기타/X2MiniScoreboard.md) | 0 | 1 | 1 | 미니 점수판 상태를 다룹니다. |
+| [X2NameTag](06_미디어_기타/X2NameTag.md) | 0 | 1 | 8 | 이름표 표시와 스타일 정보를 다룹니다. |
+| [X2Nation](05_소셜_조직/X2Nation.md) | 0 | 19 | 6 | 국가 구성원, 외교와 국가 정보를 다룹니다. |
+| [X2OneAndOneChat](05_소셜_조직/X2OneAndOneChat.md) | 0 | 3 | 0 | 일대일 대화 세션을 다룹니다. |
+| [X2Option](01_애드온_시스템/X2Option.md) | 30 | 2 | 222 | 게임 옵션, UI 배율과 키 설정을 다룹니다. |
+| [X2Player](02_캐릭터_전투/X2Player.md) | 15 | 110 | 28 | 플레이어 상태, 칭호, 전투와 캐릭터 정보를 다룹니다. |
+| [X2PremiumService](06_미디어_기타/X2PremiumService.md) | 0 | 23 | 26 | 프리미엄 서비스와 혜택 상태를 다룹니다. |
+| [X2Quest](04_퀘스트_월드/X2Quest.md) | 5 | 170 | 22 | 퀘스트 목록, 진행도, 추적과 완료 상태를 다룹니다. |
+| [X2Rank](04_퀘스트_월드/X2Rank.md) | 0 | 20 | 12 | 순위, 점수와 랭킹 보상 정보를 다룹니다. |
+| [X2RenewItem](03_아이템_경제/X2RenewItem.md) | 0 | 4 | 0 | 아이템 갱신과 교환 정보를 다룹니다. |
+| [X2Resident](04_퀘스트_월드/X2Resident.md) | 5 | 5 | 12 | 주민 게시판과 주택 거래 목록을 다룹니다. |
+| [X2Roster](05_소셜_조직/X2Roster.md) | 0 | 12 | 4 | 공격대 명단과 로스터 정보를 다룹니다. |
+| [X2Security](01_애드온_시스템/X2Security.md) | 0 | 17 | 0 | 2차 비밀번호와 보안 상태를 다룹니다. |
+| [X2SiegeWeapon](04_퀘스트_월드/X2SiegeWeapon.md) | 2 | 14 | 0 | 공성 병기의 속도와 조작 정보를 다룹니다. |
+| [X2Skill](02_캐릭터_전투/X2Skill.md) | 4 | 0 | 1 | 기술 툴팁, 재사용 시간과 기술 정보를 다룹니다. |
+| [X2SkillAlert](02_캐릭터_전투/X2SkillAlert.md) | 0 | 6 | 5 | 기술 알림 조건과 표시 정보를 다룹니다. |
+| [X2Sound](06_미디어_기타/X2Sound.md) | 5 | 1 | 0 | UI 효과음과 배경 음악 재생을 다룹니다. |
+| [X2Squad](05_소셜_조직/X2Squad.md) | 0 | 31 | 7 | 분대 구성, 역할과 분대 상태를 다룹니다. |
+| [X2Store](03_아이템_경제/X2Store.md) | 5 | 43 | 20 | 특산품 생산지, 판매지와 가격 비율을 다룹니다. |
+| [X2SurveyForm](06_미디어_기타/X2SurveyForm.md) | 0 | 5 | 8 | 설문 양식과 응답 상태를 다룹니다. |
+| [X2Team](05_소셜_조직/X2Team.md) | 2 | 102 | 16 | 파티와 공격대 구성원, 역할과 이동을 다룹니다. |
+| [X2Time](04_퀘스트_월드/X2Time.md) | 2 | 8 | 0 | 게임 시간과 서버 시간을 조회합니다. |
+| [X2Trade](03_아이템_경제/X2Trade.md) | 0 | 14 | 2 | 개인 거래 상태와 거래 물품을 다룹니다. |
+| [X2Trial](04_퀘스트_월드/X2Trial.md) | 0 | 22 | 20 | 재판 배심원, 평결과 재판 정보를 다룹니다. |
+| [X2Tutorial](04_퀘스트_월드/X2Tutorial.md) | 0 | 2 | 0 | 튜토리얼 진행 상태를 다룹니다. |
+| [X2Ucc](06_미디어_기타/X2Ucc.md) | 0 | 8 | 0 | UCC 이미지와 사용자 제작 콘텐츠를 다룹니다. |
+| [X2Unit](02_캐릭터_전투/X2Unit.md) | 32 | 87 | 33 | 대상 유닛의 ID, 이름, 위치, 능력과 전투 상태를 조회합니다. |
+| [X2UserMusic](06_미디어_기타/X2UserMusic.md) | 0 | 5 | 0 | 사용자 연주곡과 악보 재생을 다룹니다. |
+| [X2Util](01_애드온_시스템/X2Util.md) | 7 | 48 | 11 | 문자열, 숫자, 통화와 기타 공통 유틸리티를 제공합니다. |
+| [X2Warp](04_퀘스트_월드/X2Warp.md) | 0 | 14 | 4 | 공간 이동, 귀환과 포탈 정보를 다룹니다. |
+| [X2World](04_퀘스트_월드/X2World.md) | 0 | 42 | 0 | 월드 상태, 날씨, 지역과 오브젝트 정보를 다룹니다. |
+
+## UI 위젯 API
+
+| 위젯 | 사용 가능 | 전역값 | 한국어 기능 설명 |
+|---|---:|---:|---|
+| [Avi](07_UI_위젯/Avi.md) | 2 | 0 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Button](07_UI_위젯/Button.md) | 30 | 5 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [ChatEdit](07_UI_위젯/ChatEdit.md) | 1 | 0 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [ChatMessage](07_UI_위젯/ChatMessage.md) | 8 | 0 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [ChatTabWindow](07_UI_위젯/ChatTabWindow.md) | 5 | 0 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Checkbutton](07_UI_위젯/Checkbutton.md) | 4 | 0 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Circlediagram](07_UI_위젯/Circlediagram.md) | 9 | 0 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Colorpicker](07_UI_위젯/Colorpicker.md) | 3 | 0 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Combobox](07_UI_위젯/Combobox.md) | 5 | 0 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Cooldown](07_UI_위젯/Cooldown.md) | 9 | 0 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Damagedisplay](07_UI_위젯/Damagedisplay.md) | 8 | 8 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Drawable](07_UI_위젯/Drawable.md) | 72 | 3 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [DynamicList](07_UI_위젯/DynamicList.md) | 30 | 0 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Edit](07_UI_위젯/Edit.md) | 33 | 0 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Editmultiline](07_UI_위젯/Editmultiline.md) | 20 | 0 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Emptywidget](07_UI_위젯/Emptywidget.md) | 1 | 0 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Folder](07_UI_위젯/Folder.md) | 17 | 0 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Gametooltip](07_UI_위젯/Gametooltip.md) | 26 | 0 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Grid](07_UI_위젯/Grid.md) | 52 | 0 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Label](07_UI_위젯/Label.md) | 4 | 0 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Line](07_UI_위젯/Line.md) | 5 | 0 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [List](07_UI_위젯/List.md) | 60 | 0 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Listctrl](07_UI_위젯/Listctrl.md) | 17 | 4 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Map](07_UI_위젯/Map.md) | 56 | 1 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Message](07_UI_위젯/Message.md) | 33 | 0 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Modelview](07_UI_위젯/Modelview.md) | 100 | 0 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Pageable](07_UI_위젯/Pageable.md) | 8 | 0 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Paintcolorpicker](07_UI_위젯/Paintcolorpicker.md) | 14 | 0 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Radio](07_UI_위젯/Radio.md) | 13 | 0 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Roadmap](07_UI_위젯/Roadmap.md) | 10 | 0 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Slider](07_UI_위젯/Slider.md) | 17 | 0 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Slot](07_UI_위젯/Slot.md) | 18 | 17 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Statusbar](07_UI_위젯/Statusbar.md) | 17 | 0 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Tab](07_UI_위젯/Tab.md) | 46 | 0 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [TextStyle](07_UI_위젯/TextStyle.md) | 20 | 2 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Textbox](07_UI_위젯/Textbox.md) | 16 | 0 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Uibounds](07_UI_위젯/Uibounds.md) | 14 | 9 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Uiobject](07_UI_위젯/Uiobject.md) | 4 | 0 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Webbrowser](07_UI_위젯/Webbrowser.md) | 32 | 0 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Webview](07_UI_위젯/Webview.md) | 20 | 0 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Widget](07_UI_위젯/Widget.md) | 11 | 0 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Widgetbase](07_UI_위젯/Widgetbase.md) | 72 | 5 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Window](07_UI_위젯/Window.md) | 5 | 0 | $widget UI 객체의 동작과 상태를 제어합니다. |
+| [Worldmap](07_UI_위젯/Worldmap.md) | 26 | 0 | $widget UI 객체의 동작과 상태를 제어합니다. |
+
+## 콘솔 변수
+
+| 분류 | 변수 수 | 상태 |
+|---|---:|---|
+| [UI / 입력](08_콘솔_변수/UI_입력.md) | 16 | ⚠️ 지원 외/확인 필요 |
+| [게임플레이 / AI](08_콘솔_변수/게임플레이_AI.md) | 223 | ⚠️ 지원 외/확인 필요 |
+| [그래픽 / 렌더링](08_콘솔_변수/그래픽_렌더링.md) | 1016 | ⚠️ 지원 외/확인 필요 |
+| [기타 / 미분류](08_콘솔_변수/기타_미분류.md) | 887 | ⚠️ 지원 외/확인 필요 |
+| [네트워크 / 클라이언트](08_콘솔_변수/네트워크_클라이언트.md) | 125 | ⚠️ 지원 외/확인 필요 |
+| [디버그 / 진단](08_콘솔_변수/디버그_진단.md) | 429 | ⚠️ 지원 외/확인 필요 |
+| [물리](08_콘솔_변수/물리.md) | 103 | ⚠️ 지원 외/확인 필요 |
+| [시스템 / 성능](08_콘솔_변수/시스템_성능.md) | 81 | ⚠️ 지원 외/확인 필요 |
+| [오디오](08_콘솔_변수/오디오.md) | 129 | ⚠️ 지원 외/확인 필요 |
+
+## 추가 참조
+
+- [확인된 제약사항](09_제약과_레거시/제약사항.md)
+- [레거시/버전 차이](09_제약과_레거시/레거시_API.md)
+- [원본 정리 기록](09_제약과_레거시/원본_정리_기록.md)
+- [내부 게임 스크립트 분류](10_지원_외/내부_게임_스크립트.md)
+- [타입과 상수](11_타입과_상수/README.md)

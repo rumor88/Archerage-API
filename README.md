@@ -1,5 +1,19 @@
 # Archerage API
 
-ArcheRage addon development API reference files and extracted resources.
+ArcheRage 애드온 개발용 API 한국어 참조 저장소입니다.
 
-The contents are provided as a community reference for addon developers.
+## 문서 바로가기
+
+- **[기능별 API 한국어 문서](API/README.md)**
+- [확인된 제약과 버전 주의사항](API/09_제약과_레거시/제약사항.md)
+- [사용 불가/레거시 API](API/09_제약과_레거시/레거시_API.md)
+- [예제 애드온](examples/README.md)
+
+## 정리 기준
+
+- 최신 후보 덤프(`(1)` 파일)를 기준으로 문서를 생성했습니다.
+- 허용 목록과 차단 목록을 분리하고 모든 API에 한국어 기능 설명을 붙였습니다.
+- 콘솔 변수와 내부 게임 스크립트는 공식 애드온 API가 아니므로 `지원 외/확인 필요`로 분류했습니다.
+- 중복 덤프, 원본 ZIP, 관련 없는 바이너리는 문서 생성 검증 후 제거했습니다.
+
+> 이 문서는 특정 클라이언트 버전의 스냅샷을 기반으로 하며 공식 API 보증이 아닙니다. 업데이트 후에는 인자, 반환값과 허용 여부를 다시 확인하세요.
