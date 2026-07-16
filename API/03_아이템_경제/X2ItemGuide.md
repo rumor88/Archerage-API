@@ -16,35 +16,77 @@
 <details>
 <summary><code>GetImpls()</code></summary>
 
-Impls 정보를 조회합니다.
+**기능:** Impls 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetCategories()</code></summary>
 
-Categories 정보를 조회합니다.
+**기능:** Categories 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetCategoryInfos(aCategory, bCategory, lootIndex, grade)</code></summary>
 
-분류 Infos 정보를 조회합니다.
+**기능:** 분류 Infos 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `aCategory` — `number|string` 추정: aCategory에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `bCategory` — `number|string` 추정: bCategory에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `lootIndex` — `number` 추정: lootIndex에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+- `grade` — `number` 추정: grade에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetSpecifiedItems(aCategory, bCategory, equipItemGuideType, grade)</code></summary>
 
-Specified Items 정보를 조회합니다.
+**기능:** Specified Items 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `aCategory` — `number|string` 추정: aCategory에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `bCategory` — `number|string` 추정: bCategory에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `equipItemGuideType` — `number|string` 추정: equipItemGuideType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `grade` — `number` 추정: grade에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetIndunPortalInfo(indunZoneKey)</code></summary>
 
-Indun Portal 정보 정보를 조회합니다.
+**기능:** Indun Portal 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `indunZoneKey` — `number|string` 추정: indunZoneKey에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 

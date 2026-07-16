@@ -10,139 +10,369 @@
 
 ## ✅ 사용 가능
 
+> 문서 해석 안내: **시그니처**는 원본 덤프에서 확인된 값입니다. **추정** 표시는 함수명·매개변수명을 근거로 한 해석이며, 실제 자료형과 반환 필드는 클라이언트 버전에서 확인해야 합니다.
+
 함수 이름을 눌러 설명과 확인된 제약을 펼칠 수 있습니다. 제약이 확인되지 않은 함수는 제약 항목을 표시하지 않습니다.
 
 
 <details>
 <summary><code>ImportAPI(apiType)</code></summary>
 
-ImportAPI 관련 기능을 수행합니다.
+**기능:** API_TYPE에 정의된 API 모듈을 애드온 실행 환경으로 불러옵니다. 예를 들어 BAG 모듈을 가져오면 이후 X2Bag의 허용 함수를 호출할 수 있습니다.
+
+**매개변수**
+
+- `apiType` — `number` 추정: 불러올 API 모듈 ID입니다. `API_TYPE.BAG.id`처럼 API_TYPE 표의 id 값을 사용합니다.
+
+**반환값:** `object` 또는 반환값 없음 — 생성/가져오기 결과를 반환하는지는 함수별 원본에 기록되어 있지 않습니다.
+
+**사용 예시**
+
+```lua
+ADDON:ImportAPI(API_TYPE.BAG.id)
+```
 
 </details>
 
 <details>
 <summary><code>ImportObject(objectType)</code></summary>
 
-ImportObject 관련 기능을 수행합니다.
+**기능:** OBJECT_TYPE에 정의된 UI 객체 형식을 애드온에서 사용할 수 있도록 등록합니다. 버튼이나 창 같은 객체를 만들기 전에 필요한 형식을 불러오는 초기화 단계입니다.
+
+**매개변수**
+
+- `objectType` — `number` 추정: 불러올 UI 객체 종류입니다. `OBJECT_TYPE.BUTTON` 같은 OBJECT_TYPE 상수를 사용합니다.
+
+**반환값:** `object` 또는 반환값 없음 — 생성/가져오기 결과를 반환하는지는 함수별 원본에 기록되어 있지 않습니다.
+
+**사용 예시**
+
+```lua
+ADDON:ImportObject(OBJECT_TYPE.BUTTON)
+```
 
 </details>
 
 <details>
 <summary><code>RegisterContentWidget(uiCategory)</code></summary>
 
-콘텐츠 위젯 항목을 생성하거나 등록합니다.
+**기능:** 지정한 UI 콘텐츠 카테고리에 애드온 위젯을 연결합니다. 게임의 콘텐츠 열기 흐름에서 해당 위젯을 찾을 수 있게 등록할 때 사용합니다.
+
+**매개변수**
+
+- `uiCategory` — `number` 추정: 대상 UI 콘텐츠 카테고리입니다. `UIC_BAG` 같은 UIC_* 상수를 사용합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**사용 예시**
+
+```lua
+ADDON:RegisterContentWidget(UIC_BAG)
+```
 
 </details>
 
 <details>
 <summary><code>RegisterContentTriggerFunc(uiCategory)</code></summary>
 
-콘텐츠 Trigger Func 항목을 생성하거나 등록합니다.
+**기능:** 지정한 UI 콘텐츠 카테고리가 열릴 때 실행할 트리거 함수를 등록합니다.
+
+**매개변수**
+
+- `uiCategory` — `number` 추정: 대상 UI 콘텐츠 카테고리입니다. `UIC_BAG` 같은 UIC_* 상수를 사용합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**사용 예시**
+
+```lua
+ADDON:RegisterContentTriggerFunc(UIC_BAG)
+```
 
 </details>
 
 <details>
 <summary><code>GetContent(uiCategory)</code></summary>
 
-콘텐츠 정보를 조회합니다.
+**기능:** UI 콘텐츠 카테고리에 연결된 콘텐츠 객체를 조회합니다. 아직 생성되지 않았거나 등록되지 않은 경우에는 값이 없을 수 있습니다.
+
+**매개변수**
+
+- `uiCategory` — `number` 추정: 대상 UI 콘텐츠 카테고리입니다. `UIC_BAG` 같은 UIC_* 상수를 사용합니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**사용 예시**
+
+```lua
+local content = ADDON:GetContent(UIC_BAG)
+```
 
 </details>
 
 <details>
 <summary><code>GetContentMainScriptPosVis(uiCategory)</code></summary>
 
-콘텐츠 Main Script Pos Vis 정보를 조회합니다.
+**기능:** UI 콘텐츠의 메인 스크립트 위치·표시 상태 관련 정보를 조회합니다. 정확한 반환 필드는 원본 덤프에 기록되어 있지 않습니다.
+
+**매개변수**
+
+- `uiCategory` — `number` 추정: 대상 UI 콘텐츠 카테고리입니다. `UIC_BAG` 같은 UIC_* 상수를 사용합니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+local result = ADDON:GetContentMainScriptPosVis(UIC_BAG)
+```
 
 </details>
 
 <details>
 <summary><code>ShowContent(uiCategory, arg)</code></summary>
 
-콘텐츠 화면이나 정보를 표시합니다.
+**기능:** 지정한 UI 콘텐츠를 열거나 표시합니다. 두 번째 인자는 콘텐츠에 전달할 추가 값으로 보이지만 형식은 원본에 기록되어 있지 않습니다.
+
+**매개변수**
+
+- `uiCategory` — `number` 추정: 대상 UI 콘텐츠 카테고리입니다. `UIC_BAG` 같은 UIC_* 상수를 사용합니다.
+- `arg` — `any` 추정: 호출 대상에 전달할 추가 값입니다. 구체적인 형식은 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**사용 예시**
+
+```lua
+ADDON:ShowContent(UIC_BAG, nil)
+```
 
 </details>
 
 <details>
 <summary><code>ToggleContent(uiCategory)</code></summary>
 
-ToggleContent 관련 기능을 수행합니다.
+**기능:** 지정한 UI 콘텐츠가 열려 있으면 닫고, 닫혀 있으면 여는 방식으로 표시 상태를 전환합니다.
+
+**매개변수**
+
+- `uiCategory` — `number` 추정: 대상 UI 콘텐츠 카테고리입니다. `UIC_BAG` 같은 UIC_* 상수를 사용합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**사용 예시**
+
+```lua
+ADDON:ToggleContent(UIC_BAG)
+```
 
 </details>
 
 <details>
 <summary><code>GetAddonInfos()</code></summary>
 
-애드온 Infos 정보를 조회합니다.
+**기능:** 클라이언트가 알고 있는 애드온 목록과 활성화 상태 정보를 조회합니다. 반환 테이블의 필드 구성은 원본에 기록되어 있지 않습니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**사용 예시**
+
+```lua
+local addonInfos = ADDON:GetAddonInfos()
+```
 
 </details>
 
 <details>
 <summary><code>SetAddonEnable(name, enable)</code></summary>
 
-애드온 Enable 값을 설정하거나 변경합니다.
+**기능:** 이름으로 지정한 애드온의 활성화 여부를 변경합니다. 변경 내용을 영구 반영하려면 SaveAddonInfos 호출이 추가로 필요할 수 있습니다.
+
+**매개변수**
+
+- `name` — `string` 추정: 대상의 이름 또는 고유 식별 문자열입니다.
+- `enable` — `boolean` 추정: 기능을 활성화할지 여부입니다. 일반적으로 `true`는 활성화, `false`는 비활성화입니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**사용 예시**
+
+```lua
+ADDON:SetAddonEnable("my_addon", true)
+```
 
 </details>
 
 <details>
 <summary><code>SaveAddonInfos()</code></summary>
 
-애드온 Infos 데이터를 저장합니다.
+**기능:** 변경된 애드온 활성화 설정을 저장합니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**사용 예시**
+
+```lua
+ADDON:SaveAddonInfos()
+```
 
 </details>
 
 <details>
 <summary><code>FireAddon(name)</code></summary>
 
-애드온 이벤트를 발생시킵니다.
+**기능:** 이름으로 지정한 애드온의 로드 또는 실행을 요청합니다. 이미 로드된 애드온에서의 동작 차이는 원본에 기록되어 있지 않습니다.
+
+**매개변수**
+
+- `name` — `string` 추정: 대상의 이름 또는 고유 식별 문자열입니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**사용 예시**
+
+```lua
+ADDON:FireAddon("my_addon")
+```
 
 </details>
 
 <details>
 <summary><code>ReloadAddon(name)</code></summary>
 
-애드온 대상을 다시 불러옵니다.
+**기능:** 이름으로 지정한 애드온 스크립트를 다시 불러옵니다. 개발 중 코드를 갱신할 때 사용할 수 있지만 현재 상태가 초기화될 수 있습니다.
+
+**매개변수**
+
+- `name` — `string` 추정: 대상의 이름 또는 고유 식별 문자열입니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**사용 예시**
+
+```lua
+ADDON:ReloadAddon("my_addon")
+```
 
 </details>
 
 <details>
 <summary><code>ChatLog(logMessage)</code></summary>
 
-ChatLog 관련 기능을 수행합니다.
+**기능:** 문자열을 게임 채팅 로그에 출력합니다. 디버깅 메시지나 사용자 안내를 표시할 때 사용합니다.
+
+**매개변수**
+
+- `logMessage` — `string` 추정: 채팅 로그에 출력할 문자열입니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**사용 예시**
+
+```lua
+ADDON:ChatLog("애드온이 로드되었습니다.")
+```
 
 </details>
 
 <details>
 <summary><code>GetName()</code></summary>
 
-이름 정보를 조회합니다.
+**기능:** 현재 실행 중인 애드온의 이름을 반환합니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**사용 예시**
+
+```lua
+local addonName = ADDON:GetName()
+```
 
 </details>
 
 <details>
 <summary><code>LoadData(key)</code></summary>
 
-데이터 데이터를 불러옵니다.
+**기능:** 현재 애드온의 저장 영역에서 키에 연결된 데이터를 읽습니다. 저장된 값이 없을 때의 반환값은 원본에 기록되어 있지 않습니다.
+
+**매개변수**
+
+- `key` — `string` 추정: 값을 식별하거나 저장·조회할 때 사용할 키입니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**사용 예시**
+
+```lua
+local settings = ADDON:LoadData("settings")
+```
 
 </details>
 
 <details>
 <summary><code>SaveData(key, table)</code></summary>
 
-데이터 데이터를 저장합니다.
+**기능:** 현재 애드온의 저장 영역에 Lua 테이블을 키와 함께 기록합니다. 설정이나 사용자 상태를 다음 실행에도 유지할 때 사용합니다.
+
+**매개변수**
+
+- `key` — `string` 추정: 값을 식별하거나 저장·조회할 때 사용할 키입니다.
+- `table` — `table` 추정: 전달하거나 저장할 Lua 테이블입니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**사용 예시**
+
+```lua
+ADDON:SaveData("settings", { enabled = true })
+```
 
 </details>
 
 <details>
 <summary><code>ClearData(key)</code></summary>
 
-데이터 항목을 제거하거나 초기화합니다.
+**기능:** 현재 애드온의 저장 영역에서 지정한 키의 데이터를 삭제합니다.
+
+**매개변수**
+
+- `key` — `string` 추정: 값을 식별하거나 저장·조회할 때 사용할 키입니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**사용 예시**
+
+```lua
+ADDON:ClearData("settings")
+```
 
 </details>
 
 <details>
 <summary><code>AddEscMenuButton(categoryId, uiContentType, iconKey, name)</code></summary>
 
-Esc Menu 버튼 항목을 생성하거나 등록합니다.
+**기능:** ESC 메뉴의 지정 카테고리에 애드온 또는 콘텐츠를 여는 버튼을 추가합니다.
+
+**매개변수**
+
+- `categoryId` — `number|string` 추정: categoryId에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `uiContentType` — `number|string` 추정: uiContentType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `iconKey` — `number|string` 추정: iconKey에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `name` — `string` 추정: 대상의 이름 또는 고유 식별 문자열입니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+ADDON:AddEscMenuButton(categoryIdValue, uiContentTypeValue, iconKeyValue, "name")
+```
 
 </details>
 
@@ -154,686 +384,1382 @@ Esc Menu 버튼 항목을 생성하거나 등록합니다.
 <details>
 <summary><code>GetFeatureset()</code></summary>
 
-Featureset 정보를 조회합니다.
+**기능:** Featureset 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>ConnectToServer(serverIP, userId, password)</code></summary>
 
-ConnectToServer 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `serverIP` — `any` 추정: serverIP에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+- `userId` — `number|string` 추정: userId에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `password` — `string` 추정: password에 해당하는 문자열입니다. 허용 형식은 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>ReturnToLoginStage()</code></summary>
 
-ReturnToLoginStage 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>SendOtpNumber(numStr)</code></summary>
 
-Otp Number 데이터를 전송합니다.
+**기능:** Otp Number 데이터를 전송합니다. 클라이언트 내부 시스템에 메시지나 동작을 요청하는 함수입니다.
+
+**매개변수**
+
+- `numStr` — `string` 추정: numStr에 해당하는 문자열입니다. 허용 형식은 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>SendPcCertNumber(numStr)</code></summary>
 
-Pc Cert Number 데이터를 전송합니다.
+**기능:** Pc Cert Number 데이터를 전송합니다. 클라이언트 내부 시스템에 메시지나 동작을 요청하는 함수입니다.
+
+**매개변수**
+
+- `numStr` — `string` 추정: numStr에 해당하는 문자열입니다. 허용 형식은 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>SendSecureCardNumber(ValueStr)</code></summary>
 
-Secure Card Number 데이터를 전송합니다.
+**기능:** Secure Card Number 데이터를 전송합니다. 클라이언트 내부 시스템에 메시지나 동작을 요청하는 함수입니다.
+
+**매개변수**
+
+- `ValueStr` — `string` 추정: ValueStr에 해당하는 문자열입니다. 허용 형식은 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>RequestJoin()</code></summary>
 
-Join 작업을 요청합니다.
+**기능:** Join 작업을 요청합니다. 클라이언트 내부 시스템에 메시지나 동작을 요청하는 함수입니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>RequestFindId()</code></summary>
 
-Find ID 작업을 요청합니다.
+**기능:** Find ID 작업을 요청합니다. 클라이언트 내부 시스템에 메시지나 동작을 요청하는 함수입니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>RequestFindPassword()</code></summary>
 
-Find Password 작업을 요청합니다.
+**기능:** Find Password 작업을 요청합니다. 클라이언트 내부 시스템에 메시지나 동작을 요청하는 함수입니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetCurrentWorldId()</code></summary>
 
-현재 월드 ID 정보를 조회합니다.
+**기능:** 현재 월드 ID 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetRaces()</code></summary>
 
-Races 정보를 조회합니다.
+**기능:** Races 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetRaceCongestions()</code></summary>
 
-Race Congestions 정보를 조회합니다.
+**기능:** Race Congestions 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetAimPos()</code></summary>
 
-Aim Pos 정보를 조회합니다.
+**기능:** Aim Pos 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetAimLevel()</code></summary>
 
-Aim 레벨 정보를 조회합니다.
+**기능:** Aim 레벨 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>UnBoardingTransfer()</code></summary>
 
-UnBoardingTransfer 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetDynamicActionCount()</code></summary>
 
-Dynamic 행동 개수 정보를 조회합니다.
+**기능:** Dynamic 행동 개수 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `number` 추정 — 개수 또는 수량을 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetDynamicActionSkill(idx)</code></summary>
 
-Dynamic 행동 기술 정보를 조회합니다.
+**기능:** Dynamic 행동 기술 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `idx` — `number` 추정: 목록에서 대상을 찾기 위한 인덱스입니다. 시작 번호와 범위는 원본에 기록되어 있지 않습니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>ExecuteDynamicAction(idx)</code></summary>
 
-ExecuteDynamicAction 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `idx` — `number` 추정: 목록에서 대상을 찾기 위한 인덱스입니다. 시작 번호와 범위는 원본에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>IsDynamicActionSkillToggled(idx)</code></summary>
 
-Dynamic 행동 기술 Toggled 여부를 확인합니다.
+**기능:** Dynamic 행동 기술 Toggled 여부를 확인합니다. 조건 충족 여부를 확인하는 판정 계열 함수입니다. 이름상 참/거짓 값을 반환하는 것으로 추정됩니다.
+
+**매개변수**
+
+- `idx` — `number` 추정: 목록에서 대상을 찾기 위한 인덱스입니다. 시작 번호와 범위는 원본에 기록되어 있지 않습니다.
+
+**반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetBodyItemCategoryCount()</code></summary>
 
-Body 아이템 분류 개수 정보를 조회합니다.
+**기능:** Body 아이템 분류 개수 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `number` 추정 — 개수 또는 수량을 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetBodyItemCountByCategory(category, race, gender)</code></summary>
 
-Body 아이템 개수 By 분류 정보를 조회합니다.
+**기능:** Body 아이템 개수 By 분류 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `category` — `number|string` 추정: category에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `race` — `number|string` 추정: race에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `gender` — `number|string` 추정: gender에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** `number` 추정 — 개수 또는 수량을 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetBodyItemName(category, index, race, gender)</code></summary>
 
-Body 아이템 이름 정보를 조회합니다.
+**기능:** Body 아이템 이름 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `category` — `number|string` 추정: category에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `index` — `number` 추정: 목록에서 대상을 찾기 위한 인덱스입니다. 시작 번호와 범위는 원본에 기록되어 있지 않습니다.
+- `race` — `number|string` 추정: race에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `gender` — `number|string` 추정: gender에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetTargetCombatRelationship()</code></summary>
 
-대상 전투 Relationship 정보를 조회합니다.
+**기능:** 대상 전투 Relationship 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetTargetFactionRelationship()</code></summary>
 
-대상 세력 Relationship 정보를 조회합니다.
+**기능:** 대상 세력 Relationship 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>IsStablerNpc()</code></summary>
 
-Stabler Npc 여부를 확인합니다.
+**기능:** Stabler Npc 여부를 확인합니다. 조건 충족 여부를 확인하는 판정 계열 함수입니다. 이름상 참/거짓 값을 반환하는 것으로 추정됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>RepairPetItems()</code></summary>
 
-RepairPetItems 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetTotalRepairsForPetItems()</code></summary>
 
-Total Repairs For Pet Items 정보를 조회합니다.
+**기능:** Total Repairs For Pet Items 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>IsRepairmanNpc()</code></summary>
 
-Repairman Npc 여부를 확인합니다.
+**기능:** Repairman Npc 여부를 확인합니다. 조건 충족 여부를 확인하는 판정 계열 함수입니다. 이름상 참/거짓 값을 반환하는 것으로 추정됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>RepairSlaveItems()</code></summary>
 
-RepairSlaveItems 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetTotalRepairsForSlaveItems()</code></summary>
 
-Total Repairs For Slave Items 정보를 조회합니다.
+**기능:** Total Repairs For Slave Items 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>RollDice(maxFaces)</code></summary>
 
-RollDice 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `maxFaces` — `any` 추정: maxFaces에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>IsWebEnable()</code></summary>
 
-Web Enable 여부를 확인합니다.
+**기능:** Web Enable 여부를 확인합니다. 조건 충족 여부를 확인하는 판정 계열 함수입니다. 이름상 참/거짓 값을 반환하는 것으로 추정됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetWebWidgetName()</code></summary>
 
-Web 위젯 이름 정보를 조회합니다.
+**기능:** Web 위젯 이름 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>SendNewsCastByChat(text)</code></summary>
 
-News Cast By 채팅 데이터를 전송합니다.
+**기능:** News Cast By 채팅 데이터를 전송합니다. 클라이언트 내부 시스템에 메시지나 동작을 요청하는 함수입니다.
+
+**매개변수**
+
+- `text` — `string` 추정: 표시하거나 처리할 문자열입니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>SendPlayDiaryByChat(text)</code></summary>
 
-Play Diary By 채팅 데이터를 전송합니다.
+**기능:** Play Diary By 채팅 데이터를 전송합니다. 클라이언트 내부 시스템에 메시지나 동작을 요청하는 함수입니다.
+
+**매개변수**
+
+- `text` — `string` 추정: 표시하거나 처리할 문자열입니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetDoodadInfoById(id)</code></summary>
 
-Doodad 정보 By ID 정보를 조회합니다.
+**기능:** Doodad 정보 By ID 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `id` — `number|string` 추정: 대상을 식별하는 ID입니다. 실제 자료형은 해당 API 문맥에서 확인해야 합니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>StopChatBubble(qType)</code></summary>
 
-채팅 Bubble 기능을 중지하거나 비활성화합니다.
+**기능:** 채팅 Bubble 기능을 중지하거나 비활성화합니다. 진행 중인 동작이나 재생 상태를 제어하는 함수입니다.
+
+**매개변수**
+
+- `qType` — `number|string` 추정: qType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>FastForwardQuestChat(bubbleId)</code></summary>
 
-FastForwardQuestChat 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `bubbleId` — `number|string` 추정: bubbleId에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>FastBackwardQuestChat(bubbleId)</code></summary>
 
-FastBackwardQuestChat 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `bubbleId` — `number|string` 추정: bubbleId에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>IsFirstQuestChat(bubbleId)</code></summary>
 
-첫 번째 퀘스트 채팅 여부를 확인합니다.
+**기능:** 첫 번째 퀘스트 채팅 여부를 확인합니다. 조건 충족 여부를 확인하는 판정 계열 함수입니다. 이름상 참/거짓 값을 반환하는 것으로 추정됩니다.
+
+**매개변수**
+
+- `bubbleId` — `number|string` 추정: bubbleId에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>HasNextQuestChat(bubbleId)</code></summary>
 
-Next 퀘스트 채팅 여부를 확인합니다.
+**기능:** Next 퀘스트 채팅 여부를 확인합니다. 조건 충족 여부를 확인하는 판정 계열 함수입니다. 이름상 참/거짓 값을 반환하는 것으로 추정됩니다.
+
+**매개변수**
+
+- `bubbleId` — `number|string` 추정: bubbleId에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetQuestChatBubbleNextSpeech(bubbleId, checkTalker)</code></summary>
 
-퀘스트 채팅 Bubble Next Speech 정보를 조회합니다.
+**기능:** 퀘스트 채팅 Bubble Next Speech 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `bubbleId` — `number|string` 추정: bubbleId에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `checkTalker` — `any` 추정: checkTalker에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>AdjustQuestChatBubbleAutoFireEnd(bubbleId)</code></summary>
 
-AdjustQuestChatBubbleAutoFireEnd 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `bubbleId` — `number|string` 추정: bubbleId에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>FastBackwardQuestChatByForceSkip()</code></summary>
 
-FastBackwardQuestChatByForceSkip 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetCharacterUiData(key)</code></summary>
 
-캐릭터 UI 데이터 정보를 조회합니다.
+**기능:** 캐릭터 UI 데이터 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `key` — `string` 추정: 값을 식별하거나 저장·조회할 때 사용할 키입니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>SetCharacterUiData(key, table)</code></summary>
 
-캐릭터 UI 데이터 값을 설정하거나 변경합니다.
+**기능:** 캐릭터 UI 데이터 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `key` — `string` 추정: 값을 식별하거나 저장·조회할 때 사용할 키입니다.
+- `table` — `table` 추정: 전달하거나 저장할 Lua 테이블입니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>ClearCharacterUiData(key)</code></summary>
 
-캐릭터 UI 데이터 항목을 제거하거나 초기화합니다.
+**기능:** 캐릭터 UI 데이터 항목을 제거하거나 초기화합니다. 기존 객체·항목 또는 연결된 상태를 제거하거나 초기화하는 함수입니다.
+
+**매개변수**
+
+- `key` — `string` 추정: 값을 식별하거나 저장·조회할 때 사용할 키입니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetQuestNotifierListUiData()</code></summary>
 
-퀘스트 Notifier 목록 UI 데이터 정보를 조회합니다.
+**기능:** 퀘스트 Notifier 목록 UI 데이터 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>SetQuestNotifierListUiData(table)</code></summary>
 
-퀘스트 Notifier 목록 UI 데이터 값을 설정하거나 변경합니다.
+**기능:** 퀘스트 Notifier 목록 UI 데이터 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `table` — `table` 추정: 전달하거나 저장할 Lua 테이블입니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetQuestContextStateValuesUiData()</code></summary>
 
-퀘스트 Context 상태 Values UI 데이터 정보를 조회합니다.
+**기능:** 퀘스트 Context 상태 Values UI 데이터 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>SetQuestContextStateValuesUiData(table)</code></summary>
 
-퀘스트 Context 상태 Values UI 데이터 값을 설정하거나 변경합니다.
+**기능:** 퀘스트 Context 상태 Values UI 데이터 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `table` — `table` 추정: 전달하거나 저장할 Lua 테이블입니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetAutoToggleSlaveEquipmentUiData()</code></summary>
 
-Auto Toggle Slave 장비 UI 데이터 정보를 조회합니다.
+**기능:** Auto Toggle Slave 장비 UI 데이터 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>SetAutoToggleSlaveEquipmentUiData(autoToggle)</code></summary>
 
-Auto Toggle Slave 장비 UI 데이터 값을 설정하거나 변경합니다.
+**기능:** Auto Toggle Slave 장비 UI 데이터 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `autoToggle` — `any` 추정: autoToggle에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetPortalSortUiData(tabName)</code></summary>
 
-Portal 정렬 UI 데이터 정보를 조회합니다.
+**기능:** Portal 정렬 UI 데이터 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `tabName` — `string` 추정: tabName에 해당하는 문자열입니다. 허용 형식은 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>SetPortalSortUiData(tabName, table)</code></summary>
 
-Portal 정렬 UI 데이터 값을 설정하거나 변경합니다.
+**기능:** Portal 정렬 UI 데이터 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `tabName` — `string` 추정: tabName에 해당하는 문자열입니다. 허용 형식은 원본 덤프에 기록되어 있지 않습니다.
+- `table` — `table` 추정: 전달하거나 저장할 Lua 테이블입니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetRoadmapOptionUiData()</code></summary>
 
-Roadmap 옵션 UI 데이터 정보를 조회합니다.
+**기능:** Roadmap 옵션 UI 데이터 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>SetRoadmapOptionUiData(table)</code></summary>
 
-Roadmap 옵션 UI 데이터 값을 설정하거나 변경합니다.
+**기능:** Roadmap 옵션 UI 데이터 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `table` — `table` 추정: 전달하거나 저장할 Lua 테이블입니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetWorldmapDefaultExpansionLevel()</code></summary>
 
-Worldmap Default Expansion 레벨 정보를 조회합니다.
+**기능:** Worldmap Default Expansion 레벨 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>SetWorldmapDefaultExpansionLevel(level)</code></summary>
 
-Worldmap Default Expansion 레벨 값을 설정하거나 변경합니다.
+**기능:** Worldmap Default Expansion 레벨 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `level` — `number` 추정: level에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>ConvertUnitId(npcType)</code></summary>
 
-ConvertUnitId 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `npcType` — `number|string` 추정: npcType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>WidgetClosedByEsc(windowId)</code></summary>
 
-WidgetClosedByEsc 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `windowId` — `number|string` 추정: windowId에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetCombatResourceUiData()</code></summary>
 
-전투 자원 UI 데이터 정보를 조회합니다.
+**기능:** 전투 자원 UI 데이터 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>SetCombatResourceUiData(isOpen)</code></summary>
 
-전투 자원 UI 데이터 값을 설정하거나 변경합니다.
+**기능:** 전투 자원 UI 데이터 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `isOpen` — `boolean` 추정: isOpen 조건의 적용 여부입니다. 일반적으로 `true`/`false` 값을 사용합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetCandidateList(idx)</code></summary>
 
-Candidate 목록 정보를 조회합니다.
+**기능:** Candidate 목록 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `idx` — `number` 추정: 목록에서 대상을 찾기 위한 인덱스입니다. 시작 번호와 범위는 원본에 기록되어 있지 않습니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetCandidateOnceRetrieveCount()</code></summary>
 
-Candidate Once Retrieve 개수 정보를 조회합니다.
+**기능:** Candidate Once Retrieve 개수 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `number` 추정 — 개수 또는 수량을 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>SetCandidateOnceRetrieveCount(count)</code></summary>
 
-Candidate Once Retrieve 개수 값을 설정하거나 변경합니다.
+**기능:** Candidate Once Retrieve 개수 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `count` — `number` 추정: 처리하거나 표시할 개수입니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetCandidateCount()</code></summary>
 
-Candidate 개수 정보를 조회합니다.
+**기능:** Candidate 개수 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `number` 추정 — 개수 또는 수량을 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetCandidateSelectedIdx()</code></summary>
 
-Candidate Selected Idx 정보를 조회합니다.
+**기능:** Candidate Selected Idx 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetCandidateSelectedIdxOnCurrentPage()</code></summary>
 
-Candidate Selected Idx On 현재 페이지 정보를 조회합니다.
+**기능:** Candidate Selected Idx On 현재 페이지 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetCandidatePageStartIdx()</code></summary>
 
-Candidate 페이지 Start Idx 정보를 조회합니다.
+**기능:** Candidate 페이지 Start Idx 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>IsEnteredWorld()</code></summary>
 
-Entered 월드 여부를 확인합니다.
+**기능:** Entered 월드 여부를 확인합니다. 조건 충족 여부를 확인하는 판정 계열 함수입니다. 이름상 참/거짓 값을 반환하는 것으로 추정됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>IsInClientDrivenZone()</code></summary>
 
-In Client Driven 지역 여부를 확인합니다.
+**기능:** In Client Driven 지역 여부를 확인합니다. 조건 충족 여부를 확인하는 판정 계열 함수입니다. 이름상 참/거짓 값을 반환하는 것으로 추정됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>IsEnableSkipClientDriven()</code></summary>
 
-Enable Skip Client Driven 여부를 확인합니다.
+**기능:** Enable Skip Client Driven 여부를 확인합니다. 조건 충족 여부를 확인하는 판정 계열 함수입니다. 이름상 참/거짓 값을 반환하는 것으로 추정됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>RequestEndClientDrivenIndun()</code></summary>
 
-End Client Driven Indun 작업을 요청합니다.
+**기능:** End Client Driven Indun 작업을 요청합니다. 클라이언트 내부 시스템에 메시지나 동작을 요청하는 함수입니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetAggroTable(type)</code></summary>
 
-Aggro Table 정보를 조회합니다.
+**기능:** Aggro Table 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `type` — `number|string` 추정: 대상의 종류를 지정하는 값입니다. 보통 관련 상수 또는 열거값을 사용하지만 허용 값은 원본에 기록되어 있지 않습니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetCommonFarmInfo(commonFarmType)</code></summary>
 
-Common Farm 정보 정보를 조회합니다.
+**기능:** Common Farm 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `commonFarmType` — `number|string` 추정: commonFarmType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetFarmGorupInfo(farmGroupType)</code></summary>
 
-Farm Gorup 정보 정보를 조회합니다.
+**기능:** Farm Gorup 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `farmGroupType` — `number|string` 추정: farmGroupType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetFarmGroupDoodadList(farmGroupType)</code></summary>
 
-Farm Group Doodad 목록 정보를 조회합니다.
+**기능:** Farm Group Doodad 목록 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `farmGroupType` — `number|string` 추정: farmGroupType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>RequestRuntimeCommonFarmDoodadInfo()</code></summary>
 
-Runtime Common Farm Doodad 정보 작업을 요청합니다.
+**기능:** Runtime Common Farm Doodad 정보 작업을 요청합니다. 클라이언트 내부 시스템에 메시지나 동작을 요청하는 함수입니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetRuntimeCommonFarmDoodadsInfo(farmGroupType)</code></summary>
 
-Runtime Common Farm Doodads 정보 정보를 조회합니다.
+**기능:** Runtime Common Farm Doodads 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `farmGroupType` — `number|string` 추정: farmGroupType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetRuntimeCommonFarmDoodadCount(farmGroupType)</code></summary>
 
-Runtime Common Farm Doodad 개수 정보를 조회합니다.
+**기능:** Runtime Common Farm Doodad 개수 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `farmGroupType` — `number|string` 추정: farmGroupType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** `number` 추정 — 개수 또는 수량을 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetFarmGroups()</code></summary>
 
-Farm Groups 정보를 조회합니다.
+**기능:** Farm Groups 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>CancelEscape()</code></summary>
 
-Escape 기능을 중지하거나 비활성화합니다.
+**기능:** Escape 기능을 중지하거나 비활성화합니다. 조건 충족 여부를 확인하는 판정 계열 함수입니다. 이름상 참/거짓 값을 반환하는 것으로 추정됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetSystemDungeonStateInfo()</code></summary>
 
-System Dungeon 상태 정보 정보를 조회합니다.
+**기능:** System Dungeon 상태 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetSystemDungeonName()</code></summary>
 
-System Dungeon 이름 정보를 조회합니다.
+**기능:** System Dungeon 이름 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>SystemDungeonStateClear()</code></summary>
 
-SystemDungeonStateClear 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>EnterSystemDungeon(instId)</code></summary>
 
-System Dungeon 기능을 시작하거나 활성화합니다.
+**기능:** System Dungeon 기능을 시작하거나 활성화합니다. 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `instId` — `number|string` 추정: instId에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetInstanceIndex()</code></summary>
 
-인스턴스 인덱스 정보를 조회합니다.
+**기능:** 인스턴스 인덱스 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>IsExistFileInAFS(name)</code></summary>
 
-Exist File In AFS 여부를 확인합니다.
+**기능:** Exist File In AFS 여부를 확인합니다. 조건 충족 여부를 확인하는 판정 계열 함수입니다. 이름상 참/거짓 값을 반환하는 것으로 추정됩니다.
+
+**매개변수**
+
+- `name` — `string` 추정: 대상의 이름 또는 고유 식별 문자열입니다.
+
+**반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>NotifyQuestDirectingModeUpdate(prev, next, confirm)</code></summary>
 
-NotifyQuestDirectingModeUpdate 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `prev` — `any` 추정: prev에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+- `next` — `any` 추정: next에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+- `confirm` — `any` 추정: confirm에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetImageTextCoords(fontSet, size, key)</code></summary>
 
-Image 텍스트 Coords 정보를 조회합니다.
+**기능:** Image 텍스트 Coords 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `fontSet` — `any` 추정: fontSet에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+- `size` — `number` 추정: size에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+- `key` — `string` 추정: 값을 식별하거나 저장·조회할 때 사용할 키입니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>SetClipboardText(text)</code></summary>
 
-Clipboard 텍스트 값을 설정하거나 변경합니다.
+**기능:** Clipboard 텍스트 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `text` — `string` 추정: 표시하거나 처리할 문자열입니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetHpBarSplitColors()</code></summary>
 
-Hp Bar Split Colors 정보를 조회합니다.
+**기능:** Hp Bar Split Colors 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetTipOfDays()</code></summary>
 
-Tip Of Days 정보를 조회합니다.
+**기능:** Tip Of Days 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetRoadMapUiData()</code></summary>
 
-Road 지도 UI 데이터 정보를 조회합니다.
+**기능:** Road 지도 UI 데이터 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>SetRoadMapUiData(isOpen)</code></summary>
 
-Road 지도 UI 데이터 값을 설정하거나 변경합니다.
+**기능:** Road 지도 UI 데이터 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `isOpen` — `boolean` 추정: isOpen 조건의 적용 여부입니다. 일반적으로 `true`/`false` 값을 사용합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetEscMenuCategories()</code></summary>
 
-Esc Menu Categories 정보를 조회합니다.
+**기능:** Esc Menu Categories 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetHudRightIconMenus()</code></summary>
 
-Hud Right Icon Menus 정보를 조회합니다.
+**기능:** Hud Right Icon Menus 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 

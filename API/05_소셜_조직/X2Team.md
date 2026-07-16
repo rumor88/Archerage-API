@@ -10,22 +10,49 @@
 
 ## ✅ 사용 가능
 
+> 문서 해석 안내: **시그니처**는 원본 덤프에서 확인된 값입니다. **추정** 표시는 함수명·매개변수명을 근거로 한 해석이며, 실제 자료형과 반환 필드는 클라이언트 버전에서 확인해야 합니다.
+
 함수 이름을 눌러 설명과 확인된 제약을 펼칠 수 있습니다. 제약이 확인되지 않은 함수는 제약 항목을 표시하지 않습니다.
 
 
 <details>
 <summary><code>GetRole(teamIndex, memberIndex)</code></summary>
 
-역할 정보를 조회합니다.
+**기능:** 역할 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `teamIndex` — `number` 추정: teamIndex에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+- `memberIndex` — `number` 추정: memberIndex에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+local result = X2Team:GetRole(1, 1)
+```
 
 </details>
 
 <details>
 <summary><code>SetRole(role)</code></summary>
 
-역할 값을 설정하거나 변경합니다.
+**기능:** 역할 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
 
-**제약:** 호출 간 최소 500ms 쿨다운이 기록되어 있습니다.
+**매개변수**
+
+- `role` — `number|string` 추정: role에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**확인된 제약:** 호출 간 최소 500ms 쿨다운이 기록되어 있습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+X2Team:SetRole(roleValue)
+```
 
 </details>
 
@@ -37,714 +64,1468 @@
 <details>
 <summary><code>GetMemberIndexByName(charName, inMyTeam)</code></summary>
 
-구성원 인덱스 By 이름 정보를 조회합니다.
+**기능:** 구성원 인덱스 By 이름 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `charName` — `string` 추정: charName에 해당하는 문자열입니다. 허용 형식은 원본 덤프에 기록되어 있지 않습니다.
+- `inMyTeam` — `any` 추정: inMyTeam에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetMemberIndex(unit)</code></summary>
 
-구성원 인덱스 정보를 조회합니다.
+**기능:** 구성원 인덱스 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `unit` — `string` 추정: 대상 유닛 식별자입니다. 함수에 따라 `"player"`, `"target"` 같은 단위 문자열을 사용합니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetMyTeamJointOrder()</code></summary>
 
-My 팀 Joint Order 정보를 조회합니다.
+**기능:** My 팀 Joint Order 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>InviteToTeam(charName, isParty)</code></summary>
 
-InviteToTeam 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `charName` — `string` 추정: charName에 해당하는 문자열입니다. 허용 형식은 원본 덤프에 기록되어 있지 않습니다.
+- `isParty` — `boolean` 추정: isParty 조건의 적용 여부입니다. 일반적으로 `true`/`false` 값을 사용합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>InviteArea()</code></summary>
 
-InviteArea 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>LeaveTeam(teamRoleType)</code></summary>
 
-팀 기능을 중지하거나 비활성화합니다.
+**기능:** 팀 기능을 중지하거나 비활성화합니다. 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `teamRoleType` — `number|string` 추정: teamRoleType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>DismissTeam()</code></summary>
 
-DismissTeam 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>KickTeamMember(memberIndex, teamRoleType)</code></summary>
 
-KickTeamMember 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `memberIndex` — `number` 추정: memberIndex에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+- `teamRoleType` — `number|string` 추정: teamRoleType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>KickTeamMemberByName(charName, teamRoleType)</code></summary>
 
-KickTeamMemberByName 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `charName` — `string` 추정: charName에 해당하는 문자열입니다. 허용 형식은 원본 덤프에 기록되어 있지 않습니다.
+- `teamRoleType` — `number|string` 추정: teamRoleType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>MakeTeamOwner(unit)</code></summary>
 
-MakeTeamOwner 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `unit` — `string` 추정: 대상 유닛 식별자입니다. 함수에 따라 `"player"`, `"target"` 같은 단위 문자열을 사용합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>ConvertToRaidTeam()</code></summary>
 
-ConvertToRaidTeam 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>CountTeamMembersInParty(teamIndex, party)</code></summary>
 
-팀 Members In Party 개수를 조회합니다.
+**기능:** 팀 Members In Party 개수를 조회합니다. 대상 항목의 개수나 수량을 조회하는 함수입니다.
+
+**매개변수**
+
+- `teamIndex` — `number` 추정: teamIndex에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+- `party` — `any` 추정: party에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** `number` 추정 — 개수 또는 수량을 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>CountTeamMembers(teamIndex)</code></summary>
 
-팀 Members 개수를 조회합니다.
+**기능:** 팀 Members 개수를 조회합니다. 대상 항목의 개수나 수량을 조회하는 함수입니다.
+
+**매개변수**
+
+- `teamIndex` — `number` 추정: teamIndex에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** `number` 추정 — 개수 또는 수량을 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>IsPartyTeam()</code></summary>
 
-Party 팀 여부를 확인합니다.
+**기능:** Party 팀 여부를 확인합니다. 조건 충족 여부를 확인하는 판정 계열 함수입니다. 이름상 참/거짓 값을 반환하는 것으로 추정됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>IsRaidTeam()</code></summary>
 
-공격대 팀 여부를 확인합니다.
+**기능:** 공격대 팀 여부를 확인합니다. 조건 충족 여부를 확인하는 판정 계열 함수입니다. 이름상 참/거짓 값을 반환하는 것으로 추정됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>IsJointTeam()</code></summary>
 
-Joint 팀 여부를 확인합니다.
+**기능:** Joint 팀 여부를 확인합니다. 조건 충족 여부를 확인하는 판정 계열 함수입니다. 이름상 참/거짓 값을 반환하는 것으로 추정됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>IsJointLeader()</code></summary>
 
-Joint Leader 여부를 확인합니다.
+**기능:** Joint Leader 여부를 확인합니다. 조건 충족 여부를 확인하는 판정 계열 함수입니다. 이름상 참/거짓 값을 반환하는 것으로 추정됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>IsTeamOwner(teamIndex, memberIndex)</code></summary>
 
-팀 Owner 여부를 확인합니다.
+**기능:** 팀 Owner 여부를 확인합니다. 조건 충족 여부를 확인하는 판정 계열 함수입니다. 이름상 참/거짓 값을 반환하는 것으로 추정됩니다.
+
+**매개변수**
+
+- `teamIndex` — `number` 추정: teamIndex에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+- `memberIndex` — `number` 추정: memberIndex에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>IsHeadMarker(memberIndex)</code></summary>
 
-Head 마커 여부를 확인합니다.
+**기능:** Head 마커 여부를 확인합니다. 조건 충족 여부를 확인하는 판정 계열 함수입니다. 이름상 참/거짓 값을 반환하는 것으로 추정됩니다.
+
+**매개변수**
+
+- `memberIndex` — `number` 추정: memberIndex에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>IsMyTeamOwner(memberIndex)</code></summary>
 
-My 팀 Owner 여부를 확인합니다.
+**기능:** My 팀 Owner 여부를 확인합니다. 조건 충족 여부를 확인하는 판정 계열 함수입니다. 이름상 참/거짓 값을 반환하는 것으로 추정됩니다.
+
+**매개변수**
+
+- `memberIndex` — `number` 추정: memberIndex에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>IsTeamOfficer(memberIndex)</code></summary>
 
-팀 Officer 여부를 확인합니다.
+**기능:** 팀 Officer 여부를 확인합니다. 조건 충족 여부를 확인하는 판정 계열 함수입니다. 이름상 참/거짓 값을 반환하는 것으로 추정됩니다.
+
+**매개변수**
+
+- `memberIndex` — `number` 추정: memberIndex에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetTeamPlayerTeam()</code></summary>
 
-팀 플레이어 팀 정보를 조회합니다.
+**기능:** 팀 플레이어 팀 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetTeamPlayerParty()</code></summary>
 
-팀 플레이어 Party 정보를 조회합니다.
+**기능:** 팀 플레이어 Party 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetTeamPlayerPartyHeadIndex()</code></summary>
 
-팀 플레이어 Party Head 인덱스 정보를 조회합니다.
+**기능:** 팀 플레이어 Party Head 인덱스 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetTeamPlayerSlot()</code></summary>
 
-팀 플레이어 슬롯 정보를 조회합니다.
+**기능:** 팀 플레이어 슬롯 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetTeamPlayerIndex()</code></summary>
 
-팀 플레이어 인덱스 정보를 조회합니다.
+**기능:** 팀 플레이어 인덱스 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>MoveTeamMember(frommemberIndex, tomemberIndex)</code></summary>
 
-팀 구성원 이동을 수행합니다.
+**기능:** 팀 구성원 이동을 수행합니다. 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `frommemberIndex` — `number` 추정: frommemberIndex에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+- `tomemberIndex` — `number` 추정: tomemberIndex에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>MoveTeamMemberToParty(frommemberIndex, toParty)</code></summary>
 
-팀 구성원 To Party 이동을 수행합니다.
+**기능:** 팀 구성원 To Party 이동을 수행합니다. 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `frommemberIndex` — `number` 추정: frommemberIndex에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+- `toParty` — `any` 추정: toParty에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetTeamMemberName(teamIndex, memberIndex)</code></summary>
 
-팀 구성원 이름 정보를 조회합니다.
+**기능:** 팀 구성원 이름 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `teamIndex` — `number` 추정: teamIndex에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+- `memberIndex` — `number` 추정: memberIndex에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetTeamDistributorName()</code></summary>
 
-팀 Distributor 이름 정보를 조회합니다.
+**기능:** 팀 Distributor 이름 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetOwnerIndex(teamIndex)</code></summary>
 
-Owner 인덱스 정보를 조회합니다.
+**기능:** Owner 인덱스 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `teamIndex` — `number` 추정: teamIndex에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>JointInfoReq(mode, name)</code></summary>
 
-JointInfoReq 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `mode` — `any` 추정: mode에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+- `name` — `string` 추정: 대상의 이름 또는 고유 식별 문자열입니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>JointBreakRes(accept)</code></summary>
 
-JointBreakRes 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `accept` — `any` 추정: accept에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>HasMyTeamRecruit()</code></summary>
 
-My 팀 Recruit 여부를 확인합니다.
+**기능:** My 팀 Recruit 여부를 확인합니다. 조건 충족 여부를 확인하는 판정 계열 함수입니다. 이름상 참/거짓 값을 반환하는 것으로 추정됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>ChangeLootingRule(teamLootMethod, distributorName, minGrade, bindOnPickup)</code></summary>
 
-Looting Rule 값을 설정하거나 변경합니다.
+**기능:** Looting Rule 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `teamLootMethod` — `any` 추정: teamLootMethod에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+- `distributorName` — `string` 추정: distributorName에 해당하는 문자열입니다. 허용 형식은 원본 덤프에 기록되어 있지 않습니다.
+- `minGrade` — `number` 추정: minGrade에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+- `bindOnPickup` — `any` 추정: bindOnPickup에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetLootingRule()</code></summary>
 
-Looting Rule 정보를 조회합니다.
+**기능:** Looting Rule 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetMaxMembers()</code></summary>
 
-최대 Members 정보를 조회합니다.
+**기능:** 최대 Members 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetMaxParties()</code></summary>
 
-최대 Parties 정보를 조회합니다.
+**기능:** 최대 Parties 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetMaxPartyMembers()</code></summary>
 
-최대 Party Members 정보를 조회합니다.
+**기능:** 최대 Party Members 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>SetPartyVisible(teamIndex, party, visible)</code></summary>
 
-Party Visible 값을 설정하거나 변경합니다.
+**기능:** Party Visible 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `teamIndex` — `number` 추정: teamIndex에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+- `party` — `any` 추정: party에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+- `visible` — `boolean` 추정: 화면에 보이게 할지 여부입니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetPartyVisible(teamIndex, party)</code></summary>
 
-Party Visible 정보를 조회합니다.
+**기능:** Party Visible 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `teamIndex` — `number` 추정: teamIndex에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+- `party` — `any` 추정: party에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>SetRefuseAreaInvitation(refuse)</code></summary>
 
-Refuse Area Invitation 값을 설정하거나 변경합니다.
+**기능:** Refuse Area Invitation 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `refuse` — `any` 추정: refuse에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetRefuseAreaInvitation()</code></summary>
 
-Refuse Area Invitation 정보를 조회합니다.
+**기능:** Refuse Area Invitation 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetCanUseAreaInvitation()</code></summary>
 
-Can Use Area Invitation 정보를 조회합니다.
+**기능:** Can Use Area Invitation 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetCanJointBreakAck()</code></summary>
 
-Can Joint Break Ack 정보를 조회합니다.
+**기능:** Can Joint Break Ack 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>SetSimpleView(simple)</code></summary>
 
-Simple View 값을 설정하거나 변경합니다.
+**기능:** Simple View 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `simple` — `any` 추정: simple에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetSimpleView()</code></summary>
 
-Simple View 정보를 조회합니다.
+**기능:** Simple View 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>SetPartyFrameVisible(visible)</code></summary>
 
-Party Frame Visible 값을 설정하거나 변경합니다.
+**기능:** Party Frame Visible 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `visible` — `boolean` 추정: 화면에 보이게 할지 여부입니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetPartyFrameVisible()</code></summary>
 
-Party Frame Visible 정보를 조회합니다.
+**기능:** Party Frame Visible 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>SetRaidFrameVisible(visible)</code></summary>
 
-공격대 Frame Visible 값을 설정하거나 변경합니다.
+**기능:** 공격대 Frame Visible 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `visible` — `boolean` 추정: 화면에 보이게 할지 여부입니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetRaidFrameVisible()</code></summary>
 
-공격대 Frame Visible 정보를 조회합니다.
+**기능:** 공격대 Frame Visible 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>IsPossibleLeaveTeam()</code></summary>
 
-Possible Leave 팀 여부를 확인합니다.
+**기능:** Possible Leave 팀 여부를 확인합니다. 조건 충족 여부를 확인하는 판정 계열 함수입니다. 이름상 참/거짓 값을 반환하는 것으로 추정됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>SetTeamDiceBidRule(bidRule)</code></summary>
 
-팀 Dice Bid Rule 값을 설정하거나 변경합니다.
+**기능:** 팀 Dice Bid Rule 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `bidRule` — `any` 추정: bidRule에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetTeamDiceBidRule()</code></summary>
 
-팀 Dice Bid Rule 정보를 조회합니다.
+**기능:** 팀 Dice Bid Rule 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetRaidRecruitTypeList()</code></summary>
 
-공격대 Recruit 유형 목록 정보를 조회합니다.
+**기능:** 공격대 Recruit 유형 목록 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetRaidRecruitSubTypeList(recruitTypeList, recruitSubType, bExceptSiege)</code></summary>
 
-공격대 Recruit Sub 유형 목록 정보를 조회합니다.
+**기능:** 공격대 Recruit Sub 유형 목록 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `recruitTypeList` — `any` 추정: recruitTypeList에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+- `recruitSubType` — `number|string` 추정: recruitSubType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `bExceptSiege` — `any` 추정: bExceptSiege에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetRaidRecruitSubType(recruitType, recruitSubType)</code></summary>
 
-공격대 Recruit Sub 유형 정보를 조회합니다.
+**기능:** 공격대 Recruit Sub 유형 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `recruitType` — `number|string` 추정: recruitType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `recruitSubType` — `number|string` 추정: recruitSubType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetRaidRecruitHeadcountList()</code></summary>
 
-공격대 Recruit Headcount 목록 정보를 조회합니다.
+**기능:** 공격대 Recruit Headcount 목록 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `number` 추정 — 개수 또는 수량을 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetRaidRecruitExpense(hour, minute)</code></summary>
 
-공격대 Recruit Expense 정보를 조회합니다.
+**기능:** 공격대 Recruit Expense 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `hour` — `number` 추정: hour에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+- `minute` — `number` 추정: minute에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>RaidRecruitAdd(type, subType, headcount, limitLevel, autoJoin, msg, hour, minute, limitGearPoint)</code></summary>
 
-RaidRecruitAdd 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `type` — `number|string` 추정: 대상의 종류를 지정하는 값입니다. 보통 관련 상수 또는 열거값을 사용하지만 허용 값은 원본에 기록되어 있지 않습니다.
+- `subType` — `number|string` 추정: subType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `headcount` — `number` 추정: headcount에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+- `limitLevel` — `number` 추정: limitLevel에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+- `autoJoin` — `any` 추정: autoJoin에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+- `msg` — `string` 추정: 전송하거나 표시할 메시지입니다.
+- `hour` — `number` 추정: hour에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+- `minute` — `number` 추정: minute에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+- `limitGearPoint` — `number` 추정: limitGearPoint에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>RaidRecruitDel()</code></summary>
 
-RaidRecruitDel 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>RaidRecruitList()</code></summary>
 
-RaidRecruitList 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>RaidRecruitSeachList(recruitTypeList, recruitSubType)</code></summary>
 
-RaidRecruitSeachList 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `recruitTypeList` — `any` 추정: recruitTypeList에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+- `recruitSubType` — `number|string` 추정: recruitSubType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>RaidRecruitOption(autoJoin)</code></summary>
 
-RaidRecruitOption 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `autoJoin` — `any` 추정: autoJoin에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>RaidRecruitDetail(ownerId, createTime)</code></summary>
 
-RaidRecruitDetail 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `ownerId` — `number|string` 추정: ownerId에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `createTime` — `number` 추정: createTime에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>RaidApplicantAdd(ownerId, role, createTime)</code></summary>
 
-RaidApplicantAdd 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `ownerId` — `number|string` 추정: ownerId에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `role` — `number|string` 추정: role에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `createTime` — `number` 추정: createTime에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>RaidApplicantDel(ownerId)</code></summary>
 
-RaidApplicantDel 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `ownerId` — `number|string` 추정: ownerId에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>RaidApplicantAccept(charIds)</code></summary>
 
-RaidApplicantAccept 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `charIds` — `any` 추정: charIds에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>RaidApplicantAcceptReply(ownerId, join, role)</code></summary>
 
-RaidApplicantAcceptReply 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `ownerId` — `number|string` 추정: ownerId에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `join` — `any` 추정: join에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+- `role` — `number|string` 추정: role에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>RaidApplicantReject(charIds)</code></summary>
 
-RaidApplicantReject 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `charIds` — `any` 추정: charIds에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>RaidApplicantList()</code></summary>
 
-RaidApplicantList 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetRaidRecruitHud()</code></summary>
 
-공격대 Recruit Hud 정보를 조회합니다.
+**기능:** 공격대 Recruit Hud 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>JointOk(leader)</code></summary>
 
-JointOk 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `leader` — `any` 추정: leader에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>JointCancel(leader, timeout)</code></summary>
 
-JointCancel 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `leader` — `any` 추정: leader에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+- `timeout` — `any` 추정: timeout에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetLinkText()</code></summary>
 
-Link 텍스트 정보를 조회합니다.
+**기능:** Link 텍스트 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetSummonItem()</code></summary>
 
-Summon 아이템 정보를 조회합니다.
+**기능:** Summon 아이템 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>RequestSummon()</code></summary>
 
-Summon 작업을 요청합니다.
+**기능:** Summon 작업을 요청합니다. 클라이언트 내부 시스템에 메시지나 동작을 요청하는 함수입니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>RequestSummonReply(result, name)</code></summary>
 
-Summon Reply 작업을 요청합니다.
+**기능:** Summon Reply 작업을 요청합니다. 클라이언트 내부 시스템에 메시지나 동작을 요청하는 함수입니다.
+
+**매개변수**
+
+- `result` — `any` 추정: result에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+- `name` — `string` 추정: 대상의 이름 또는 고유 식별 문자열입니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>RequestSummonNotRecv(use)</code></summary>
 
-Summon Not Recv 작업을 요청합니다.
+**기능:** Summon Not Recv 작업을 요청합니다. 클라이언트 내부 시스템에 메시지나 동작을 요청하는 함수입니다.
+
+**매개변수**
+
+- `use` — `boolean` 추정: use 조건의 적용 여부입니다. 일반적으로 `true`/`false` 값을 사용합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>IsSiegeRaidTeam()</code></summary>
 
-공성 공격대 팀 여부를 확인합니다.
+**기능:** 공성 공격대 팀 여부를 확인합니다. 조건 충족 여부를 확인하는 판정 계열 함수입니다. 이름상 참/거짓 값을 반환하는 것으로 추정됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>IsSiegeRaidTeamRecruit()</code></summary>
 
-공성 공격대 팀 Recruit 여부를 확인합니다.
+**기능:** 공성 공격대 팀 Recruit 여부를 확인합니다. 조건 충족 여부를 확인하는 판정 계열 함수입니다. 이름상 참/거짓 값을 반환하는 것으로 추정됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>IsSiegeRaidRecruitType(type, subType)</code></summary>
 
-공성 공격대 Recruit 유형 여부를 확인합니다.
+**기능:** 공성 공격대 Recruit 유형 여부를 확인합니다. 조건 충족 여부를 확인하는 판정 계열 함수입니다. 이름상 참/거짓 값을 반환하는 것으로 추정됩니다.
+
+**매개변수**
+
+- `type` — `number|string` 추정: 대상의 종류를 지정하는 값입니다. 보통 관련 상수 또는 열거값을 사용하지만 허용 값은 원본에 기록되어 있지 않습니다.
+- `subType` — `number|string` 추정: subType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>IsExistSiegeRaidTeam()</code></summary>
 
-Exist 공성 공격대 팀 여부를 확인합니다.
+**기능:** Exist 공성 공격대 팀 여부를 확인합니다. 조건 충족 여부를 확인하는 판정 계열 함수입니다. 이름상 참/거짓 값을 반환하는 것으로 추정됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetTeamRoleType()</code></summary>
 
-팀 역할 유형 정보를 조회합니다.
+**기능:** 팀 역할 유형 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>RequestSiegeRaidMasterRegisterState(zoneGroupType, bRegister)</code></summary>
 
-공성 공격대 Master Register 상태 작업을 요청합니다.
+**기능:** 공성 공격대 Master Register 상태 작업을 요청합니다. 클라이언트 내부 시스템에 메시지나 동작을 요청하는 함수입니다.
+
+**매개변수**
+
+- `zoneGroupType` — `number|string` 추정: zoneGroupType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `bRegister` — `any` 추정: bRegister에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>RequestSiegeRaidRegisterList()</code></summary>
 
-공성 공격대 Register 목록 작업을 요청합니다.
+**기능:** 공성 공격대 Register 목록 작업을 요청합니다. 클라이언트 내부 시스템에 메시지나 동작을 요청하는 함수입니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>RequestSiegeRaidRegisterInfo(zoneGroupType)</code></summary>
 
-공성 공격대 Register 정보 작업을 요청합니다.
+**기능:** 공성 공격대 Register 정보 작업을 요청합니다. 클라이언트 내부 시스템에 메시지나 동작을 요청하는 함수입니다.
+
+**매개변수**
+
+- `zoneGroupType` — `number|string` 추정: zoneGroupType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>MakeTeamOfficer(unit)</code></summary>
 
-MakeTeamOfficer 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `unit` — `string` 추정: 대상 유닛 식별자입니다. 함수에 따라 `"player"`, `"target"` 같은 단위 문자열을 사용합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetSiegeRaidZoneList()</code></summary>
 
-공성 공격대 지역 목록 정보를 조회합니다.
+**기능:** 공성 공격대 지역 목록 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>RequestSiegeRaidTeamInfo(timerType)</code></summary>
 
-공성 공격대 팀 정보 작업을 요청합니다.
+**기능:** 공성 공격대 팀 정보 작업을 요청합니다. 클라이언트 내부 시스템에 메시지나 동작을 요청하는 함수입니다.
+
+**매개변수**
+
+- `timerType` — `number|string` 추정: timerType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>SiegeRaidRecruitDetail()</code></summary>
 
-SiegeRaidRecruitDetail 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>RequestAllSiegeRaidTeamInfo(timerType)</code></summary>
 
-All 공성 공격대 팀 정보 작업을 요청합니다.
+**기능:** All 공성 공격대 팀 정보 작업을 요청합니다. 클라이언트 내부 시스템에 메시지나 동작을 요청하는 함수입니다.
+
+**매개변수**
+
+- `timerType` — `number|string` 추정: timerType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>ShowSiegeRaidRegisterUI()</code></summary>
 
-공성 공격대 Register UI 화면이나 정보를 표시합니다.
+**기능:** 공성 공격대 Register UI 화면이나 정보를 표시합니다. 화면 요소 또는 콘텐츠의 표시 상태를 변경하는 함수입니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>FindMyRegisterSiegeZoneGroupType()</code></summary>
 
-My Register 공성 지역 Group 유형 항목을 찾습니다.
+**기능:** My Register 공성 지역 Group 유형 항목을 찾습니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>CheckCoolTimerByTimerType(timerType)</code></summary>
 
-Cool Timer By Timer 유형 여부를 확인합니다.
+**기능:** Cool Timer By Timer 유형 여부를 확인합니다. 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `timerType` — `number|string` 추정: timerType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>ResetCoolTimerByTimerType(timerType)</code></summary>
 
-Cool Timer By Timer 유형 상태를 초기화합니다.
+**기능:** Cool Timer By Timer 유형 상태를 초기화합니다. 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `timerType` — `number|string` 추정: timerType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>IsPossibleMoveTeamMember(memberIndex)</code></summary>
 
-Possible Move 팀 구성원 여부를 확인합니다.
+**기능:** Possible Move 팀 구성원 여부를 확인합니다. 조건 충족 여부를 확인하는 판정 계열 함수입니다. 이름상 참/거짓 값을 반환하는 것으로 추정됩니다.
+
+**매개변수**
+
+- `memberIndex` — `number` 추정: memberIndex에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>IsCreateAlreadySiegeRaidTeam()</code></summary>
 
-Create Already 공성 공격대 팀 여부를 확인합니다.
+**기능:** Create Already 공성 공격대 팀 여부를 확인합니다. 조건 충족 여부를 확인하는 판정 계열 함수입니다. 이름상 참/거짓 값을 반환하는 것으로 추정됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>RequestSiegeRaidRecruitInfo()</code></summary>
 
-공성 공격대 Recruit 정보 작업을 요청합니다.
+**기능:** 공성 공격대 Recruit 정보 작업을 요청합니다. 클라이언트 내부 시스템에 메시지나 동작을 요청하는 함수입니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>CopyRaidMembersToClipboard()</code></summary>
 
-CopyRaidMembersToClipboard 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>ToggleSecondRaidWindow()</code></summary>
 
-ToggleSecondRaidWindow 관련 기능을 수행합니다.
+**기능:** 화면 요소 또는 콘텐츠의 표시 상태를 변경하는 함수입니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>ShowRaidWindowSettings()</code></summary>
 
-공격대 Window Settings 화면이나 정보를 표시합니다.
+**기능:** 공격대 Window Settings 화면이나 정보를 표시합니다. 화면 요소 또는 콘텐츠의 표시 상태를 변경하는 함수입니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 

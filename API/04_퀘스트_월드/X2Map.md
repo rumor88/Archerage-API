@@ -10,20 +10,49 @@
 
 ## ✅ 사용 가능
 
+> 문서 해석 안내: **시그니처**는 원본 덤프에서 확인된 값입니다. **추정** 표시는 함수명·매개변수명을 근거로 한 해석이며, 실제 자료형과 반환 필드는 클라이언트 버전에서 확인해야 합니다.
+
 함수 이름을 눌러 설명과 확인된 제약을 펼칠 수 있습니다. 제약이 확인되지 않은 함수는 제약 항목을 표시하지 않습니다.
 
 
 <details>
 <summary><code>GetZoneStateInfoByZoneId(zoneId)</code></summary>
 
-지역 상태 정보 By 지역 ID 정보를 조회합니다.
+**기능:** 지역 상태 정보 By 지역 ID 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `zoneId` — `number|string` 추정: zoneId에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+local result = X2Map:GetZoneStateInfoByZoneId(zoneIdValue)
+```
 
 </details>
 
 <details>
 <summary><code>ShowWorldmapLocation(zoneGroupId, x, y, z)</code></summary>
 
-Worldmap Location 화면이나 정보를 표시합니다.
+**기능:** Worldmap Location 화면이나 정보를 표시합니다. 화면 요소 또는 콘텐츠의 표시 상태를 변경하는 함수입니다.
+
+**매개변수**
+
+- `zoneGroupId` — `number|string` 추정: zoneGroupId에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `x` — `number` 추정: 가로 좌표 또는 X축 값입니다.
+- `y` — `number` 추정: 세로 좌표 또는 Y축 값입니다.
+- `z` — `any` 추정: z에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+X2Map:ShowWorldmapLocation(zoneGroupIdValue, 1, 1, zValue)
+```
 
 </details>
 
@@ -35,168 +64,361 @@ Worldmap Location 화면이나 정보를 표시합니다.
 <details>
 <summary><code>UpdateNotifyQuestInfo(decalIndex, qType, show)</code></summary>
 
-Notify 퀘스트 정보 값을 설정하거나 변경합니다.
+**기능:** Notify 퀘스트 정보 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `decalIndex` — `number` 추정: decalIndex에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+- `qType` — `number|string` 추정: qType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `show` — `boolean` 추정: 표시 여부입니다. 일반적으로 `true`는 표시, `false`는 숨김입니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>RemoveNotifyQuestInfo(qType)</code></summary>
 
-Notify 퀘스트 정보 항목을 제거하거나 초기화합니다.
+**기능:** Notify 퀘스트 정보 항목을 제거하거나 초기화합니다. 기존 객체·항목 또는 연결된 상태를 제거하거나 초기화하는 함수입니다.
+
+**매개변수**
+
+- `qType` — `number|string` 추정: qType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>RemoveAllNotifyQuestInfo()</code></summary>
 
-All Notify 퀘스트 정보 항목을 제거하거나 초기화합니다.
+**기능:** All Notify 퀘스트 정보 항목을 제거하거나 초기화합니다. 기존 객체·항목 또는 연결된 상태를 제거하거나 초기화하는 함수입니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>SetNotifyCoords(path, keyTable)</code></summary>
 
-Notify Coords 값을 설정하거나 변경합니다.
+**기능:** Notify Coords 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `path` — `string` 추정: 리소스 또는 파일의 경로 문자열입니다.
+- `keyTable` — `table` 추정: keyTable에 해당하는 Lua 테이블입니다. 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>SetNotifyAreaCoords(path, keyTable)</code></summary>
 
-Notify Area Coords 값을 설정하거나 변경합니다.
+**기능:** Notify Area Coords 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `path` — `string` 추정: 리소스 또는 파일의 경로 문자열입니다.
+- `keyTable` — `table` 추정: keyTable에 해당하는 Lua 테이블입니다. 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>SetNotifyAreaColors(count, colors)</code></summary>
 
-Notify Area Colors 값을 설정하거나 변경합니다.
+**기능:** Notify Area Colors 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `count` — `number` 추정: 처리하거나 표시할 개수입니다.
+- `colors` — `any` 추정: colors에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>SetShipCoords(path, keyTable)</code></summary>
 
-Ship Coords 값을 설정하거나 변경합니다.
+**기능:** Ship Coords 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `path` — `string` 추정: 리소스 또는 파일의 경로 문자열입니다.
+- `keyTable` — `table` 추정: keyTable에 해당하는 Lua 테이블입니다. 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>SetMapFilter(npcIcon, checked)</code></summary>
 
-지도 Filter 값을 설정하거나 변경합니다.
+**기능:** 지도 Filter 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `npcIcon` — `any` 추정: npcIcon에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+- `checked` — `boolean` 추정: checked 조건의 적용 여부입니다. 일반적으로 `true`/`false` 값을 사용합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>SetShowFilter(filter, checked)</code></summary>
 
-Show Filter 값을 설정하거나 변경합니다.
+**기능:** Show Filter 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `filter` — `number|string` 추정: filter에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `checked` — `boolean` 추정: checked 조건의 적용 여부입니다. 일반적으로 `true`/`false` 값을 사용합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetDefault()</code></summary>
 
-Default 정보를 조회합니다.
+**기능:** Default 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetCheckList(filter)</code></summary>
 
-Check 목록 정보를 조회합니다.
+**기능:** Check 목록 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `filter` — `number|string` 추정: filter에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetMapIconCoord(symbolType)</code></summary>
 
-지도 Icon Coord 정보를 조회합니다.
+**기능:** 지도 Icon Coord 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `symbolType` — `number|string` 추정: symbolType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetTelescopeUnitHealth(id)</code></summary>
 
-Telescope 유닛 생명력 정보를 조회합니다.
+**기능:** Telescope 유닛 생명력 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `id` — `number|string` 추정: 대상을 식별하는 ID입니다. 실제 자료형은 해당 API 문맥에서 확인해야 합니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetMySlaveHealth()</code></summary>
 
-My Slave 생명력 정보를 조회합니다.
+**기능:** My Slave 생명력 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetMapIconText(index)</code></summary>
 
-지도 Icon 텍스트 정보를 조회합니다.
+**기능:** 지도 Icon 텍스트 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `index` — `number` 추정: 목록에서 대상을 찾기 위한 인덱스입니다. 시작 번호와 범위는 원본에 기록되어 있지 않습니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetZoneListByWorldId(worldId)</code></summary>
 
-지역 목록 By 월드 ID 정보를 조회합니다.
+**기능:** 지역 목록 By 월드 ID 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `worldId` — `number|string` 추정: worldId에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>IsCheckedMapFilter(symbolType)</code></summary>
 
-Checked 지도 Filter 여부를 확인합니다.
+**기능:** Checked 지도 Filter 여부를 확인합니다. 조건 충족 여부를 확인하는 판정 계열 함수입니다. 이름상 참/거짓 값을 반환하는 것으로 추정됩니다.
+
+**매개변수**
+
+- `symbolType` — `number|string` 추정: symbolType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetZoneGroupOfCity(zoneId)</code></summary>
 
-지역 Group Of City 정보를 조회합니다.
+**기능:** 지역 Group Of City 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `zoneId` — `number|string` 추정: zoneId에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>SetSafeAreaTextureSettings(count, settings)</code></summary>
 
-Safe Area Texture Settings 값을 설정하거나 변경합니다.
+**기능:** Safe Area Texture Settings 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `count` — `number` 추정: 처리하거나 표시할 개수입니다.
+- `settings` — `any` 추정: settings에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetZoneFactionCompetitionInfo()</code></summary>
 
-지역 세력 Competition 정보 정보를 조회합니다.
+**기능:** 지역 세력 Competition 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetZoneFactionCompetitionRemainTime(zoneGroup)</code></summary>
 
-지역 세력 Competition Remain 시간 정보를 조회합니다.
+**기능:** 지역 세력 Competition Remain 시간 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `zoneGroup` — `any` 추정: zoneGroup에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetTowerDefAlarmInfo(zoneId)</code></summary>
 
-Tower Def Alarm 정보 정보를 조회합니다.
+**기능:** Tower Def Alarm 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `zoneId` — `number|string` 추정: zoneId에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetZoneDoodadText(zoneGroup)</code></summary>
 
-지역 Doodad 텍스트 정보를 조회합니다.
+**기능:** 지역 Doodad 텍스트 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `zoneGroup` — `any` 추정: zoneGroup에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetZoneStateTextInfo(state)</code></summary>
 
-지역 상태 텍스트 정보 정보를 조회합니다.
+**기능:** 지역 상태 텍스트 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `state` — `number|string` 추정: state에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 

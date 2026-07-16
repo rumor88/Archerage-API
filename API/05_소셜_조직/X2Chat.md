@@ -10,13 +10,28 @@
 
 ## ✅ 사용 가능
 
+> 문서 해석 안내: **시그니처**는 원본 덤프에서 확인된 값입니다. **추정** 표시는 함수명·매개변수명을 근거로 한 해석이며, 실제 자료형과 반환 필드는 클라이언트 버전에서 확인해야 합니다.
+
 함수 이름을 눌러 설명과 확인된 제약을 펼칠 수 있습니다. 제약이 확인되지 않은 함수는 제약 항목을 표시하지 않습니다.
 
 
 <details>
 <summary><code>DispatchChatMessage(filter, message)</code></summary>
 
-DispatchChatMessage 관련 기능을 수행합니다.
+**기능:** 클라이언트 내부 시스템에 메시지나 동작을 요청하는 함수입니다.
+
+**매개변수**
+
+- `filter` — `number|string` 추정: filter에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `message` — `string` 추정: 전송하거나 표시할 메시지입니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**저장소에 포함된 Lua 예제에서 확인된 호출**
+
+```lua
+X2Chat:DispatchChatMessage(CMF_SYSTEM, string.format("Target name is %s", str))
+```
 
 </details>
 
@@ -28,280 +43,592 @@ DispatchChatMessage 관련 기능을 수행합니다.
 <details>
 <summary><code>CreateUserChatChannel(channel, password)</code></summary>
 
-사용자 채팅 Channel 항목을 생성하거나 등록합니다.
+**기능:** 사용자 채팅 Channel 항목을 생성하거나 등록합니다. 새 객체·항목을 만들거나 등록하는 함수입니다.
+
+**매개변수**
+
+- `channel` — `string` 추정: channel에 해당하는 문자열입니다. 허용 형식은 원본 덤프에 기록되어 있지 않습니다.
+- `password` — `string` 추정: password에 해당하는 문자열입니다. 허용 형식은 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** `object` 또는 반환값 없음 — 생성/가져오기 결과를 반환하는지는 함수별 원본에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>JoinUserChatChannel(channel, password)</code></summary>
 
-사용자 채팅 Channel 기능을 시작하거나 활성화합니다.
+**기능:** 사용자 채팅 Channel 기능을 시작하거나 활성화합니다. 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `channel` — `string` 추정: channel에 해당하는 문자열입니다. 허용 형식은 원본 덤프에 기록되어 있지 않습니다.
+- `password` — `string` 추정: password에 해당하는 문자열입니다. 허용 형식은 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>LeaveUserChatChannel(channel)</code></summary>
 
-사용자 채팅 Channel 기능을 중지하거나 비활성화합니다.
+**기능:** 사용자 채팅 Channel 기능을 중지하거나 비활성화합니다. 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `channel` — `string` 추정: channel에 해당하는 문자열입니다. 허용 형식은 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetChatChannelName(channel)</code></summary>
 
-채팅 Channel 이름 정보를 조회합니다.
+**기능:** 채팅 Channel 이름 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `channel` — `string` 추정: channel에 해당하는 문자열입니다. 허용 형식은 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>OpenChat()</code></summary>
 
-채팅 화면이나 정보를 표시합니다.
+**기능:** 채팅 화면이나 정보를 표시합니다. 화면 요소 또는 콘텐츠의 표시 상태를 변경하는 함수입니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetChatCommands()</code></summary>
 
-채팅 Commands 정보를 조회합니다.
+**기능:** 채팅 Commands 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>ExpressEmotion(text)</code></summary>
 
-ExpressEmotion 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `text` — `string` 추정: 표시하거나 처리할 문자열입니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>DispatchCombatChatMessage(targetFilter, combatFilter, message)</code></summary>
 
-DispatchCombatChatMessage 관련 기능을 수행합니다.
+**기능:** 클라이언트 내부 시스템에 메시지나 동작을 요청하는 함수입니다.
+
+**매개변수**
+
+- `targetFilter` — `number|string` 추정: targetFilter에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `combatFilter` — `number|string` 추정: combatFilter에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `message` — `string` 추정: 전송하거나 표시할 메시지입니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>UpdateChatTabInfo(tabId, chatTabInfoTable)</code></summary>
 
-채팅 탭 정보 값을 설정하거나 변경합니다.
+**기능:** 채팅 탭 정보 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `tabId` — `number|string` 추정: tabId에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `chatTabInfoTable` — `table` 추정: chatTabInfoTable에 해당하는 Lua 테이블입니다. 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>UpdateChatTabFilter(tabId, filtersTable, filterColorsTable)</code></summary>
 
-채팅 탭 Filter 값을 설정하거나 변경합니다.
+**기능:** 채팅 탭 Filter 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `tabId` — `number|string` 추정: tabId에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `filtersTable` — `table` 추정: filtersTable에 해당하는 Lua 테이블입니다. 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+- `filterColorsTable` — `table` 추정: filterColorsTable에 해당하는 Lua 테이블입니다. 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>AddNewChatTabByUser(windowId, name)</code></summary>
 
-New 채팅 탭 By 사용자 항목을 생성하거나 등록합니다.
+**기능:** New 채팅 탭 By 사용자 항목을 생성하거나 등록합니다. 새 객체·항목을 만들거나 등록하는 함수입니다.
+
+**매개변수**
+
+- `windowId` — `number|string` 추정: windowId에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `name` — `string` 추정: 대상의 이름 또는 고유 식별 문자열입니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>DeleteChatTabByUser(tabId)</code></summary>
 
-채팅 탭 By 사용자 항목을 제거하거나 초기화합니다.
+**기능:** 채팅 탭 By 사용자 항목을 제거하거나 초기화합니다. 기존 객체·항목 또는 연결된 상태를 제거하거나 초기화하는 함수입니다.
+
+**매개변수**
+
+- `tabId` — `number|string` 추정: tabId에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>RenameChatTabByUser(tabId, name)</code></summary>
 
-RenameChatTabByUser 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `tabId` — `number|string` 추정: tabId에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `name` — `string` 추정: 대상의 이름 또는 고유 식별 문자열입니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>ClearChatContentByUser(tabId)</code></summary>
 
-채팅 콘텐츠 By 사용자 항목을 제거하거나 초기화합니다.
+**기능:** 채팅 콘텐츠 By 사용자 항목을 제거하거나 초기화합니다. 기존 객체·항목 또는 연결된 상태를 제거하거나 초기화하는 함수입니다.
+
+**매개변수**
+
+- `tabId` — `number|string` 추정: tabId에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetChatTabInfoTable(tabId)</code></summary>
 
-채팅 탭 정보 Table 정보를 조회합니다.
+**기능:** 채팅 탭 정보 Table 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `tabId` — `number|string` 추정: tabId에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetDefaultChatTabInfoTable(tabId)</code></summary>
 
-Default 채팅 탭 정보 Table 정보를 조회합니다.
+**기능:** Default 채팅 탭 정보 Table 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `tabId` — `number|string` 추정: tabId에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>AllChatWindowIds()</code></summary>
 
-AllChatWindowIds 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>AddItemLinkToActiveChatInput(linkText)</code></summary>
 
-아이템 Link To Active 채팅 Input 항목을 생성하거나 등록합니다.
+**기능:** 아이템 Link To Active 채팅 Input 항목을 생성하거나 등록합니다. 새 객체·항목을 만들거나 등록하는 함수입니다.
+
+**매개변수**
+
+- `linkText` — `string` 추정: linkText에 해당하는 문자열입니다. 허용 형식은 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>AddQuestLinkToActiveChatInput(linkText)</code></summary>
 
-퀘스트 Link To Active 채팅 Input 항목을 생성하거나 등록합니다.
+**기능:** 퀘스트 Link To Active 채팅 Input 항목을 생성하거나 등록합니다. 새 객체·항목을 만들거나 등록하는 함수입니다.
+
+**매개변수**
+
+- `linkText` — `string` 추정: linkText에 해당하는 문자열입니다. 허용 형식은 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>AddRaidRecruitLinkToActiveChatInput(linkText)</code></summary>
 
-공격대 Recruit Link To Active 채팅 Input 항목을 생성하거나 등록합니다.
+**기능:** 공격대 Recruit Link To Active 채팅 Input 항목을 생성하거나 등록합니다. 새 객체·항목을 만들거나 등록하는 함수입니다.
+
+**매개변수**
+
+- `linkText` — `string` 추정: linkText에 해당하는 문자열입니다. 허용 형식은 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>AddSquadRecruitLinkToActiveChatInput(linkText)</code></summary>
 
-분대 Recruit Link To Active 채팅 Input 항목을 생성하거나 등록합니다.
+**기능:** 분대 Recruit Link To Active 채팅 Input 항목을 생성하거나 등록합니다. 새 객체·항목을 만들거나 등록하는 함수입니다.
+
+**매개변수**
+
+- `linkText` — `string` 추정: linkText에 해당하는 문자열입니다. 허용 형식은 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>AddUrlLinkToActiveChatInput()</code></summary>
 
-Url Link To Active 채팅 Input 항목을 생성하거나 등록합니다.
+**기능:** Url Link To Active 채팅 Input 항목을 생성하거나 등록합니다. 새 객체·항목을 만들거나 등록하는 함수입니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>AddCraftLinkToActiveChatInput(craftType)</code></summary>
 
-제작 Link To Active 채팅 Input 항목을 생성하거나 등록합니다.
+**기능:** 제작 Link To Active 채팅 Input 항목을 생성하거나 등록합니다. 새 객체·항목을 만들거나 등록하는 함수입니다.
+
+**매개변수**
+
+- `craftType` — `number|string` 추정: craftType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>IsActivatedChatInput()</code></summary>
 
-Activated 채팅 Input 여부를 확인합니다.
+**기능:** Activated 채팅 Input 여부를 확인합니다. 조건 충족 여부를 확인하는 판정 계열 함수입니다. 이름상 참/거짓 값을 반환하는 것으로 추정됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>ActivateWhisperChatInput(isWhispered)</code></summary>
 
-Whisper 채팅 Input 기능을 활성화합니다.
+**기능:** Whisper 채팅 Input 기능을 활성화합니다. 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `isWhispered` — `boolean` 추정: isWhispered 조건의 적용 여부입니다. 일반적으로 `true`/`false` 값을 사용합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>InitChatWindow()</code></summary>
 
-InitChatWindow 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>IsLockedChatWindowByChatTabId(tabId)</code></summary>
 
-잠긴 채팅 Window By 채팅 탭 ID 여부를 확인합니다.
+**기능:** 잠긴 채팅 Window By 채팅 탭 ID 여부를 확인합니다. 조건 충족 여부를 확인하는 판정 계열 함수입니다. 이름상 참/거짓 값을 반환하는 것으로 추정됩니다.
+
+**매개변수**
+
+- `tabId` — `number|string` 추정: tabId에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>LockChatWindowByTabId(tabId, lock)</code></summary>
 
-LockChatWindowByTabId 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `tabId` — `number|string` 추정: tabId에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `lock` — `any` 추정: lock에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetChatOption()</code></summary>
 
-채팅 옵션 정보를 조회합니다.
+**기능:** 채팅 옵션 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>UpdateChatOption(chatOption)</code></summary>
 
-채팅 옵션 값을 설정하거나 변경합니다.
+**기능:** 채팅 옵션 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `chatOption` — `any` 추정: chatOption에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>ReportSpammer(targetName, message, chatType)</code></summary>
 
-ReportSpammer 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `targetName` — `string` 추정: targetName에 해당하는 문자열입니다. 허용 형식은 원본 덤프에 기록되어 있지 않습니다.
+- `message` — `string` 추정: 전송하거나 표시할 메시지입니다.
+- `chatType` — `number|string` 추정: chatType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetChatChannelInfo(chatType)</code></summary>
 
-채팅 Channel 정보 정보를 조회합니다.
+**기능:** 채팅 Channel 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `chatType` — `number|string` 추정: chatType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>UseMegaphone()</code></summary>
 
-Megaphone 사용을 수행합니다.
+**기능:** Megaphone 사용을 수행합니다. 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetMegaphoneChannelInfos()</code></summary>
 
-Megaphone Channel Infos 정보를 조회합니다.
+**기능:** Megaphone Channel Infos 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>SetMegaphoneWarningMsgState()</code></summary>
 
-Megaphone Warning Msg 상태 값을 설정하거나 변경합니다.
+**기능:** Megaphone Warning Msg 상태 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetUrlTextAddr()</code></summary>
 
-Url 텍스트 Addr 정보를 조회합니다.
+**기능:** Url 텍스트 Addr 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>SetUrlTextAddr(text, addr)</code></summary>
 
-Url 텍스트 Addr 값을 설정하거나 변경합니다.
+**기능:** Url 텍스트 Addr 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `text` — `string` 추정: 표시하거나 처리할 문자열입니다.
+- `addr` — `any` 추정: addr에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>IsEnableChatChannel(chatType)</code></summary>
 
-Enable 채팅 Channel 여부를 확인합니다.
+**기능:** Enable 채팅 Channel 여부를 확인합니다. 조건 충족 여부를 확인하는 판정 계열 함수입니다. 이름상 참/거짓 값을 반환하는 것으로 추정됩니다.
+
+**매개변수**
+
+- `chatType` — `number|string` 추정: chatType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetChatIcon(chatIconKind)</code></summary>
 
-채팅 Icon 정보를 조회합니다.
+**기능:** 채팅 Icon 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `chatIconKind` — `number|string` 추정: chatIconKind에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>GetChatIconKind(charId, chatType)</code></summary>
 
-채팅 Icon Kind 정보를 조회합니다.
+**기능:** 채팅 Icon Kind 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `charId` — `number|string` 추정: charId에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `chatType` — `number|string` 추정: chatType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
