@@ -10,216 +10,571 @@
 
 ## ✅ 사용 가능
 
+> 문서 해석 안내: **시그니처**는 원본 덤프에서 확인된 값입니다. **추정** 표시는 함수명·매개변수명을 근거로 한 해석이며, 실제 자료형과 반환 필드는 클라이언트 버전에서 확인해야 합니다.
+
 함수 이름을 눌러 설명과 확인된 제약을 펼칠 수 있습니다. 제약이 확인되지 않은 함수는 제약 항목을 표시하지 않습니다.
 
 
 <details>
 <summary><code>Save()</code></summary>
 
-게임 옵션, UI 배율과 키 설정을 다룹니다. 데이터를 저장합니다.
+**기능:** 게임 옵션, UI 배율과 키 설정을 다룹니다. 데이터를 저장합니다. 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+X2Option:Save()
+```
 
 </details>
 
 <details>
 <summary><code>Reset()</code></summary>
 
-게임 옵션, UI 배율과 키 설정을 다룹니다. 상태를 초기화합니다.
+**기능:** 게임 옵션, UI 배율과 키 설정을 다룹니다. 상태를 초기화합니다. 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+X2Option:Reset()
+```
 
 </details>
 
 <details>
 <summary><code>CreateOptionItemFloat(name, value)</code></summary>
 
-옵션 아이템 Float 항목을 생성하거나 등록합니다.
+**기능:** 옵션 아이템 Float 항목을 생성하거나 등록합니다. 새 객체·항목을 만들거나 등록하는 함수입니다.
+
+**매개변수**
+
+- `name` — `string` 추정: 대상의 이름 또는 고유 식별 문자열입니다.
+- `value` — `any` 추정: 설정하거나 비교할 값입니다. 구체적인 자료형은 함수 문맥에 따라 달라집니다.
+
+**반환값:** `object` 또는 반환값 없음 — 생성/가져오기 결과를 반환하는지는 함수별 원본에 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+local result = X2Option:CreateOptionItemFloat("name", valueValue)
+```
 
 </details>
 
 <details>
 <summary><code>CreateOptionItemString(name, value)</code></summary>
 
-옵션 아이템 String 항목을 생성하거나 등록합니다.
+**기능:** 옵션 아이템 String 항목을 생성하거나 등록합니다. 새 객체·항목을 만들거나 등록하는 함수입니다.
+
+**매개변수**
+
+- `name` — `string` 추정: 대상의 이름 또는 고유 식별 문자열입니다.
+- `value` — `any` 추정: 설정하거나 비교할 값입니다. 구체적인 자료형은 함수 문맥에 따라 달라집니다.
+
+**반환값:** `object` 또는 반환값 없음 — 생성/가져오기 결과를 반환하는지는 함수별 원본에 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+local result = X2Option:CreateOptionItemString("name", valueValue)
+```
 
 </details>
 
 <details>
 <summary><code>GetOptionItemValue(optionType)</code></summary>
 
-옵션 아이템 Value 정보를 조회합니다.
+**기능:** 옵션 아이템 Value 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `optionType` — `number|string` 추정: optionType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+local result = X2Option:GetOptionItemValue(optionTypeValue)
+```
 
 </details>
 
 <details>
 <summary><code>GetOptionItemValueByName(name)</code></summary>
 
-옵션 아이템 Value By 이름 정보를 조회합니다.
+**기능:** 옵션 아이템 Value By 이름 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `name` — `string` 추정: 대상의 이름 또는 고유 식별 문자열입니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+local result = X2Option:GetOptionItemValueByName("name")
+```
 
 </details>
 
 <details>
 <summary><code>SetItemFloatValue(optionType, value)</code></summary>
 
-아이템 Float Value 값을 설정하거나 변경합니다.
+**기능:** 아이템 Float Value 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `optionType` — `number|string` 추정: optionType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `value` — `any` 추정: 설정하거나 비교할 값입니다. 구체적인 자료형은 함수 문맥에 따라 달라집니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+X2Option:SetItemFloatValue(optionTypeValue, valueValue)
+```
 
 </details>
 
 <details>
 <summary><code>SetItemFloatValueWithoutModify(optionType, value)</code></summary>
 
-아이템 Float Value Without Modify 값을 설정하거나 변경합니다.
+**기능:** 아이템 Float Value Without Modify 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `optionType` — `number|string` 추정: optionType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `value` — `any` 추정: 설정하거나 비교할 값입니다. 구체적인 자료형은 함수 문맥에 따라 달라집니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+X2Option:SetItemFloatValueWithoutModify(optionTypeValue, valueValue)
+```
 
 </details>
 
 <details>
 <summary><code>SetItemFloatValueByName(name, value)</code></summary>
 
-아이템 Float Value By 이름 값을 설정하거나 변경합니다.
+**기능:** 아이템 Float Value By 이름 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `name` — `string` 추정: 대상의 이름 또는 고유 식별 문자열입니다.
+- `value` — `any` 추정: 설정하거나 비교할 값입니다. 구체적인 자료형은 함수 문맥에 따라 달라집니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+X2Option:SetItemFloatValueByName("name", valueValue)
+```
 
 </details>
 
 <details>
 <summary><code>SetItemStringValue(optionType, value)</code></summary>
 
-아이템 String Value 값을 설정하거나 변경합니다.
+**기능:** 아이템 String Value 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `optionType` — `number|string` 추정: optionType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `value` — `any` 추정: 설정하거나 비교할 값입니다. 구체적인 자료형은 함수 문맥에 따라 달라집니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+X2Option:SetItemStringValue(optionTypeValue, valueValue)
+```
 
 </details>
 
 <details>
 <summary><code>SetItemStringValueByName(name, value)</code></summary>
 
-아이템 String Value By 이름 값을 설정하거나 변경합니다.
+**기능:** 아이템 String Value By 이름 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `name` — `string` 추정: 대상의 이름 또는 고유 식별 문자열입니다.
+- `value` — `any` 추정: 설정하거나 비교할 값입니다. 구체적인 자료형은 함수 문맥에 따라 달라집니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+X2Option:SetItemStringValueByName("name", valueValue)
+```
 
 </details>
 
 <details>
 <summary><code>SetItemDefaultFloatValue(optionType, value)</code></summary>
 
-아이템 Default Float Value 값을 설정하거나 변경합니다.
+**기능:** 아이템 Default Float Value 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `optionType` — `number|string` 추정: optionType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `value` — `any` 추정: 설정하거나 비교할 값입니다. 구체적인 자료형은 함수 문맥에 따라 달라집니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+X2Option:SetItemDefaultFloatValue(optionTypeValue, valueValue)
+```
 
 </details>
 
 <details>
 <summary><code>SetItemDefaultFloatValueByName(name, value)</code></summary>
 
-아이템 Default Float Value By 이름 값을 설정하거나 변경합니다.
+**기능:** 아이템 Default Float Value By 이름 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `name` — `string` 추정: 대상의 이름 또는 고유 식별 문자열입니다.
+- `value` — `any` 추정: 설정하거나 비교할 값입니다. 구체적인 자료형은 함수 문맥에 따라 달라집니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+X2Option:SetItemDefaultFloatValueByName("name", valueValue)
+```
 
 </details>
 
 <details>
 <summary><code>SetItemDefaultStringValue(optionType, value)</code></summary>
 
-아이템 Default String Value 값을 설정하거나 변경합니다.
+**기능:** 아이템 Default String Value 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `optionType` — `number|string` 추정: optionType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `value` — `any` 추정: 설정하거나 비교할 값입니다. 구체적인 자료형은 함수 문맥에 따라 달라집니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+X2Option:SetItemDefaultStringValue(optionTypeValue, valueValue)
+```
 
 </details>
 
 <details>
 <summary><code>SetItemDefaultStringValueByName(name, value)</code></summary>
 
-아이템 Default String Value By 이름 값을 설정하거나 변경합니다.
+**기능:** 아이템 Default String Value By 이름 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `name` — `string` 추정: 대상의 이름 또는 고유 식별 문자열입니다.
+- `value` — `any` 추정: 설정하거나 비교할 값입니다. 구체적인 자료형은 함수 문맥에 따라 달라집니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+X2Option:SetItemDefaultStringValueByName("name", valueValue)
+```
 
 </details>
 
 <details>
 <summary><code>GetResolutionCount()</code></summary>
 
-Resolution 개수 정보를 조회합니다.
+**기능:** Resolution 개수 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `number` 추정 — 개수 또는 수량을 돌려주는 형태로 보입니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+local result = X2Option:GetResolutionCount()
+```
 
 </details>
 
 <details>
 <summary><code>GetResolution(index)</code></summary>
 
-Resolution 정보를 조회합니다.
+**기능:** Resolution 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `index` — `number` 추정: 목록에서 대상을 찾기 위한 인덱스입니다. 시작 번호와 범위는 원본에 기록되어 있지 않습니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+local result = X2Option:GetResolution(1)
+```
 
 </details>
 
 <details>
 <summary><code>GetCursorSize()</code></summary>
 
-Cursor Size 정보를 조회합니다.
+**기능:** Cursor Size 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+local result = X2Option:GetCursorSize()
+```
 
 </details>
 
 <details>
 <summary><code>GetBasicCursorShape()</code></summary>
 
-Basic Cursor Shape 정보를 조회합니다.
+**기능:** Basic Cursor Shape 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+local result = X2Option:GetBasicCursorShape()
+```
 
 </details>
 
 <details>
 <summary><code>EnumAAFormats()</code></summary>
 
-EnumAAFormats 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+X2Option:EnumAAFormats()
+```
 
 </details>
 
 <details>
 <summary><code>GetNextSysSpecFullValue()</code></summary>
 
-Next Sys Spec Full Value 정보를 조회합니다.
+**기능:** Next Sys Spec Full Value 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+local result = X2Option:GetNextSysSpecFullValue()
+```
 
 </details>
 
 <details>
 <summary><code>GetMinxMaxOfMouseSensitivity()</code></summary>
 
-Minx 최대 Of Mouse Sensitivity 정보를 조회합니다.
+**기능:** Minx 최대 Of Mouse Sensitivity 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+local result = X2Option:GetMinxMaxOfMouseSensitivity()
+```
 
 </details>
 
 <details>
 <summary><code>IsPixelSyncSupported()</code></summary>
 
-Pixel Sync Supported 여부를 확인합니다.
+**기능:** Pixel Sync Supported 여부를 확인합니다. 조건 충족 여부를 확인하는 판정 계열 함수입니다. 이름상 참/거짓 값을 반환하는 것으로 추정됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+local result = X2Option:IsPixelSyncSupported()
+```
 
 </details>
 
 <details>
 <summary><code>HasOceanSimulateOption()</code></summary>
 
-Ocean Simulate 옵션 여부를 확인합니다.
+**기능:** Ocean Simulate 옵션 여부를 확인합니다. 조건 충족 여부를 확인하는 판정 계열 함수입니다. 이름상 참/거짓 값을 반환하는 것으로 추정됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+local result = X2Option:HasOceanSimulateOption()
+```
 
 </details>
 
 <details>
 <summary><code>OptimizationEnable(enable)</code></summary>
 
-OptimizationEnable 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `enable` — `boolean` 추정: 기능을 활성화할지 여부입니다. 일반적으로 `true`는 활성화, `false`는 비활성화입니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+X2Option:OptimizationEnable(true)
+```
 
 </details>
 
 <details>
 <summary><code>GetSubOptionItemList(modeOptionId, selected)</code></summary>
 
-Sub 옵션 아이템 목록 정보를 조회합니다.
+**기능:** Sub 옵션 아이템 목록 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `modeOptionId` — `number|string` 추정: modeOptionId에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `selected` — `boolean` 추정: selected 조건의 적용 여부입니다. 일반적으로 `true`/`false` 값을 사용합니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+local result = X2Option:GetSubOptionItemList(modeOptionIdValue, true)
+```
 
 </details>
 
 <details>
 <summary><code>GetOptionInfo(optionItemType)</code></summary>
 
-옵션 정보 정보를 조회합니다.
+**기능:** 옵션 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `optionItemType` — `number|string` 추정: optionItemType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+local result = X2Option:GetOptionInfo(optionItemTypeValue)
+```
 
 </details>
 
 <details>
 <summary><code>GetHotkeyInfo(hotkeyActionType)</code></summary>
 
-단축키 정보 정보를 조회합니다.
+**기능:** 단축키 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `hotkeyActionType` — `number|string` 추정: hotkeyActionType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+local result = X2Option:GetHotkeyInfo(hotkeyActionTypeValue)
+```
 
 </details>
 
 <details>
 <summary><code>GetConsoleVariable(name)</code></summary>
 
-Console Variable 정보를 조회합니다.
+**기능:** Console Variable 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수**
+
+- `name` — `string` 추정: 대상의 이름 또는 고유 식별 문자열입니다.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+local result = X2Option:GetConsoleVariable("name")
+```
 
 </details>
 
 <details>
 <summary><code>SetConsoleVariable(name, value)</code></summary>
 
-Console Variable 값을 설정하거나 변경합니다.
+**기능:** Console Variable 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `name` — `string` 추정: 대상의 이름 또는 고유 식별 문자열입니다.
+- `value` — `any` 추정: 설정하거나 비교할 값입니다. 구체적인 자료형은 함수 문맥에 따라 달라집니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**저장소에 포함된 Lua 예제에서 확인된 호출**
+
+```lua
+X2Option:SetConsoleVariable("name_tag_hp_width_on_bgmode", "80")
+```
 
 </details>
 
@@ -231,14 +586,26 @@ Console Variable 값을 설정하거나 변경합니다.
 <details>
 <summary><code>GetModifiedRestartOption()</code></summary>
 
-변경 상태 Restart 옵션 정보를 조회합니다.
+**기능:** 변경 상태 Restart 옵션 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 
 <details>
 <summary><code>RemoveModifiedOption()</code></summary>
 
-변경 상태 옵션 항목을 제거하거나 초기화합니다.
+**기능:** 변경 상태 옵션 항목을 제거하거나 초기화합니다. 기존 객체·항목 또는 연결된 상태를 제거하거나 초기화하는 함수입니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
 </details>
 

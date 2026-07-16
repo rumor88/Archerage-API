@@ -10,75 +10,190 @@ Roadmap UI 객체의 속성, 상태와 동작을 제어합니다.
 
 ## ✅ 사용 가능
 
+> 문서 해석 안내: **시그니처**는 원본 덤프에서 확인된 값입니다. **추정** 표시는 함수명·매개변수명을 근거로 한 해석이며, 실제 자료형과 반환 필드는 클라이언트 버전에서 확인해야 합니다.
+
 함수 이름을 눌러 설명과 확인된 제약을 펼칠 수 있습니다. 제약이 확인되지 않은 함수는 제약 항목을 표시하지 않습니다.
 
 
 <details>
 <summary><code>InitMapData()</code></summary>
 
-InitMapData 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+widget:InitMapData()
+```
 
 </details>
 
 <details>
 <summary><code>SetMapSize(radioValue)</code></summary>
 
-지도 Size 값을 설정하거나 변경합니다.
+**기능:** 지도 Size 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `radioValue` — `any` 추정: radioValue에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+widget:SetMapSize(radioValueValue)
+```
 
 </details>
 
 <details>
 <summary><code>SetRoadMapNpc(isShow)</code></summary>
 
-Road 지도 Npc 값을 설정하거나 변경합니다.
+**기능:** Road 지도 Npc 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `isShow` — `boolean` 추정: isShow 조건의 적용 여부입니다. 일반적으로 `true`/`false` 값을 사용합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+widget:SetRoadMapNpc(true)
+```
 
 </details>
 
 <details>
 <summary><code>SetPingBtn(clicked, pingType)</code></summary>
 
-Ping Btn 값을 설정하거나 변경합니다.
+**기능:** Ping Btn 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `clicked` — `any` 추정: clicked에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+- `pingType` — `number|string` 추정: pingType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+widget:SetPingBtn(clickedValue, pingTypeValue)
+```
 
 </details>
 
 <details>
 <summary><code>ResetCursor(isNull)</code></summary>
 
-Cursor 상태를 초기화합니다.
+**기능:** Cursor 상태를 초기화합니다. 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `isNull` — `boolean` 추정: isNull 조건의 적용 여부입니다. 일반적으로 `true`/`false` 값을 사용합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+widget:ResetCursor(true)
+```
 
 </details>
 
 <details>
 <summary><code>ShowLeaderPing(isShow)</code></summary>
 
-Leader Ping 화면이나 정보를 표시합니다.
+**기능:** Leader Ping 화면이나 정보를 표시합니다. 화면 요소 또는 콘텐츠의 표시 상태를 변경하는 함수입니다.
+
+**매개변수**
+
+- `isShow` — `boolean` 추정: isShow 조건의 적용 여부입니다. 일반적으로 `true`/`false` 값을 사용합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+widget:ShowLeaderPing(true)
+```
 
 </details>
 
 <details>
 <summary><code>OnLeftClick()</code></summary>
 
-OnLeftClick 관련 기능을 수행합니다.
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+widget:OnLeftClick()
+```
 
 </details>
 
 <details>
 <summary><code>GetPlayerViewPos()</code></summary>
 
-플레이어 View Pos 정보를 조회합니다.
+**기능:** 플레이어 View Pos 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+local result = widget:GetPlayerViewPos()
+```
 
 </details>
 
 <details>
 <summary><code>SetExpandRatio(ratio)</code></summary>
 
-Expand Ratio 값을 설정하거나 변경합니다.
+**기능:** Expand Ratio 값을 설정하거나 변경합니다. 전달한 값으로 설정 또는 상태를 변경하는 함수입니다. 호출 직후 UI나 클라이언트 상태에 반영될 수 있습니다.
+
+**매개변수**
+
+- `ratio` — `any` 추정: ratio에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+widget:SetExpandRatio(ratioValue)
+```
 
 </details>
 
 <details>
 <summary><code>IsPingMode()</code></summary>
 
-Ping Mode 여부를 확인합니다.
+**기능:** Ping Mode 여부를 확인합니다. 조건 충족 여부를 확인하는 판정 계열 함수입니다. 이름상 참/거짓 값을 반환하는 것으로 추정됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
+
+**형태 예시 — 인자 값은 실제 게임 상태와 관련 상수에 맞게 바꿔야 합니다.**
+
+```lua
+local result = widget:IsPingMode()
+```
 
 </details>
