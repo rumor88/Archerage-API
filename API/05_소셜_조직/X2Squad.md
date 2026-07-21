@@ -13,7 +13,7 @@
 <details>
 <summary><code>CreateSquad(selectedField, openType, explanation, partyInvitation, limitLevel, limitGearScore)</code></summary>
 
-**기능:** 분대 항목을 생성하거나 등록합니다. 새 객체·항목을 만들거나 등록하는 함수입니다.
+**기능:** 필드, 공개 방식, 설명, 파티 초대와 참가 제한을 지정해 분대를 생성합니다.
 
 **매개변수**
 

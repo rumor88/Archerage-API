@@ -13,7 +13,7 @@
 <details>
 <summary><code>GetInstanceUiKindList()</code></summary>
 
-**기능:** 인스턴스 UI Kind 목록 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+**기능:** 인스턴스 입장 UI에서 사용하는 콘텐츠 종류 목록을 조회합니다.
 
 **매개변수:** 없음.
 
@@ -27,7 +27,7 @@
 <details>
 <summary><code>GetInstanceListByKind(kind)</code></summary>
 
-**기능:** 인스턴스 목록 By Kind 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+**기능:** 선택한 콘텐츠 종류에 속하는 인스턴스 목록을 조회합니다.
 
 **매개변수**
 
@@ -43,7 +43,7 @@
 <details>
 <summary><code>GetDetailInstanceInfo(instanceType)</code></summary>
 
-**기능:** Detail 인스턴스 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+**기능:** 지정한 인스턴스의 입장 조건과 상태 등 상세 정보를 조회합니다.
 
 **매개변수**
 
@@ -59,7 +59,7 @@
 <details>
 <summary><code>GetInstanceName(instanceType)</code></summary>
 
-**기능:** 인스턴스 이름 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+**기능:** 인스턴스 유형에 해당하는 표시 이름을 조회합니다.
 
 **매개변수**
 

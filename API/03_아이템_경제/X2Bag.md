@@ -61,7 +61,7 @@ X2Bag:EquipBagItem(1, false)
 <details>
 <summary><code>CountItems()</code></summary>
 
-**기능:** Items 개수를 조회합니다. 대상 항목의 개수나 수량을 조회하는 함수입니다.
+**기능:** 가방에서 사용 중인 아이템 슬롯 또는 아이템 수를 조회합니다. 정확한 집계 기준은 게임에서 확인해야 합니다.
 
 **매개변수:** 없음.
 
@@ -75,7 +75,7 @@ X2Bag:EquipBagItem(1, false)
 <details>
 <summary><code>ItemStack(slot)</code></summary>
 
-**기능:** 아이템의 수량 정보를 조회합니다. 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+**기능:** 지정한 가방 슬롯에 있는 아이템의 중첩 수량을 조회합니다.
 
 **매개변수**
 
@@ -91,7 +91,7 @@ X2Bag:EquipBagItem(1, false)
 <details>
 <summary><code>MoveToEmptyBankSlot(slotIdx)</code></summary>
 
-**기능:** To 빈 창고 슬롯 이동을 수행합니다. 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+**기능:** 지정한 가방 아이템을 창고의 첫 빈 슬롯으로 이동합니다.
 
 **매개변수**
 
@@ -107,7 +107,7 @@ X2Bag:EquipBagItem(1, false)
 <details>
 <summary><code>MoveToEmptyCofferSlot(slotIdx)</code></summary>
 
-**기능:** To 빈 Coffer 슬롯 이동을 수행합니다. 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+**기능:** 지정한 가방 아이템을 보관함의 첫 빈 슬롯으로 이동합니다.
 
 **매개변수**
 

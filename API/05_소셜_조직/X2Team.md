@@ -81,7 +81,7 @@ X2Team:InviteToTeam("캐릭터이름", true)
 <details>
 <summary><code>MoveTeamMember(frommemberIndex, tomemberIndex)</code></summary>
 
-**기능:** 팀 구성원 이동을 수행합니다. 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+**기능:** 두 구성원의 인덱스를 기준으로 파티·공격대 내 배치를 이동합니다.
 
 **매개변수**
 
@@ -98,7 +98,7 @@ X2Team:InviteToTeam("캐릭터이름", true)
 <details>
 <summary><code>MoveTeamMemberToParty(frommemberIndex, toParty)</code></summary>
 
-**기능:** 팀 구성원 To Party 이동을 수행합니다. 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+**기능:** 지정한 공격대원을 선택한 파티로 이동합니다.
 
 **매개변수**
 
@@ -115,7 +115,7 @@ X2Team:InviteToTeam("캐릭터이름", true)
 <details>
 <summary><code>KickTeamMember(memberIndex, teamRoleType)</code></summary>
 
-**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+**기능:** 구성원 인덱스와 팀 역할 유형을 사용해 파티·공격대원을 추방합니다.
 
 **매개변수**
 
@@ -132,7 +132,7 @@ X2Team:InviteToTeam("캐릭터이름", true)
 <details>
 <summary><code>KickTeamMemberByName(charName, teamRoleType)</code></summary>
 
-**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+**기능:** 캐릭터 이름과 팀 역할 유형을 사용해 파티·공격대원을 추방합니다.
 
 **매개변수**
 
@@ -149,7 +149,7 @@ X2Team:InviteToTeam("캐릭터이름", true)
 <details>
 <summary><code>GetTeamRoleType()</code></summary>
 
-**기능:** 팀 역할 유형 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+**기능:** 자신이 속한 팀의 파티·공격대 역할 유형을 조회합니다.
 
 **매개변수:** 없음.
 
@@ -163,7 +163,7 @@ X2Team:InviteToTeam("캐릭터이름", true)
 <details>
 <summary><code>RaidRecruitAdd(type, subType, headcount, limitLevel, autoJoin, msg, hour, minute, limitGearPoint)</code></summary>
 
-**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+**기능:** 인원, 레벨, 장비점수, 자동 가입과 모집 문구 등의 조건을 지정해 공격대 모집글을 등록합니다.
 
 **매개변수**
 
@@ -187,7 +187,7 @@ X2Team:InviteToTeam("캐릭터이름", true)
 <details>
 <summary><code>RaidRecruitDel()</code></summary>
 
-**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+**기능:** 자신이 등록한 공격대 모집글을 삭제합니다.
 
 **매개변수:** 없음.
 
