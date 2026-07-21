@@ -5,8 +5,8 @@
 > 판정 기준: 원본 덤프의 Allowed functions는 **사용 가능**, Available/not allowed functions는 **애드온 사용 불가**로 분류했습니다. 서버/클라이언트 버전에 따라 달라질 수 있습니다.
 
 - 전역값: 0개
-- 사용 가능 함수: 2개
-- 사용 불가 함수: 77개
+- 사용 가능 함수: 6개
+- 사용 불가 함수: 73개
 
 ## ✅ 사용 가능
 
@@ -16,23 +16,22 @@
 
 
 <details>
-<summary><code>GetBagItemInfo(bagId, slot)</code></summary>
+<summary><code>GetBagItemInfo(slot)</code></summary>
 
-**기능:** 가방 식별자와 슬롯 번호로 해당 칸의 아이템 정보를 조회합니다. 빈 슬롯이면 값이 없을 수 있으며 반환 테이블의 필드는 아이템 종류와 서버 버전에 따라 달라질 수 있습니다.
+**기능:** 슬롯 번호로 해당 칸의 아이템 정보를 조회합니다. 빈 슬롯이면 값이 없을 수 있으며 반환 테이블의 필드는 아이템 종류와 서버 버전에 따라 달라질 수 있습니다.
 
 **매개변수**
 
-- `bagId` — `number` 추정: 가방 또는 보관 공간을 식별하는 ID입니다.
 - `slot` — `number` 추정: 대상 슬롯 번호입니다. 시작 번호와 유효 범위는 해당 API/보관함 종류에서 확인해야 합니다.
 
 **반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
 
-**확인된 제약:** 과거 특정 아이템에서 충돌하던 문제가 수정되었습니다. 서버 버전에 따라 반환 필드 차이를 확인하세요.
+**확인된 제약:** 2024년 공지에는 `GetBagItemInfo(bagId, slot)`로 표기됐지만, 2026-04-07 공지에서 `GetBagItemInfo(slot)`로 갱신되었습니다. 과거 특정 아이템에서 충돌하던 문제도 수정되었습니다.
 
 **사용 예시**
 
 ```lua
-local itemInfo = X2Bag:GetBagItemInfo(1, 1)
+local itemInfo = X2Bag:GetBagItemInfo(1)
 ```
 
 </details>
@@ -56,6 +55,68 @@ local itemInfo = X2Bag:GetBagItemInfo(1, 1)
 ```lua
 X2Bag:EquipBagItem(1, false)
 ```
+
+</details>
+
+<details>
+<summary><code>CountItems()</code></summary>
+
+**기능:** Items 개수를 조회합니다. 대상 항목의 개수나 수량을 조회하는 함수입니다.
+
+**매개변수:** 없음.
+
+**반환값:** `number` 추정 — 개수 또는 수량을 돌려주는 형태로 보입니다.
+
+
+**공식 허용 기록:** [2026-04-07 서버 업데이트](https://na.archerage.to/forums/threads/server-updates-4-7-ishvaran-victory-festival-start-and-other-updates.13390/)
+
+</details>
+
+<details>
+<summary><code>ItemStack(slot)</code></summary>
+
+**기능:** 아이템의 수량 정보를 조회합니다. 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `slot` — `number` 추정: 대상 슬롯 번호입니다. 시작 번호와 유효 범위는 해당 API/보관함 종류에서 확인해야 합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+
+**공식 허용 기록:** [2026-04-07 서버 업데이트](https://na.archerage.to/forums/threads/server-updates-4-7-ishvaran-victory-festival-start-and-other-updates.13390/)
+
+</details>
+
+<details>
+<summary><code>MoveToEmptyBankSlot(slotIdx)</code></summary>
+
+**기능:** To 빈 창고 슬롯 이동을 수행합니다. 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `slotIdx` — `number` 추정: 대상 슬롯의 인덱스입니다. 시작 번호와 범위는 해당 UI/API에서 확인해야 합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+
+**공식 허용 기록:** [2026-05-19 서버 업데이트](https://na.archerage.to/forums/threads/server-updates-5-19-free-winds-festival-start-and-other-updates.13506/) — 호출 간 최소 200ms 쿨다운.
+
+</details>
+
+<details>
+<summary><code>MoveToEmptyCofferSlot(slotIdx)</code></summary>
+
+**기능:** To 빈 Coffer 슬롯 이동을 수행합니다. 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `slotIdx` — `number` 추정: 대상 슬롯의 인덱스입니다. 시작 번호와 범위는 해당 UI/API에서 확인해야 합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+
+**공식 허용 기록:** [2026-05-19 서버 업데이트](https://na.archerage.to/forums/threads/server-updates-5-19-free-winds-festival-start-and-other-updates.13506/) — 호출 간 최소 200ms 쿨다운.
 
 </details>
 
@@ -341,19 +402,6 @@ X2Bag:EquipBagItem(1, false)
 </details>
 
 <details>
-<summary><code>CountItems()</code></summary>
-
-**기능:** Items 개수를 조회합니다. 대상 항목의 개수나 수량을 조회하는 함수입니다.
-
-**매개변수:** 없음.
-
-**반환값:** `number` 추정 — 개수 또는 수량을 돌려주는 형태로 보입니다.
-
-**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
-
-</details>
-
-<details>
 <summary><code>GetBagCooldown(bagSlot)</code></summary>
 
 **기능:** 가방 재사용 시간 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
@@ -423,21 +471,6 @@ X2Bag:EquipBagItem(1, false)
 - `slot` — `number` 추정: 대상 슬롯 번호입니다. 시작 번호와 유효 범위는 해당 API/보관함 종류에서 확인해야 합니다.
 
 **반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
-
-**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
-
-</details>
-
-<details>
-<summary><code>ItemStack(slot)</code></summary>
-
-**기능:** 아이템의 수량 정보를 조회합니다. 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
-
-**매개변수**
-
-- `slot` — `number` 추정: 대상 슬롯 번호입니다. 시작 번호와 유효 범위는 해당 API/보관함 종류에서 확인해야 합니다.
-
-**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
 
 **예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
@@ -863,36 +896,6 @@ X2Bag:EquipBagItem(1, false)
 <summary><code>UnlockSlot(slotIdx)</code></summary>
 
 **기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
-
-**매개변수**
-
-- `slotIdx` — `number` 추정: 대상 슬롯의 인덱스입니다. 시작 번호와 범위는 해당 UI/API에서 확인해야 합니다.
-
-**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
-
-**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
-
-</details>
-
-<details>
-<summary><code>MoveToEmptyBankSlot(slotIdx)</code></summary>
-
-**기능:** To 빈 창고 슬롯 이동을 수행합니다. 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
-
-**매개변수**
-
-- `slotIdx` — `number` 추정: 대상 슬롯의 인덱스입니다. 시작 번호와 범위는 해당 UI/API에서 확인해야 합니다.
-
-**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
-
-**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
-
-</details>
-
-<details>
-<summary><code>MoveToEmptyCofferSlot(slotIdx)</code></summary>
-
-**기능:** To 빈 Coffer 슬롯 이동을 수행합니다. 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
 
 **매개변수**
 

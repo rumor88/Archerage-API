@@ -5,8 +5,31 @@
 > 판정 기준: 원본 덤프의 Allowed functions는 **사용 가능**, Available/not allowed functions는 **애드온 사용 불가**로 분류했습니다. 서버/클라이언트 버전에 따라 달라질 수 있습니다.
 
 - 전역값: 7개
-- 사용 가능 함수: 0개
-- 사용 불가 함수: 31개
+- 사용 가능 함수: 1개
+- 사용 불가 함수: 30개
+
+## ✅ 사용 가능
+
+<details>
+<summary><code>CreateSquad(selectedField, openType, explanation, partyInvitation, limitLevel, limitGearScore)</code></summary>
+
+**기능:** 분대 항목을 생성하거나 등록합니다. 새 객체·항목을 만들거나 등록하는 함수입니다.
+
+**매개변수**
+
+- `selectedField` — `any` 추정: selectedField에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+- `openType` — `number|string` 추정: openType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `explanation` — `any` 추정: explanation에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+- `partyInvitation` — `any` 추정: partyInvitation에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+- `limitLevel` — `number` 추정: limitLevel에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+- `limitGearScore` — `any` 추정: limitGearScore에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** `object` 또는 반환값 없음 — 생성/가져오기 결과를 반환하는지는 함수별 원본에 기록되어 있지 않습니다.
+
+
+**공식 허용 기록:** [2026-05-19 서버 업데이트](https://na.archerage.to/forums/threads/server-updates-5-19-free-winds-festival-start-and-other-updates.13506/) — 호출 간 최소 5초 쿨다운.
+
+</details>
 
 ## ⛔ 애드온 사용 불가
 
@@ -50,26 +73,6 @@
 - `page` — `number` 추정: page에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
 
 **반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
-
-**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
-
-</details>
-
-<details>
-<summary><code>CreateSquad(selectedField, openType, explanation, partyInvitation, limitLevel, limitGearScore)</code></summary>
-
-**기능:** 분대 항목을 생성하거나 등록합니다. 새 객체·항목을 만들거나 등록하는 함수입니다.
-
-**매개변수**
-
-- `selectedField` — `any` 추정: selectedField에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
-- `openType` — `number|string` 추정: openType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
-- `explanation` — `any` 추정: explanation에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
-- `partyInvitation` — `any` 추정: partyInvitation에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
-- `limitLevel` — `number` 추정: limitLevel에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
-- `limitGearScore` — `any` 추정: limitGearScore에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
-
-**반환값:** `object` 또는 반환값 없음 — 생성/가져오기 결과를 반환하는지는 함수별 원본에 기록되어 있지 않습니다.
 
 **예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 

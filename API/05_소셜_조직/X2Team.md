@@ -5,8 +5,8 @@
 > 판정 기준: 원본 덤프의 Allowed functions는 **사용 가능**, Available/not allowed functions는 **애드온 사용 불가**로 분류했습니다. 서버/클라이언트 버전에 따라 달라질 수 있습니다.
 
 - 전역값: 16개
-- 사용 가능 함수: 3개
-- 사용 불가 함수: 101개
+- 사용 가능 함수: 10개
+- 사용 불가 함수: 94개
 
 ## ✅ 사용 가능
 
@@ -75,6 +75,126 @@ X2Team:SetRole(roleValue)
 ```lua
 X2Team:InviteToTeam("캐릭터이름", true)
 ```
+
+</details>
+
+<details>
+<summary><code>MoveTeamMember(frommemberIndex, tomemberIndex)</code></summary>
+
+**기능:** 팀 구성원 이동을 수행합니다. 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `frommemberIndex` — `number` 추정: frommemberIndex에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+- `tomemberIndex` — `number` 추정: tomemberIndex에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+
+**공식 허용 기록:** [2026-02-24 서버 업데이트](https://na.archerage.to/forums/threads/server-updates-2-24-sport-fishing-updates-bug-fixes-etc.13118/) — 호출 간 최소 1초 쿨다운.
+
+</details>
+
+<details>
+<summary><code>MoveTeamMemberToParty(frommemberIndex, toParty)</code></summary>
+
+**기능:** 팀 구성원 To Party 이동을 수행합니다. 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `frommemberIndex` — `number` 추정: frommemberIndex에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+- `toParty` — `any` 추정: toParty에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+
+**공식 허용 기록:** [2026-02-24 서버 업데이트](https://na.archerage.to/forums/threads/server-updates-2-24-sport-fishing-updates-bug-fixes-etc.13118/) — 호출 간 최소 1초 쿨다운.
+
+</details>
+
+<details>
+<summary><code>KickTeamMember(memberIndex, teamRoleType)</code></summary>
+
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `memberIndex` — `number` 추정: memberIndex에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+- `teamRoleType` — `number|string` 추정: teamRoleType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+
+**공식 허용 기록:** [2026-02-24 서버 업데이트](https://na.archerage.to/forums/threads/server-updates-2-24-sport-fishing-updates-bug-fixes-etc.13118/) — 호출 간 최소 1초 쿨다운.
+
+</details>
+
+<details>
+<summary><code>KickTeamMemberByName(charName, teamRoleType)</code></summary>
+
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `charName` — `string` 추정: charName에 해당하는 문자열입니다. 허용 형식은 원본 덤프에 기록되어 있지 않습니다.
+- `teamRoleType` — `number|string` 추정: teamRoleType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+
+**공식 허용 기록:** [2026-02-24 서버 업데이트](https://na.archerage.to/forums/threads/server-updates-2-24-sport-fishing-updates-bug-fixes-etc.13118/) — 호출 간 최소 1초 쿨다운.
+
+</details>
+
+<details>
+<summary><code>GetTeamRoleType()</code></summary>
+
+**기능:** 팀 역할 유형 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
+
+**매개변수:** 없음.
+
+**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
+
+
+**공식 허용 기록:** [2026-02-24 서버 업데이트](https://na.archerage.to/forums/threads/server-updates-2-24-sport-fishing-updates-bug-fixes-etc.13118/)
+
+</details>
+
+<details>
+<summary><code>RaidRecruitAdd(type, subType, headcount, limitLevel, autoJoin, msg, hour, minute, limitGearPoint)</code></summary>
+
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수**
+
+- `type` — `number|string` 추정: 대상의 종류를 지정하는 값입니다. 보통 관련 상수 또는 열거값을 사용하지만 허용 값은 원본에 기록되어 있지 않습니다.
+- `subType` — `number|string` 추정: subType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
+- `headcount` — `number` 추정: headcount에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+- `limitLevel` — `number` 추정: limitLevel에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+- `autoJoin` — `any` 추정: autoJoin에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
+- `msg` — `string` 추정: 전송하거나 표시할 메시지입니다.
+- `hour` — `number` 추정: hour에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+- `minute` — `number` 추정: minute에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+- `limitGearPoint` — `number` 추정: limitGearPoint에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+
+**공식 허용 기록:** [2026-04-07 서버 업데이트](https://na.archerage.to/forums/threads/server-updates-4-7-ishvaran-victory-festival-start-and-other-updates.13390/) — 호출 간 최소 5초 쿨다운.
+
+</details>
+
+<details>
+<summary><code>RaidRecruitDel()</code></summary>
+
+**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
+
+**매개변수:** 없음.
+
+**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
+
+
+**공식 허용 기록:** [2026-04-07 서버 업데이트](https://na.archerage.to/forums/threads/server-updates-4-7-ishvaran-victory-festival-start-and-other-updates.13390/) — 호출 간 최소 5초 쿨다운.
 
 </details>
 
@@ -161,38 +281,6 @@ X2Team:InviteToTeam("캐릭터이름", true)
 **기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
 
 **매개변수:** 없음.
-
-**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
-
-**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
-
-</details>
-
-<details>
-<summary><code>KickTeamMember(memberIndex, teamRoleType)</code></summary>
-
-**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
-
-**매개변수**
-
-- `memberIndex` — `number` 추정: memberIndex에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
-- `teamRoleType` — `number|string` 추정: teamRoleType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
-
-**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
-
-**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
-
-</details>
-
-<details>
-<summary><code>KickTeamMemberByName(charName, teamRoleType)</code></summary>
-
-**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
-
-**매개변수**
-
-- `charName` — `string` 추정: charName에 해당하는 문자열입니다. 허용 형식은 원본 덤프에 기록되어 있지 않습니다.
-- `teamRoleType` — `number|string` 추정: teamRoleType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
 
 **반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
 
@@ -432,38 +520,6 @@ X2Team:InviteToTeam("캐릭터이름", true)
 **매개변수:** 없음.
 
 **반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
-
-**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
-
-</details>
-
-<details>
-<summary><code>MoveTeamMember(frommemberIndex, tomemberIndex)</code></summary>
-
-**기능:** 팀 구성원 이동을 수행합니다. 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
-
-**매개변수**
-
-- `frommemberIndex` — `number` 추정: frommemberIndex에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
-- `tomemberIndex` — `number` 추정: tomemberIndex에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
-
-**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
-
-**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
-
-</details>
-
-<details>
-<summary><code>MoveTeamMemberToParty(frommemberIndex, toParty)</code></summary>
-
-**기능:** 팀 구성원 To Party 이동을 수행합니다. 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
-
-**매개변수**
-
-- `frommemberIndex` — `number` 추정: frommemberIndex에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
-- `toParty` — `any` 추정: toParty에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
-
-**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
 
 **예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
@@ -915,42 +971,6 @@ X2Team:InviteToTeam("캐릭터이름", true)
 </details>
 
 <details>
-<summary><code>RaidRecruitAdd(type, subType, headcount, limitLevel, autoJoin, msg, hour, minute, limitGearPoint)</code></summary>
-
-**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
-
-**매개변수**
-
-- `type` — `number|string` 추정: 대상의 종류를 지정하는 값입니다. 보통 관련 상수 또는 열거값을 사용하지만 허용 값은 원본에 기록되어 있지 않습니다.
-- `subType` — `number|string` 추정: subType에 해당하는 식별자 또는 열거값입니다. 관련 상수 표와 호출 문맥을 함께 확인해야 합니다.
-- `headcount` — `number` 추정: headcount에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
-- `limitLevel` — `number` 추정: limitLevel에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
-- `autoJoin` — `any` 추정: autoJoin에 전달할 값입니다. 자료형과 허용 범위는 원본 덤프에 기록되어 있지 않습니다.
-- `msg` — `string` 추정: 전송하거나 표시할 메시지입니다.
-- `hour` — `number` 추정: hour에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
-- `minute` — `number` 추정: minute에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
-- `limitGearPoint` — `number` 추정: limitGearPoint에 해당하는 숫자 값입니다. 유효 범위와 시작 번호는 원본 덤프에 기록되어 있지 않습니다.
-
-**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
-
-**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
-
-</details>
-
-<details>
-<summary><code>RaidRecruitDel()</code></summary>
-
-**기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
-
-**매개변수:** 없음.
-
-**반환값:** 원본 덤프에 반환값 유무와 자료형이 기록되어 있지 않습니다.
-
-**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
-
-</details>
-
-<details>
 <summary><code>RaidRecruitList()</code></summary>
 
 **기능:** 함수 이름과 매개변수 시그니처는 원본 덤프에서 확인됐지만 세부 동작 명세는 제공되지 않았습니다.
@@ -1266,19 +1286,6 @@ X2Team:InviteToTeam("캐릭터이름", true)
 **매개변수:** 없음.
 
 **반환값:** `boolean` 추정 — 조건을 만족하면 `true`, 아니면 `false`를 돌려주는 형태로 보입니다.
-
-**예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
-
-</details>
-
-<details>
-<summary><code>GetTeamRoleType()</code></summary>
-
-**기능:** 팀 역할 유형 정보를 조회합니다. 게임 또는 UI의 현재 값을 읽는 조회 계열 함수입니다. 원칙적으로 조회 대상 자체를 변경하지 않는 용도로 해석됩니다.
-
-**매개변수:** 없음.
-
-**반환값:** `any` 또는 `nil` 추정 — 조회 결과의 실제 자료형과 필드 구성은 원본 덤프에 기록되어 있지 않습니다.
 
 **예시:** 애드온 호출 불가로 분류되어 실행 예시는 제공하지 않습니다.
 
